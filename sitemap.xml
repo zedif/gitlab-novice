@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/01-introduction.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/CODE_OF_CONDUCT.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/LICENSE.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/index.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/01-introduction.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/instructor/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/LICENSE.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/index.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/instructor-notes.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/key-points.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/instructor/key-points.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/keypoints.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/instructor/keypoints.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/profiles.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/instructor/profiles.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor-notes.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/key-points.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/key-points.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/keypoints.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/keypoints.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/profiles.html</loc>
+    <loc>https://zedif.github.io/gitlab-novice/profiles.html</loc>
   </url>
 </urlset>
