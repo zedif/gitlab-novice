@@ -1,10 +1,22 @@
-# The Carpentries Workbench Template Markdown Lesson
+# Introduction to GitLab
 
-This lesson is a template lesson that uses [The Carpentries Workbench][workbench].
+[GitLab] is a web application for managing [Git] repositories. Since it is build
+around to Git, it is suitable to manage any project that mostly works with plain
+text files, for example TeX based documents. With its built-in issue and wiki
+systems, it can, in certain cases, even be the right tool to for managing a
+project without any files.
 
-To get started using this template, visit https://github.com/carpentries/workbench-template-md/generate
-and follow the instructions.
+This lesson will give you a foundational understanding of GitLab’s features, so
+that you can make informed decisions on how to use it as a tool.
 
-If you have any questions, contact [@zkamvar](https://github.com/zkamvar)
+Since GitLab interprets many of its text fields’ values as Markdown, more
+specifically [GitLab flavored Markdown][GitLabMarkdown], this lesson contains
+a rudimentary introduction to Markdown syntax, following the [CommonMark
+specification][CommonMark] on which the GitLab flavor is based.
 
-[workbench]: https://carpentries.github.io/sandpaper-docs/
+[CommonMark]: https://spec.commonmark.org/current/
+[Git]: https://git-scm.com/
+[GitLab]: https://about.gitlab.com/
+[GitLabMarkdown]: https://docs.gitlab.com/ee/user/markdown.html
+
+If you have any questions, contact [@fiveop](https://github.com/fiveop)
