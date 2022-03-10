@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zedif.github.io/gitlab-novice/01-finding-projects-groups.html</loc>
+  </url>
+  <url>
     <loc>https://zedif.github.io/gitlab-novice/01-introduction.html</loc>
   </url>
   <url>
@@ -11,6 +14,9 @@
   </url>
   <url>
     <loc>https://zedif.github.io/gitlab-novice/index.html</loc>
+  </url>
+  <url>
+    <loc>https://zedif.github.io/gitlab-novice/instructor/01-finding-projects-groups.html</loc>
   </url>
   <url>
     <loc>https://zedif.github.io/gitlab-novice/instructor/01-introduction.html</loc>
