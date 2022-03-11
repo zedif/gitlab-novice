@@ -1,6 +1,7 @@
 "file" "checksum" "built" "date"
 "CODE_OF_CONDUCT.md" "8d9e44dd5c39f241b5e8b47ecfc802d1" "site/built/CODE_OF_CONDUCT.md" "2022-01-29"
 "LICENSE.md" "afaf427b4223952624dcb6d8ded53ec0" "site/built/LICENSE.md" "2022-01-29"
+"NOTES.md" "c450e942d216f5ebda9dcbc7dc963a18" "site/built/NOTES.md" "2022-03-11"
 "config.yaml" "a4770860a92a07d44f6d84bb45f9b9da" "site/built/config.yaml" "2022-03-10"
 "index.md" "fd958d384a7a39ce71b2e4ef5cef4bfa" "site/built/index.md" "2022-03-10"
 "links.md" "8184cf4149eafbf03ce8da8ff0778c14" "site/built/links.md" "2022-02-22"
