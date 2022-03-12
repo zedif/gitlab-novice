@@ -32,12 +32,12 @@ click on that.
 
 This leads to the following page:
 
-![Create blank project dialog with text input fields labeled “Project name”,
-“Project URL”, “Project slug”, “Project description (optional)”, “Project
-deployment target (optional)”, a radio button element labeled “Visibility Level”
-with options “Private” and “Public”, and two checkboxes labeled “Initialize
-repository with a README” and “Enable Static Application Security Testing
-(SAST)”.](assets/create-project.png)
+![Create blank project dialog](fig/create-project.png){alt="Create blank project
+dialog with text input fields labeled “Project name”, “Project URL”, “Project
+slug”, “Project description (optional)”, “Project deployment target (optional)”,
+a radio button element labeled “Visibility Level” with options “Private” and
+“Public”, and two checkboxes labeled “Initialize repository with a README” and
+“Enable Static Application Security Testing (SAST)”."}
 
 The “Project name” field is for just that, the project name. Its value has no
 other purpose and can be changed at anytime without indirect consequences (the
@@ -124,17 +124,17 @@ We will ignore the checkbox labeled “Enable Static Application security Testin
 After clicking the “Create project” button, GitLab creates the project and
 redirects us to the project’s homepage, which looks similar to this:
 
-![Project homepage for a new project. On the left, a menu leading to other
-project pages: Project Information, Issues, Merge requests, CI/CD, Security &
-Compliance, Deployments, Monitor, Infrastructure, Packages & Registries,
-Analytics, Wiki, Snippets, and Settings. On the right, taking the major port of
-the width, the project page: Starting at the top, the project’s name “Research
-Diary“, followed by its descriptions “My research diary, a collection of
-Markdown files”, an encouragement to “Invite your team” with a button “Invite
-members”, the statement that “The repository for this project is empty” with
-various buttons for getting initial content into the repository. At the bottom,
-the beginning of instructions on how to push an existing repository are visible,
-but cut off.](assets/new-project.png)
+![Fresh project homepage](fig/new-project.png){alt="Project homepage for a new
+project. On the left, a menu leading to other project pages: Project
+Information, Issues, Merge requests, CI/CD, Security & Compliance, Deployments,
+Monitor, Infrastructure, Packages & Registries, Analytics, Wiki, Snippets, and
+Settings. On the right, taking the major port of the width, the project page:
+Starting at the top, the project’s name “Research Diary“, followed by its
+descriptions “My research diary, a collection of Markdown files”, an
+encouragement to “Invite your team” with a button “Invite members”, the
+statement that “The repository for this project is empty” with various buttons
+for getting initial content into the repository. At the bottom, the beginning of
+instructions on how to push an existing repository are visible, but cut off."}
 
 The page is split into the menu on the left and the project overview on the
 right.
@@ -396,22 +396,22 @@ browser and navigate to the project (or reload it, if we still have it open).
 We will be greeted by the project homepage, similar to the following
 screenshot:
 
-![Project homepage of a project. On the left, a menu leading to other project
-pages. On the right, taking up most of the width, the project homepage.
-Starting from the top, we first have the project title, Research Diary, followed
-by a line of statistical values (1 Commit, 1 Branch, 0 Tags, 72KB files, 72 KB
-Storage). Under these we see the description: “My research diary, a collection of
-Markdown files.”. In the next line we see a drop-down field for branches showing
-“main”, the project slug¸“test”, a drop-down button labeled “+”, and buttons
-labeled “History”, “Find file”, “Web IDE”, a download symbol, and ”Clone”. This
-is followed by a box giving information on the last commit of the current
-branch: the commit message “Add README.md”, the authors name and how far in the
-past the commit was authored, as well as prefix of the commit’s hash with a
-copy-to-clipboard button. This is followed by some buttons that allow to add or
-upload new files or setup some of GitLab features for the project. Next is a
-list of files, in this case only `README.md`, with information when it was last
-updated and through which commit. Finally, we see a rendering of
-`README.md`.](assets/first-push.png)
+![Project homepage after first push](fig/first-push.png){alt="Project homepage
+of a project. On the left, a menu leading to other project pages. On the right,
+taking up most of the width, the project homepage. Starting from the top, we
+first have the project title, Research Diary, followed by a line of statistical
+values (1 Commit, 1 Branch, 0 Tags, 72KB files, 72 KB Storage). Under these we
+see the description: “My research diary, a collection of Markdown files.”. In
+the next line we see a drop-down field for branches showing “main”, the project
+slug¸“test”, a drop-down button labeled “+”, and buttons labeled “History”,
+“Find file”, “Web IDE”, a download symbol, and ”Clone”. This is followed by a
+box giving information on the last commit of the current branch: the commit
+message “Add README.md”, the authors name and how far in the past the commit was
+authored, as well as prefix of the commit’s hash with a copy-to-clipboard
+button. This is followed by some buttons that allow to add or upload new files
+or setup some of GitLab features for the project. Next is a list of files, in
+this case only `README.md`, with information when it was last updated and
+through which commit. Finally, we see a rendering of `README.md`."}
 
 TODO: REDO THE IMAGE WITH FULL README CONTENT!
 
@@ -457,10 +457,10 @@ deleted.
 
 At the bottom we find a section labeled “Delete Project”.
 
-![A box with red headline “Delete this project”, followed by the warning “This
-action deletes `fiveop/reseach-diary` and everything this project contains.
-**There is no going back**”, and a red button labeled “Delete
-project”.](assets/delete-project.png)
+![Delete project dialog](fig/delete-project.png){alt="A box with red headline
+“Delete this project”, followed by the warning “This action deletes
+`fiveop/reseach-diary` and everything this project contains. **There is no going
+back**”, and a red button labeled “Delete project”."}
 
 Clicking the button will not directly delete the project, as the warning says,
 but requires you to type the project location and slug,

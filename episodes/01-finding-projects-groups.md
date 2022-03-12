@@ -83,9 +83,10 @@ But on GitLab’s own instance you will certainly see projects on the “Explore
 projects” tab. For example, while writing the lesson material the tab looked
 like this:
 
-![Project overview page with tab “Explore projects” and subtab “Most stars”
-open. The tab shows a list of projects with icon, name, descriptions, and four
-statistical values for each entry.](project-list.png)
+![Project overview page](fig/project-list.png){alt="Project overview page with
+tab “Explore projects” and subtab “Most stars” open. The tab shows a list of
+projects with icon, name, descriptions, and four statistical values for each
+entry."}
 
 The first tab, “Your projects”, lists all projects that you are a member of.
 When you create a project you automatically become a member and others can add
