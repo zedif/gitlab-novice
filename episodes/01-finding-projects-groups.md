@@ -7,7 +7,6 @@ exercises: 15
 :::::::::::::::::::::::::::::::::::::: questions
 
 - What is GitLab?
-- What are GitLab’s primary entities of organization?
 - How can I find my way around GitLab?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
