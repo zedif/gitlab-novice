@@ -52,7 +52,7 @@ projects.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Log in to GitLab
+### Log in to GitLab
 
 Navigate to to GitLab.com’s [sign in page][GitLabSignIn] and log in to your
 account. Once logged in, have a look at what projects you can see in the first
@@ -141,7 +141,7 @@ projects.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Finding a project
+### Finding a project
 
 Use the search methods GitLab provides to find the project page for the software
 “Inkscape”.
@@ -177,7 +177,7 @@ position ins this system:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Top-level groups and Subgroup
+### Top-level groups and Subgroup
 
 On the group page https://gitlab.com/inkscape identify the top-level group’s
 name and one subgroup or contained project of that group.
