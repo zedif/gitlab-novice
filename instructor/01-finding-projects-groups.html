@@ -72,11 +72,11 @@
   Introduction to GitLab
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: NaN%" class="percentage">
-    NaN%
+<aside class="col-md-12 lesson-progress"><div style="width: 0%" class="percentage">
+    0%
   </div>
   <div class="progress software">
-    <div class="progress-bar software" role="progressbar" style="width: NaN%" aria-valuenow="NaN" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar software" role="progressbar" style="width: 0%" aria-valuenow="0" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -150,6 +150,15 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="02-creating-projects-connecting-repositories.html">Creating Projects and Connecting Local Repositories</a>
+    </div><!--/div.accordion-header-->
+        
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -184,16 +193,16 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/02-creating-projects-connecting-repositories.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/index.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/index.html" rel="next">Next... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/02-creating-projects-connecting-repositories.html" rel="next">Next: Creating Projects... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Finding Projects and Groups</h1>
-        <p> Last updated on 2022-03-10 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/01-finding-projects-groups.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-03-12 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/01-finding-projects-groups.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 25 minutes </p>
         
         <div class="text-end">
@@ -210,7 +219,6 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul><li>What is GitLab?</li>
-<li>What are GitLab’s primary entities of organization?</li>
 <li>How can I find my way around GitLab?</li>
 </ul></div>
 </div>
@@ -246,21 +254,35 @@
 </div>
 </div>
 </div>
-<blockquote>
-<h2 id="homepage">Homepage</h2>
+<div id="callout1" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="homepage" class="callout-inner">
+<h3 class="callout-title">Homepage</h3>
+<div class="callout-content">
 <p>The project overview page is the default homepage. However, the homepage is a configuration option for GitLab instances as well as users. You may have changed that setting and on other instances an administrator might have done so.</p>
-<p>You can always navigate to the project overview page by selecting one of the subentries of the “Projects” option in the menu accessible from the menu button on the left side of the top menu bar. {: .callout}</p>
-</blockquote>
+<p>You can always navigate to the project overview page by selecting one of the subentries of the “Projects” option in the menu accessible from the menu button on the left side of the top menu bar.</p>
+</div>
+</div>
+</div>
 <p>Depending on whether you have used GitLab before or have been assigned to a group by someone else you may see some or no projects on the first two tabs. But on GitLab’s own instance you will certainly see projects on the “Explore projects” tab. For example, while writing the lesson material the tab looked like this:</p>
-<figure><img src="../project-list.png" alt="" class="figure mx-auto d-block"><figcaption>Project overview page with tab “Explore projects” and subtab “Most stars” open. The tab shows a list of projects with icon, name, descriptions, and four statistical values for each entry.</figcaption></figure><p>The first tab, “Your projects”, lists all projects that you are a member of. When you create a project you automatically become a member and others can add you as a member to a project. We will talk about another way to become a member of a project when we talk about groups, members, and permissions (TODO: LINK TO SECTION).</p>
+<figure><img src="../fig/project-list.png" alt="Project overview page with tab “Explore projects” and subtab “Most stars” open. The tab shows a list of projects with icon, name, descriptions, and four statistical values for each entry." class="figure mx-auto d-block"><figcaption>Project overview page</figcaption></figure><p>The first tab, “Your projects”, lists all projects that you are a member of. When you create a project you automatically become a member and others can add you as a member to a project. We will talk about another way to become a member of a project when we talk about groups, members, and permissions (TODO: LINK TO SECTION).</p>
 <p>The second tab, “Starred projects”, lists projects that you have “starred”. In this context “starring” it is akin to bookmarks in a browser. Every project homepage shows a widget in the upper right corner labeled “Star”. By pressing it you “star” or bookmark the project.</p>
 <p>The third tab, “Explore projects”, lists all projects that you can access. This includes all projects from the “Your projects” tab as well as all projects that are publicly visible.</p>
-<blockquote>
-<h2 id="visiblity">Visiblity</h2>
+<div id="callout2" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="visiblity" class="callout-inner">
+<h3 class="callout-title">Visiblity</h3>
+<div class="callout-content">
 <p>GitLab offers three settings for the visibility of a project: public, internal, and private. Publicly visible projects can be looked at by anyone that can access the GitLab instance, projects with internal visibility can be looked at by anyone logged in to the instance, while projects with private visibility can only be locked at by its members.</p>
 <p>On GitLab.com the visibility “internal” is disabled. Everyone can create an account, log in to the instance, and thus could look at any project of internal visibility anyway.</p>
-<p>Self-hosted instances might also disable some visibility types. For example, the public visibility might be disabled, to prevent users from publishing something to whole internet. {: .callout}</p>
-</blockquote>
+<p>Self-hosted instances might also disable some visibility types. For example, the public visibility might be disabled, to prevent users from publishing something to whole internet.</p>
+</div>
+</div>
+</div>
 <p>When working with GitLab, most of the time you will want to access projects you are already a member of. In that case the list on the “Your projects” will be all you need to find the project you are looking for. When the list becomes long, the search field next to the tabs allows you to filter the projects by name, just as the placeholder text suggests.</p>
 <p>You can also use that search field on the “Explore projects” tab to search through all projects that you can look at.</p>
 <p>The search field in the top menu bar can also be used to find projects. It also shows other search results, but clearly labels what is what.</p>
@@ -356,12 +378,12 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/02-creating-projects-connecting-repositories.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/index.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/index.html" rel="next">Next... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/02-creating-projects-connecting-repositories.html" rel="next">Next: Creating Projects... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav></div> <!-- / div.primary-content.col-xs-12 -->
 <!-- END:   inst/pkgdown/templates/content-instructor.html-->
@@ -399,9 +421,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://zedif.github.io/gitlab-novice/instructor/01-finding-projects-groups.html",
   "identifier": "https://zedif.github.io/gitlab-novice/instructor/01-finding-projects-groups.html",
-  "dateCreated": "2022-03-11",
-  "dateModified": "2022-03-10",
-  "datePublished": "2022-03-11"
+  "dateCreated": "2022-03-12",
+  "dateModified": "2022-03-12",
+  "datePublished": "2022-03-12"
 }
 
   </script><script>
