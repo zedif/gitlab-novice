@@ -121,7 +121,7 @@ Self-hosted instances might also disable some visibility types. For example,
 the public visibility might be disabled, to prevent users from publishing
 something to whole internet.
 
-###
+:::
 
 When working with GitLab, most of the time you will want to access projects you
 are already a member of. In that case the list on the “Your projects” will be
