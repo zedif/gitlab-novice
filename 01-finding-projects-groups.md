@@ -7,7 +7,6 @@ exercises: 15
 :::::::::::::::::::::::::::::::::::::: questions
 
 - What is GitLab?
-- What are GitLab’s primary entities of organization?
 - How can I find my way around GitLab?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -52,7 +51,7 @@ projects.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Log in to GitLab
+### Log in to GitLab
 
 Navigate to to GitLab.com’s [sign in page][GitLabSignIn] and log in to your
 account. Once logged in, have a look at what projects you can see in the first
@@ -63,17 +62,20 @@ This exercise should take about 5 minutes.
 
 :::::::::::::::::::::::::::::::::::::
 
-> ## Homepage
->
-> The project overview page is the default homepage. However, the homepage is a
-> configuration option for GitLab instances as well as users. You may have
-> changed that setting and on other instances an administrator might have done
-> so.
->
-> You can always navigate to the project overview page by selecting one of the
-> subentries of the “Projects” option in the menu accessible from the menu
-> button on the left side of the top menu bar.
-{: .callout}
+::: callout
+
+### Homepage
+
+The project overview page is the default homepage. However, the homepage is a
+configuration option for GitLab instances as well as users. You may have
+changed that setting and on other instances an administrator might have done
+so.
+
+You can always navigate to the project overview page by selecting one of the
+subentries of the “Projects” option in the menu accessible from the menu
+button on the left side of the top menu bar.
+
+:::
 
 Depending on whether you have used GitLab before or have been assigned to
 a group by someone else you may see some or no projects on the first two tabs.
@@ -81,9 +83,10 @@ But on GitLab’s own instance you will certainly see projects on the “Explore
 projects” tab. For example, while writing the lesson material the tab looked
 like this:
 
-![Project overview page with tab “Explore projects” and subtab “Most stars”
-open. The tab shows a list of projects with icon, name, descriptions, and four
-statistical values for each entry.](project-list.png)
+![Project overview page](fig/project-list.png){alt="Project overview page with
+tab “Explore projects” and subtab “Most stars” open. The tab shows a list of
+projects with icon, name, descriptions, and four statistical values for each
+entry."}
 
 The first tab, “Your projects”, lists all projects that you are a member of.
 When you create a project you automatically become a member and others can add
@@ -100,22 +103,25 @@ The third tab, “Explore projects”, lists all projects that you can access. T
 includes all projects from the “Your projects” tab as well as all projects that
 are publicly visible.
 
-> ## Visiblity
->
-> GitLab offers three settings for the visibility of a project: public,
-> internal, and private. Publicly visible projects can be looked at by anyone
-> that can access the GitLab instance, projects with internal visibility can be
-> looked at by anyone logged in to the instance, while projects with private
-> visibility can only be locked at by its members.
->
-> On GitLab.com the visibility “internal” is disabled. Everyone can create an
-> account, log in to the instance, and thus could look at any project of
-> internal visibility anyway.
->
-> Self-hosted instances might also disable some visibility types. For example,
-> the public visibility might be disabled, to prevent users from publishing
-> something to whole internet.
-{: .callout}
+::: callout
+
+### Visiblity
+
+GitLab offers three settings for the visibility of a project: public,
+internal, and private. Publicly visible projects can be looked at by anyone
+that can access the GitLab instance, projects with internal visibility can be
+looked at by anyone logged in to the instance, while projects with private
+visibility can only be locked at by its members.
+
+On GitLab.com the visibility “internal” is disabled. Everyone can create an
+account, log in to the instance, and thus could look at any project of
+internal visibility anyway.
+
+Self-hosted instances might also disable some visibility types. For example,
+the public visibility might be disabled, to prevent users from publishing
+something to whole internet.
+
+:::
 
 When working with GitLab, most of the time you will want to access projects you
 are already a member of. In that case the list on the “Your projects” will be
@@ -135,7 +141,7 @@ projects.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Finding a project
+### Finding a project
 
 Use the search methods GitLab provides to find the project page for the software
 “Inkscape”.
@@ -171,7 +177,7 @@ position ins this system:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Top-level groups and Subgroup
+### Top-level groups and Subgroup
 
 On the group page https://gitlab.com/inkscape identify the top-level group’s
 name and one subgroup or contained project of that group.
