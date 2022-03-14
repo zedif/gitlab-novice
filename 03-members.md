@@ -1,5 +1,5 @@
 ---
-title: "Members, Roles, and Groups"
+title: "Members and Groups"
 teaching: 0
 exercises: 0
 ---
@@ -81,5 +81,19 @@ The “Developer” role grants just enough permissions for all the collaborativ
 tasks we will practice in this lesson.
 
 This exercise should take about 5 minutes.
+
+:::
+
+- CLONE REPOSITORY
+- ADD LAB ENTRY FOR TODAY
+- PUSH
+- IN OWN REPOSITORY: PULL
+- CREATE A GROUP
+- NAVIGATE TO CREATE PROJECT, SEE GROUP IN Project URL DROP DOWN (DO NOT CREATE PROJECT)
+- NAVIGATE TO GROUP MEMBERS, NOTE SOURCE => INHERITENCE
+- EXERCISE: ADD MEMBER TO GROUP  (SOMEONE ELSE AS Guest)
+- DELETE GROUP
+
+::: keypoints
 
 :::
