@@ -2,6 +2,8 @@
 title: Setup
 ---
 
+# Setup
+
 To follow the lesson, you need to have a text editor and Git installed. You also
 need access to to GitLab.
 

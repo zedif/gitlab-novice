@@ -21,7 +21,7 @@ specification][CommonMark] on which the GitLab flavor is based.
 [GitLab]: https://about.gitlab.com/
 [GitLabMarkdown]: https://docs.gitlab.com/ee/user/markdown.html
 
-# Prerequisites
+# Required Previous Knowledge
 
 GitLab is mainly a platform for Git repositories. So a major part of this lesson
 requires a basic familiarity with Git. To understand the material on GitLab’s
