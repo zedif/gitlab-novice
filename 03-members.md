@@ -84,16 +84,11 @@ This exercise should take about 5 minutes.
 
 :::
 
-- CLONE REPOSITORY
-- ADD LAB ENTRY FOR TODAY
-- PUSH
-- IN OWN REPOSITORY: PULL
-- CREATE A GROUP
-- NAVIGATE TO CREATE PROJECT, SEE GROUP IN Project URL DROP DOWN (DO NOT CREATE PROJECT)
-- NAVIGATE TO GROUP MEMBERS, NOTE SOURCE => INHERITENCE
-- EXERCISE: ADD MEMBER TO GROUP  (SOMEONE ELSE AS Guest)
-- DELETE GROUP
+Now, everyone should be the member of one of your co-learners’ projects. We will
+now add an diary entry for the work we did on their experiments last weekend.
 
-::: keypoints
+First, we clone their repositories:
 
-:::
+```bash
+git clone git@gitlab.com
+```
