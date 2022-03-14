@@ -2,48 +2,28 @@
 title: Setup
 ---
 
-Setup instructions live in this document. Please specify the tools and the data
-sets the Learner needs to have installed.
+To follow the lesson, you need to have a text editor and Git installed. You also
+need access to to GitLab.
 
-## Data Sets
-
-Download the [data zip file](data/data.zip) and unzip it to your Desktop
+The following sections provide information on how to install the required
+software, if necessary, and how you get access to GitLab.
 
 ## Software Setup
 
-::::::::::::::::::::::::::::::::::::::: discussion
+See https://carpentries.github.io/workshop-template/#editor for how to install
+or find a text editor on your machine.
 
-### Details
+See https://carpentries.github.io/workshop-template/#git for how to install or
+find Git on your machine.
 
-Setup for different systems can be presented in dropdown menus via a `solution`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
+## GitLab
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::
+You can create a free GitLab account on [GitLabSignUp]. If you already have an
+account, please make sure that you know you account credentials and can [sign
+in][GitLabSignIn].
 
-:::::::::::::::: solution
+Note that for a specific course, you might work on another GitLab instance. In
+that case you should follow the instructions given by the organizers.
 
-### Windows
-
-Use PuTTY
-
-:::::::::::::::::::::::::
-
-:::::::::::::::: solution
-
-### MacOS
-
-Use Terminal.app
-
-:::::::::::::::::::::::::
-
-
-:::::::::::::::: solution
-
-### Linux
-
-Use Terminal
-
-:::::::::::::::::::::::::
-
+[GitLabSignUp]: https://gitlab.com/users/sign_up
+[GitLabSignIn]: https://gitlab.com/user/sign_in
