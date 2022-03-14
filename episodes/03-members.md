@@ -81,3 +81,14 @@ The “Developer” role grants just enough permissions for all the collaborativ
 tasks we will practice in this lesson.
 
 This exercise should take about 5 minutes.
+
+:::
+
+Now, everyone should be the member of one of your co-learners’ projects. We will
+now add an diary entry for the work we did on their experiments last weekend.
+
+First, we clone their repositories:
+
+```bash
+git clone git@gitlab.com
+```
