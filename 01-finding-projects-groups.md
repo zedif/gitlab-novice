@@ -44,11 +44,6 @@ to you from GitHub are called in GitLab.
 
 ## Finding Projects
 
-As its purpose suggests, GitLab’s main organizational entity is the project.
-When we log in to a GitLab instance we are greeted by a view with lists of
-projects.
-
-
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ### Log in to GitLab
@@ -62,9 +57,26 @@ This exercise should take about 5 minutes.
 
 :::::::::::::::::::::::::::::::::::::
 
+When we log into GitLab for the first time, we are greeted by a welcome page,
+offering us four ways to move forward:
+
+- “Create a project”
+- “Create a group”
+- “Explore public projects”
+- “Learn more about GitLab”
+
+We will cover how to create a project and a group in the next episode. For now,
+we want to learn how to navigate GitLab. For that we select “Explore public
+projects”. This leads us to the projects overview page. The project is the main
+organizational unit of GitLab.
+
 ::: callout
 
 ### Homepage
+
+The welcome page is only shown as long as we are not a member of any project
+yet. On instances other than on GitLab.com it might not be shown at all. In the
+case the configured home page is shown.
 
 The project overview page is the default homepage. However, the homepage is a
 configuration option for GitLab instances as well as users. You may have
@@ -78,10 +90,10 @@ button on the left side of the top menu bar.
 :::
 
 Depending on whether you have used GitLab before or have been assigned to
-a group by someone else you may see some or no projects on the first two tabs.
-But on GitLab’s own instance you will certainly see projects on the “Explore
-projects” tab. For example, while writing the lesson material the tab looked
-like this:
+a group by someone else you may see some or no projects on the first two tabs,
+“Your projects” and “Starred projects”. But on GitLab’s own instance you will
+certainly see projects on the “Explore projects” tab. For example, while writing
+the lesson material the tab looked like this:
 
 ![Project overview page](fig/project-list.png){alt="Project overview page with
 tab “Explore projects” and subtab “Most stars” open. The tab shows a list of
