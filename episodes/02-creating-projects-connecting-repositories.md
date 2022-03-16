@@ -48,10 +48,11 @@ As we fill in the project name, a project slug gets suggested in the respective
 field. The project slug is the last part of the project’s, and the associated
 Git repository’s, URL or web address.
 
-The URL’s middle part can be chosen in the drop-down field labeled “Project
-URL”, which defaults to the current user’s username. This is the location for a
-user’s project (and groups). Other options in the drop-down list are the groups
-in which the current user may create projects.
+If the user belongs to at least one group, the URL’s middle part can be chosen
+in the drop-down field labeled “Project URL”, which defaults to the current
+user’s username. This is the location for a user’s project (and groups). Other
+options in the drop-down list are the groups in which the current user may
+create projects.
 
 ::: callout
 
@@ -118,8 +119,8 @@ homepage; if it is in Markdown format, in its rendered form.
 
 :::
 
-We will ignore the checkbox labeled “Enable Static Application security Testing
-(SAST)” in this lesson, except for unchecking it.
+We will ignore any other fields that may be visible depending on the GitLab
+instances configuration.
 
 After clicking the “Create project” button, GitLab creates the project and
 redirects us to the project’s homepage, which looks similar to this:
@@ -195,8 +196,8 @@ If both return sensible values, we are good to go. Otherwise we provide the
 missing values, for example:
 
 ```
-$ git config --global user.name "Riley Doe"
-$ git config --global user.email "r.doe@example.com"
+$ git config --global user.name "Some Novice"
+$ git config --global user.email "some.novice@example.com"
 ```
 {: .language-bash}
 
@@ -235,7 +236,7 @@ $ echo "# Research Diary" > README.md
 $ echo "" >> README.md
 $ echo "This repository contains our research diary." >> README.md
 $ echo "Each day gets his own file." >> README.md
-$ echo "We use the Markdown format for your files." >> README.md
+$ echo "We use the Markdown format for our files." >> README.md
 $ git add README.md
 $ git commit -m "Add README.md"
 ```
@@ -281,14 +282,14 @@ time at the instructions toward the bottom of the page. They read:
 > **Git global setup**
 >
 > ```
-> git config --global user.name "Philipp Matthias Schäfer"
-> git config --global user.email "philipp.matthias.schaefer@posteo.de"
+> git config --global user.name "Some Novice"
+> git config --global user.email "some.novice@example.com"
 > ```
 >
 > **Create a new repository**
 >
 > ```
-> git clone git@gitlab.com:fiveop/test.git
+> git clone https://gitlab.com/somenovice/research-diary.git
 > cd test
 > git switch -c main
 > touch README.md
@@ -302,7 +303,7 @@ time at the instructions toward the bottom of the page. They read:
 > ```
 > cd existing_folder
 > git init --initial-branch=main
-> git remote add origin git@gitlab.com:fiveop/test.git
+> git remote add origin https://gitlab.com/somenovice/research-diary.git
 > git add .
 > git commit -m "Initial commit"
 > git push -u origin main
@@ -313,7 +314,7 @@ time at the instructions toward the bottom of the page. They read:
 > ```
 > cd existing_repo
 > git remote rename origin old-origin
-> git remote add origin git@gitlab.com:fiveop/test.git
+> git remote add origin https://gitlab.com/somenovice/research-diary.git
 > git push -u origin --all
 > git push -u origin --tags
 > ```
@@ -326,25 +327,26 @@ although we have a directory with contents, its already a Git repository. That
 leaves us with the third option, which is the one applicable to our situation:
 “Push an existing Git repository.”
 
-Transferring our changes to a remote repository is called **push**ing, because we
-are sending the changes from us, the local repository, to somewhere else, a
+Transferring our changes to a remote repository is called **push**ing, because
+we are sending the changes from us, the local repository, to somewhere else, a
 remote repository. Later on we will “**pull**” changes from a remote repository,
 completing the analogy.
 
-Going back to the shell and following the instruction, we first make sure to be
-in the right directory:
+Going back to the shell, we configure our project’s repository as a remote in
+our local repository:
 
 ```
-$ cd ~/Desktop/research-diary/
+$ git remote add origin https://gitlab.com/somenovice/research-diary.git
 ```
 {: .language-bash}
 
-Then we add a link to our remote repository
+::: callout
 
-```
-$ git remote add origin git@gitlab.com:fiveop/test.git
-```
-{: .language-bash}
+### https:// vs git@
+
+TODO
+
+:::
 
 We instruct Git to add a remote called `origin` with the last part as the
 address. Make sure to copy that last part from the project overview page,
@@ -374,7 +376,8 @@ university GitLab instance.
 
 :::
 
-Finally, we push our changes to the remote repository
+Finally, we push our changes to the remote repository. The command will prompt
+for our user name and password:
 
 ```
 $ git push -u origin --all
@@ -385,7 +388,7 @@ Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 250 bytes | 250.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-To gitlab.com:fiveop/test.git
+To https://gitlab.com/somenovice/research-diary.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
 ```
@@ -401,7 +404,7 @@ of a project. On the left, a menu leading to other project pages. On the right,
 taking up most of the width, the project homepage. Starting from the top, we
 first have the project title, Research Diary, followed by a line of statistical
 values (1 Commit, 1 Branch, 0 Tags, 72KB files, 72 KB Storage). Under these we
-see the description: “My research diary, a collection of Markdown files.”. In
+see the description: “My research diary, a collection of Markdown files”. In
 the next line we see a drop-down field for branches showing “main”, the project
 slug¸“test”, a drop-down button labeled “+”, and buttons labeled “History”,
 “Find file”, “Web IDE”, a download symbol, and ”Clone”. This is followed by a
@@ -412,8 +415,6 @@ button. This is followed by some buttons that allow to add or upload new files
 or setup some of GitLab features for the project. Next is a list of files, in
 this case only `README.md`, with information when it was last updated and
 through which commit. Finally, we see a rendering of `README.md`."}
-
-TODO: REDO THE IMAGE WITH FULL README CONTENT!
 
 Let us look at what has changed compared to its initial state. The interface
 elements encouraging us to add members to the project are gone. Of course, we
@@ -459,7 +460,7 @@ At the bottom we find a section labeled “Delete Project”.
 
 ![Delete project dialog](fig/delete-project.png){alt="A box with red headline
 “Delete this project”, followed by the warning “This action deletes
-`fiveop/reseach-diary` and everything this project contains. **There is no going
+`somenovice/reseach-diary` and everything this project contains. **There is no going
 back**”, and a red button labeled “Delete project”."}
 
 Clicking the button will not directly delete the project, as the warning says,
