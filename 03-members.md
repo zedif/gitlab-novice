@@ -89,6 +89,15 @@ now add an diary entry for the work we did on their experiments last weekend.
 
 First, we clone their repositories:
 
-```bash
-git clone git@gitlab.com
+```
+git clone https://gitlab.com/someothernovice/research-diary.git
+```
+```
+Cloning into 'research-diary'...
+Username for 'https://gitlab.com': someothernovice
+Password for 'https://someothernovice@gitlab.com':
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 ```
