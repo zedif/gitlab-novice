@@ -202,7 +202,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Creating Projects and Connecting Local Repositories</h1>
-        <p> Last updated on 2022-03-12 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/02-creating-projects-connecting-repositories.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-03-16 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/02-creating-projects-connecting-repositories.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 35 minutes </p>
         
         <div class="text-end">
@@ -241,7 +241,7 @@
 <p>This leads to the following page:</p>
 <figure><img src="../fig/create-project.png" alt="Create blank project dialog with text input fields labeled “Project name”, “Project URL”, “Project slug”, “Project description (optional)”, “Project deployment target (optional)”, a radio button element labeled “Visibility Level” with options “Private” and “Public”, and two checkboxes labeled “Initialize repository with a README” and “Enable Static Application Security Testing (SAST)”." class="figure mx-auto d-block"><figcaption>Create blank project dialog</figcaption></figure><p>The “Project name” field is for just that, the project name. Its value has no other purpose and can be changed at anytime without indirect consequences (the direct consequence being, that its name will be different). We will call it “Research Diary”.</p>
 <p>As we fill in the project name, a project slug gets suggested in the respective field. The project slug is the last part of the project’s, and the associated Git repository’s, URL or web address.</p>
-<p>The URL’s middle part can be chosen in the drop-down field labeled “Project URL”, which defaults to the current user’s username. This is the location for a user’s project (and groups). Other options in the drop-down list are the groups in which the current user may create projects.</p>
+<p>If the user belongs to at least one group, the URL’s middle part can be chosen in the drop-down field labeled “Project URL”, which defaults to the current user’s username. This is the location for a user’s project (and groups). Other options in the drop-down list are the groups in which the current user may create projects.</p>
 <div id="callout1" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -283,7 +283,7 @@
 </div>
 </div>
 </div>
-<p>We will ignore the checkbox labeled “Enable Static Application security Testing (SAST)” in this lesson, except for unchecking it.</p>
+<p>We will ignore any other fields that may be visible depending on the GitLab instances configuration.</p>
 <p>After clicking the “Create project” button, GitLab creates the project and redirects us to the project’s homepage, which looks similar to this:</p>
 <figure><img src="../fig/new-project.png" alt="Project homepage for a new project. On the left, a menu leading to other project pages: Project Information, Issues, Merge requests, CI/CD, Security &amp; Compliance, Deployments, Monitor, Infrastructure, Packages &amp; Registries, Analytics, Wiki, Snippets, and Settings. On the right, taking the major port of the width, the project page: Starting at the top, the project’s name “Research Diary“, followed by its descriptions “My research diary, a collection of Markdown files”, an encouragement to “Invite your team” with a button “Invite members”, the statement that “The repository for this project is empty” with various buttons for getting initial content into the repository. At the bottom, the beginning of instructions on how to push an existing repository are visible, but cut off." class="figure mx-auto d-block"><figcaption>Fresh project homepage</figcaption></figure><p>The page is split into the menu on the left and the project overview on the right.</p>
 <p>The menu leads to pages related to various properties, processes, and content of the project. It is visible on each of these pages. The number of menu entries may seem overwhelming, in particular when one notices that the entries have subentries. However, it is not necessary to know what hides behind all these entries to use GitLab. Following this lesson, we will get to know parts of what lies behind the entries “Project Information”, “Issues”, “Merge requests”, “CI/CD”, “Wiki”, and “Settings”.</p>
@@ -310,8 +310,8 @@
 <pre><code>$ git config --global --get user.email</code></pre>
 <p>{: .language-bash}</p>
 <p>If both return sensible values, we are good to go. Otherwise we provide the missing values, for example:</p>
-<pre><code>$ git config --global user.name "Riley Doe"
-$ git config --global user.email "r.doe@example.com"</code></pre>
+<pre><code>$ git config --global user.name "Some Novice"
+$ git config --global user.email "some.novice@example.com"</code></pre>
 <p>{: .language-bash}</p>
 <div id="callout5" class="callout callout">
 <div class="callout-square">
@@ -344,7 +344,7 @@ $ git config --global user.email "r.doe@example.com"</code></pre>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The following sequence of commands create and navigate to new directory, initialize a repository, create a README file, and add it as part of a commit to the repository.</p>
 <pre><code>$ mkdir research-diary
@@ -354,7 +354,7 @@ $ echo "# Research Diary" &gt; README.md
 $ echo "" &gt;&gt; README.md
 $ echo "This repository contains our research diary." &gt;&gt; README.md
 $ echo "Each day gets his own file." &gt;&gt; README.md
-$ echo "We use the Markdown format for your files." &gt;&gt; README.md
+$ echo "We use the Markdown format for our files." &gt;&gt; README.md
 $ git add README.md
 $ git commit -m "Add README.md"</code></pre>
 <p>{: .language-bash}</p>
@@ -377,10 +377,10 @@ nothing to commit, working tree clean</code></pre>
 <p>Having thus created our local repository, we want to save it to our repository in GitLab. To that end, we have a look at the project overview page again; this time at the instructions toward the bottom of the page. They read:</p>
 <blockquote>
 <p><strong>Git global setup</strong></p>
-<pre><code>git config --global user.name "Philipp Matthias Schäfer"
-git config --global user.email "philipp.matthias.schaefer@posteo.de"</code></pre>
+<pre><code>git config --global user.name "Some Novice"
+git config --global user.email "some.novice@example.com"</code></pre>
 <p><strong>Create a new repository</strong></p>
-<pre><code>git clone git@gitlab.com:fiveop/test.git
+<pre><code>git clone https://gitlab.com/somenovice/research-diary.git
 cd test
 git switch -c main
 touch README.md
@@ -390,29 +390,38 @@ git push -u origin main</code></pre>
 <p><strong>Push an existing folder</strong></p>
 <pre><code>cd existing_folder
 git init --initial-branch=main
-git remote add origin git@gitlab.com:fiveop/test.git
+git remote add origin https://gitlab.com/somenovice/research-diary.git
 git add .
 git commit -m "Initial commit"
 git push -u origin main</code></pre>
 <p><strong>Push an existing Git repository</strong></p>
 <pre><code>cd existing_repo
 git remote rename origin old-origin
-git remote add origin git@gitlab.com:fiveop/test.git
+git remote add origin https://gitlab.com/somenovice/research-diary.git
 git push -u origin --all
 git push -u origin --tags</code></pre>
 </blockquote>
 <p>We already covered the global setup.</p>
 <p>The next three sets of instructions are mutually exclusive. The first is not for us, because we already created a repository. Neither is the second, because although we have a directory with contents, its already a Git repository. That leaves us with the third option, which is the one applicable to our situation: “Push an existing Git repository.”</p>
 <p>Transferring our changes to a remote repository is called <strong>push</strong>ing, because we are sending the changes from us, the local repository, to somewhere else, a remote repository. Later on we will “<strong>pull</strong>” changes from a remote repository, completing the analogy.</p>
-<p>Going back to the shell and following the instruction, we first make sure to be in the right directory:</p>
-<pre><code>$ cd ~/Desktop/research-diary/</code></pre>
+<p>Going back to the shell, we configure our project’s repository as a remote in our local repository:</p>
+<pre><code>$ git remote add origin https://gitlab.com/somenovice/research-diary.git</code></pre>
 <p>{: .language-bash}</p>
-<p>Then we add a link to our remote repository</p>
-<pre><code>$ git remote add origin git@gitlab.com:fiveop/test.git</code></pre>
-<p>{: .language-bash}</p>
+<div id="callout6" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="https-vs-git" class="callout-inner">
+<h3 class="callout-title">
+<a href="https://" class="external-link uri">https://</a> vs git@</h3>
+<div class="callout-content">
+<p>TODO</p>
+</div>
+</div>
+</div>
 <p>We instruct Git to add a remote called <code>origin</code> with the last part as the address. Make sure to copy that last part from the project overview page, because it represents the Git address of your project’s repository on GitLab. It will be different for everyone.</p>
 <p>Note also, that we skipped the second line of the instructions. It renames an existing remote <code>origin</code> to <code>old-origin</code>, but we have no existing remote.</p>
-<div id="callout6" class="callout callout">
+<div id="callout7" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -425,20 +434,19 @@ git push -u origin --tags</code></pre>
 </div>
 </div>
 </div>
-<p>Finally, we push our changes to the remote repository</p>
+<p>Finally, we push our changes to the remote repository. The command will prompt for our user name and password:</p>
 <pre><code>$ git push -u origin --all</code></pre>
 <p>{: .language-bash}</p>
 <pre><code>Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 250 bytes | 250.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-To gitlab.com:fiveop/test.git
+To https://gitlab.com/somenovice/research-diary.git
  * [new branch]      main -&gt; main
 branch 'main' set up to track 'origin/main'.</code></pre>
 <p>{: .output}</p>
 <p>Having successfully pushed our commit to the GitLab repository, we change to our browser and navigate to the project (or reload it, if we still have it open). We will be greeted by the project homepage, similar to the following screenshot:</p>
-<figure><img src="../fig/first-push.png" alt="Project homepage of a project. On the left, a menu leading to other project pages. On the right, taking up most of the width, the project homepage. Starting from the top, we first have the project title, Research Diary, followed by a line of statistical values (1 Commit, 1 Branch, 0 Tags, 72KB files, 72 KB Storage). Under these we see the description: “My research diary, a collection of Markdown files.”. In the next line we see a drop-down field for branches showing “main”, the project slug¸“test”, a drop-down button labeled “+”, and buttons labeled “History”, “Find file”, “Web IDE”, a download symbol, and ”Clone”. This is followed by a box giving information on the last commit of the current branch: the commit message “Add README.md”, the authors name and how far in the past the commit was authored, as well as prefix of the commit’s hash with a copy-to-clipboard button. This is followed by some buttons that allow to add or upload new files or setup some of GitLab features for the project. Next is a list of files, in this case only `README.md`, with information when it was last updated and through which commit. Finally, we see a rendering of `README.md`." class="figure mx-auto d-block"><figcaption>Project homepage after first push</figcaption></figure><p>TODO: REDO THE IMAGE WITH FULL README CONTENT!</p>
-<p>Let us look at what has changed compared to its initial state. The interface elements encouraging us to add members to the project are gone. Of course, we can still navigate to the project’s Members later on, if we need to. We also, correctly, no longer get told that the repository is empty and the instructions on how to push content to the repository have vanished.</p>
+<figure><img src="../fig/first-push.png" alt="Project homepage of a project. On the left, a menu leading to other project pages. On the right, taking up most of the width, the project homepage. Starting from the top, we first have the project title, Research Diary, followed by a line of statistical values (1 Commit, 1 Branch, 0 Tags, 72KB files, 72 KB Storage). Under these we see the description: “My research diary, a collection of Markdown files”. In the next line we see a drop-down field for branches showing “main”, the project slug¸“test”, a drop-down button labeled “+”, and buttons labeled “History”, “Find file”, “Web IDE”, a download symbol, and ”Clone”. This is followed by a box giving information on the last commit of the current branch: the commit message “Add README.md”, the authors name and how far in the past the commit was authored, as well as prefix of the commit’s hash with a copy-to-clipboard button. This is followed by some buttons that allow to add or upload new files or setup some of GitLab features for the project. Next is a list of files, in this case only `README.md`, with information when it was last updated and through which commit. Finally, we see a rendering of `README.md`." class="figure mx-auto d-block"><figcaption>Project homepage after first push</figcaption></figure><p>Let us look at what has changed compared to its initial state. The interface elements encouraging us to add members to the project are gone. Of course, we can still navigate to the project’s Members later on, if we need to. We also, correctly, no longer get told that the repository is empty and the instructions on how to push content to the repository have vanished.</p>
 <p>Instead, we see some statistics below the project’s title: 1 Commit, 1 Branch, 0 Tags, 72 KB Files, 72 KB Storage. They double as buttons other project pages.</p>
 <p>Below the description is a new button bar, followed by a box presenting information on last commit of the currently select branch.</p>
 <p>The buttons below, that we saw earlier, allow us to add specific files or navigate to the configuration of certain GitLab features. Note that one button changed from reading “Add README” to just “README”, since we added <code>README.md</code>. The button is now a link to the latest version of that file in the current branch.</p>
@@ -449,7 +457,7 @@ branch 'main' set up to track 'origin/main'.</code></pre>
 <p>At the bottom the page, we find a section named “Advanced”. We hit the “Expand” button right next to it and scroll to the bottom of the page.</p>
 <p>Notice that many of buttons here are not the usual blue or white, but first an orange-brown and then red. This indicates that we should be careful about clicking them. Things might break or, as we want to have a look at now, get deleted.</p>
 <p>At the bottom we find a section labeled “Delete Project”.</p>
-<figure><img src="../fig/delete-project.png" alt="A box with red headline “Delete this project”, followed by the warning “This action deletes `fiveop/reseach-diary` and everything this project contains. **There is no going back**”, and a red button labeled “Delete project”." class="figure mx-auto d-block"><figcaption>Delete project dialog</figcaption></figure><p>Clicking the button will not directly delete the project, as the warning says, but requires you to type the project location and slug, <code>&lt;username&gt;/research-diary</code> in our case, into a text field and clicking another button. <strong>Do not do that now!</strong></p>
+<figure><img src="../fig/delete-project.png" alt="A box with red headline “Delete this project”, followed by the warning “This action deletes `somenovice/reseach-diary` and everything this project contains. **There is no going back**”, and a red button labeled “Delete project”." class="figure mx-auto d-block"><figcaption>Delete project dialog</figcaption></figure><p>Clicking the button will not directly delete the project, as the warning says, but requires you to type the project location and slug, <code>&lt;username&gt;/research-diary</code> in our case, into a text field and clicking another button. <strong>Do not do that now!</strong></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -518,7 +526,7 @@ any links that you are not going to use.
   "url": "https://zedif.github.io/gitlab-novice/instructor/02-creating-projects-connecting-repositories.html",
   "identifier": "https://zedif.github.io/gitlab-novice/instructor/02-creating-projects-connecting-repositories.html",
   "dateCreated": "2022-03-16",
-  "dateModified": "2022-03-12",
+  "dateModified": "2022-03-16",
   "datePublished": "2022-03-16"
 }
 
