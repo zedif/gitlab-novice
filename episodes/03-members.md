@@ -87,17 +87,124 @@ This exercise should take about 5 minutes.
 Now, everyone should be the member of one of your co-learners’ projects. We will
 now add an diary entry for the work we did on their experiments last weekend.
 
-First, we clone their repositories:
+First, we clone their repositories into the directory `rd-colleague`.
 
 ```
-git clone https://gitlab.com/someothernovice/research-diary.git
+git clone https://gitlab.com/someothernovice/research-diary.git rd-colleague
 ```
 ```
 Cloning into 'research-diary'...
-Username for 'https://gitlab.com': someothernovice
-Password for 'https://someothernovice@gitlab.com':
+Username for 'https://gitlab.com': somenovice
+Password for 'https://somenovice@gitlab.com':
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 ```
+
+Moving into the directory
+
+```
+cd rd-colleague
+```
+
+we check its contents. If your colleague did everything we did, it should
+contain a single file, `README.md`.
+
+```
+ls
+```
+```
+README.md
+```
+
+Now we are sure that everything is in order with the cloned repository and we
+can add our lab entry. Let us do that:
+
+::: callout
+
+### Markdown Lists
+
+TODO
+
+:::
+
+```
+echo "* Injected transformational fluid into moss sample." > 2022-03-13.md
+echo "* Moss turned into several butterflys. SUCCESS!" >> 2022-03-13.md
+git add 2022-03.13.md
+git commit -m "Record work on experiment A-13"
+```
+```
+[main 4eac24c] Record work on experiment A-13
+ 1 file changed, 2 insertions(+)
+ create mode 100644 2022-03-13.md
+```
+
+We check Git’s log for our commit:
+
+```
+git log -n 1
+```
+```
+commit 4eac24cafbcebc4f0d528bd2e1246a4624265085 (HEAD -> main)
+Author: Some Novice <some.novice@example.com>
+Date:   Thu Mar 17 16:00:23 2022 +0000
+
+    Record work on experiment A-13
+```
+
+And everything seems to be in order, so we push our change.
+
+```
+git push
+```
+```
+Username for 'https://gitlab.com': somenovice
+Password for 'https://somenovice@gitlab.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 388 bytes | 388.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://gitlab.com/somenovice/research-diary.git
+   2dd2c21..4eac24c  main -> main
+```
+
+We have now recorded in pairs lab work we carried out for a colleague during the
+last weekend. Curious what our colleagues did for us, we navigate back to the
+directory of our own repository in the shell, for example:
+
+```
+cd ../research-diary
+```
+
+There, we pull the changes that our colleagues previously pushed.
+
+```
+git pull
+```
+```
+Username for 'https://gitlab.com': somenovice
+Password for 'https://somenovice@gitlab.com':
+Updating 2dd2c21..4eac24c
+Fast-forward
+ 2022-03-13.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 2022-03-13.md
+```
+
+From the output’s last line, we can already see that a single file,
+`2022-03-13.md` was added. Letting the shell write out the files contents shows
+us, what our colleague did:
+
+```
+cat 2022-03-13.md
+```
+```
+* Injected transformational fluid into moss sample.
+* Moss turned into several butterflys. SUCCESS!
+```
+
+We successfully collaborated through GitLab on a project of text files.
