@@ -19,6 +19,8 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Creating a Project
+
 After knowing how to find groups and projects. We want to go from passively
 browsing GitLab to actively using it. We are going to create a project and
 connect a local Git repository to it.
@@ -175,7 +177,7 @@ project’s repository directly in GitLab. However, we will fill the project fro
 a local Git repository. To do that, we need a local Git repository with some
 content.
 
-##
+## Configuring Git
 
 Before we initialize a local Git repository, we make sure that Git is properly
 configured.
@@ -215,6 +217,8 @@ with a branch called `main`:
 ```
 $ git config --global init.defaultBranch main
 ```
+
+## Creating a Local Repository
 
 ::: callout
 
@@ -289,6 +293,8 @@ $ ls
 README.md
 ```
 {: .output}
+
+## Connecting Local and Remote Repository
 
 Having thus created our local repository, we want to save it to our repository
 in GitLab. To that end, we have a look at the project overview page again; this
@@ -456,6 +462,8 @@ created.
 Finally, we see the markdown file `README.md` rendered. Because having a
 README-file in the root directory of a repository is a widespread convention,
 GitLab (and other platforms like it) usually render it on a project’s homepage.
+
+## Deleting a Project
 
 We just went through the beginning of a GitLab project’s life cycle. At its end,
 if it has one, a project gets deleted. We will go through the process of
