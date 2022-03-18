@@ -208,3 +208,10 @@ cat 2022-03-13.md
 ```
 
 We successfully collaborated through GitLab on a project of text files.
+
+::: keypoints
+
+- Adding others as members allows them to directly contribute to your projects
+- You update your local repositories relative to the GitLab repository with the `git pull` command
+
+:::
