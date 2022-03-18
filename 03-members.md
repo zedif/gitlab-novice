@@ -1,7 +1,7 @@
 ---
-title: "Members and Groups"
-teaching: 0
-exercises: 0
+title: "Collaborate on GitLab"
+teaching: 15
+exercises: 5
 ---
 
 ::: questions
@@ -208,3 +208,10 @@ cat 2022-03-13.md
 ```
 
 We successfully collaborated through GitLab on a project of text files.
+
+::: keypoints
+
+- Adding others as members allows them to directly contribute to your projects
+- You update your local repositories relative to the GitLab repository with the `git pull` command
+
+:::
