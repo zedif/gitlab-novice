@@ -20,6 +20,8 @@ exercises: 5
 
 :::
 
+## Adding Project Members
+
 So far, each of you has created a GitLab project that not one but you can
 contribute to; depending on the visibility setting, no one but you might be able
 to even see it.
@@ -83,6 +85,8 @@ tasks we will practice in this lesson.
 This exercise should take about 5 minutes.
 
 :::
+
+## Contribute Changes to Project Repository
 
 Now, everyone should be the member of one of your co-learners’ projects. We will
 now add an diary entry for the work we did on their experiments last weekend.
