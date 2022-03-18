@@ -493,7 +493,7 @@ button. **Do not do that now!**
 
 ::: keypoints
 
-- Creating a GitLab project requires not more than a few clicks and providing a name
+- Creating a GitLab project requires not more than a few clicks and providing a name.
 - Changing the name of description of a GitLab project after creation has no indirect consequences.
 - You can fill a fresh GitLab project’s repository by pushing a local repository.
 - You can delete a project, but the option is hidden well.
