@@ -4,21 +4,21 @@ teaching: 10
 exercises: 15
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions
+::: questions
 
 - What is GitLab?
 - How can I find my way around GitLab?
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::
 
-::::::::::::::::::::::::::::::::::::: objectives
+::: objectives
 
 - State the primary entity of organization.
 - Use GitLab’s interface to find a project.
 - State one purpose of groups.
 - Use GitLab’s interface to find group.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::
 
 ## Introduction
 
@@ -44,7 +44,7 @@ to you from GitHub are called in GitLab.
 
 ## Finding Projects
 
-::::::::::::::::::::::::::::::::::::: challenge
+::: challenge
 
 ### Log in to GitLab
 
@@ -55,7 +55,7 @@ around with the filters and sort settings.
 
 This exercise should take about 5 minutes.
 
-:::::::::::::::::::::::::::::::::::::
+:::
 
 When we log into GitLab for the first time, we are greeted by a welcome page,
 offering us four ways to move forward:
@@ -151,7 +151,7 @@ Finally, you can use the search field under the “Projects” in the menu acces
 from the menu button on the left side of the top menu bar to search for
 projects.
 
-::::::::::::::::::::::::::::::::::::: challenge
+::: challenge
 
 ### Finding a project
 
@@ -160,15 +160,15 @@ Use the search methods GitLab provides to find the project page for the software
 
 This exercise should take about 5 minutes.
 
-:::::::::::::::::::::::: solution
+:::: solution
 
 The project page is located at <https://gitlab.com/inkscape/inkscape>. If you
 found yourself at https://gitlab.com/inkscape you found the group page of the
 Inkscape community.
 
-::::::::::::::::::::::::
+::::
 
-:::::::::::::::::::::::::::::::::::::
+:::
 
 ## Finding Groups
 
@@ -187,7 +187,7 @@ position ins this system:
 - A group not contained in another group is called **top-level group**.
 - A group contain in another group is called a **subgroup** of that group.
 
-::::::::::::::::::::::::::::::::::::: challenge
+::: challenge
 
 ### Top-level groups and Subgroup
 
@@ -198,16 +198,16 @@ Hint: Note that groups cannot be starred.
 
 This exercise should take about 5 minutes.
 
-:::::::::::::::::::::::: solution
+:::: solution
 
 - The top-level groups name is Inkscape as it is written at the top of the main
   content.
 - Any entry in the list “Subgroups and projects” is a subgroup of contained
   project.
 
-::::::::::::::::::::::::
+::::
 
-:::::::::::::::::::::::::::::::::::::
+:::
 
 Similar as for projects, GitLab provides an overview page for groups. You can
 navigate there by selecting “Groups” and then “Your groups” or “Explore groups”
@@ -223,7 +223,7 @@ before.
 
 [GitLabSignIn]: https://gitlab.com/user/sign_in
 
-::::::::::::::::::::::::::::::::::::: keypoints
+::: keypoints
 
 - Projects are GitLab’s primary entity of organization.
 - Projects you have access to are listed in the “Your projects” tab on the project overview page.
@@ -237,4 +237,4 @@ before.
 - Groups you have access to are listed in the “Your groups” tab on the group overview page.
 - You can search for groups in the top menu, the top search bar and on the “Explore groups” tab of group overview page.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::
