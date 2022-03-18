@@ -332,7 +332,9 @@ $ git config --global user.email "some.novice@example.com"</code></pre>
 <div id="markdown-headlines" class="callout-inner">
 <h3 class="callout-title">Markdown Headlines</h3>
 <div class="callout-content">
-<p>You can mark a line in Markdown as a headline by prefixing it with between one and six <code>#</code> characters and one space character. The number of <code>#</code> characters indicates the heading’s level, with 1 being the most significant.</p>
+<p>In Markdown, headlines are marked by one up to six <code>#</code> characters followed by a space character in front of the text. The number of <code>#</code> characters indicates the heading’s level, with 1 being the most significant.</p>
+<p>For example, a level 3 headline:</p>
+<pre><code><span class="co">### Interesting Section Title</span></code></pre>
 </div>
 </div>
 </div>
@@ -356,7 +358,7 @@ $ git config --global user.email "some.novice@example.com"</code></pre>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The following sequence of commands create and navigate to new directory, initialize a repository, create a README file, and add it as part of a commit to the repository.</p>
 <pre><code>$ mkdir research-diary
@@ -428,7 +430,13 @@ git push -u origin --tags</code></pre>
 <h3 class="callout-title">
 <a href="https://" class="external-link uri">https://</a> vs git@</h3>
 <div class="callout-content">
-<p>TODO</p>
+<p>We assume throughout this lesson that the user has no SSH key is configured, because we do not want to make the setup of such a key a prerequisite.</p>
+<p>If however, a user has configured an SSH key for their account, GitLab would default to showing links to repositories in the form for Git over SSH instead.</p>
+<p>For example, without a configured key GitLab shows</p>
+<p><code>https://gitlab.com/somenovice/research.git</code></p>
+<p>for our example repository, whereas with a configured key it would show</p>
+<p><code>git@gitlab.com:somenovice/research.git</code>.</p>
+<p>The HTTPS link still works if a SSH key is configured, it is only no longer shown by default.</p>
 </div>
 </div>
 </div>
