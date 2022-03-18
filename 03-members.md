@@ -75,7 +75,7 @@ entry vanishes from the table.
 
 ::: challenge
 
-## Adding Members
+### Adding Members
 
 Get into pairs and add each other with the role “Developer” to your projects.
 
