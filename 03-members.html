@@ -148,12 +148,20 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         Collaborate on GitLab
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+        
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#adding-project-members">Adding Project Members</a></li>
+<li><a href="#contribute-changes-to-project-repository">Contribute Changes to Project Repository</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
         
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -232,7 +240,8 @@
 </div>
 </div>
 </div>
-<p>So far, each of you has created a GitLab project that not one but you can contribute to; depending on the visibility setting, no one but you might be able to even see it.</p>
+<section id="adding-project-members"><h2 class="section-heading">Adding Project Members</h2>
+<hr class="half-width"><p>So far, each of you has created a GitLab project that not one but you can contribute to; depending on the visibility setting, no one but you might be able to even see it.</p>
 <p>Git and GitLab can be and is used for one-person projects. But we want our colleagues to contribute to our research diary, when they keep tabs on our experiments for us on the weekends. To achieve this, we will grant others access to our GitLab project.</p>
 <p>Using the menu on the right side of the project homepage (or nearly any other project page), we navigate to the project members page hovering over or clicking on “Project Information” and then clicking on “Members” in the submenu. The project member page should look similar to the following screenshot:</p>
 <figure><img src="fig/initial-members.png" alt="Webpage coutout titled “Project Members” with three buttons next to the title: “Import from a project”, “Invite a group”, and “Invite members”. Below a table listing the project’s members, showing account holder‘s name with account name, the membership source, when access was granted, the member’s maximum role and the membership expiration date. The table contains one column: ”Philipp Matthias Schäfer, @fiveop, Direct member, 2 weeks ago by himself, Maintainer, and no Expiration date." class="figure mx-auto d-block"><figcaption>Project members page</figcaption></figure><p>On the page we can see the page title, “Project members”, three buttons to the left of the title, and a filterable table of members, currently only listing ourselves.</p>
@@ -254,7 +263,8 @@
 </div>
 </div>
 </div>
-<p>Now, everyone should be the member of one of your co-learners’ projects. We will now add an diary entry for the work we did on their experiments last weekend.</p>
+</section><section id="contribute-changes-to-project-repository"><h2 class="section-heading">Contribute Changes to Project Repository</h2>
+<hr class="half-width"><p>Now, everyone should be the member of one of your co-learners’ projects. We will now add an diary entry for the work we did on their experiments last weekend.</p>
 <p>First, we clone their repositories into the directory <code>rd-colleague</code>.</p>
 <pre><code>git clone https://gitlab.com/someothernovice/research-diary.git rd-colleague</code></pre>
 <pre><code>Cloning into 'research-diary'...
@@ -331,6 +341,7 @@ Fast-forward
 <h3 class="callout-title">Keypoints</h3>
 <div class="callout-content">
 <ul><li>Adding others as members allows them to directly contribute to your projects</li>
+<li>Members with sufficient rights can independently contribute to repositories</li>
 <li>You update your local repositories relative to the GitLab repository with the <code>git pull</code> command</li>
 </ul></div>
 </div>
@@ -339,10 +350,7 @@ Fast-forward
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="02-creating-projects-connecting-repositories.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
