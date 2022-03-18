@@ -1,7 +1,7 @@
 ---
-title: "Members and Groups"
-teaching: 0
-exercises: 0
+title: "Collaborate on GitLab"
+teaching: 15
+exercises: 5
 ---
 
 ::: questions
