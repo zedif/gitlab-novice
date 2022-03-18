@@ -4,20 +4,20 @@ teaching: 20
 exercises: 15
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions
+::: questions
 
 - How can I use GitLab to manage my project’s files?
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::
 
-::::::::::::::::::::::::::::::::::::: objectives
+::: objectives
 
 - Create a project.
 - Change name, description, visibility, and avatar of a project.
 - Push a local Git repository to a newly created project.
 - Delete a project.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::
 
 ## Creating a Project
 
