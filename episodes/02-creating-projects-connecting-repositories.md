@@ -175,10 +175,12 @@ project’s repository directly in GitLab. However, we will fill the project fro
 a local Git repository. To do that, we need a local Git repository with some
 content.
 
-Before any Git commit is created, we should configure Git to know our name and
-email address.
+##
 
-First we check whether they are already configured. We run
+Before we initialize a local Git repository, we make sure that Git is properly
+configured.
+
+To check for our name and email address, We run
 
 ```
 $ git config --global --get user.name
@@ -200,6 +202,19 @@ $ git config --global user.name "Some Novice"
 $ git config --global user.email "some.novice@example.com"
 ```
 {: .language-bash}
+
+It is now common to name the default branch `main`, rather than `master` as is
+still the default in Git. For more information see, for example, the
+[announcement of GitLab to change the default
+branch](https://about.gitlab.com/blog/2021/03/10/new-git-default-branch-name/)
+Since the discussion on this topic has started, Git has introduced a
+configuration value for the initial branch created by the `git init` command. We
+will use this, to make sure that all future repositories created locally start
+with a branch called `main`:
+
+```
+$ git config --global init.defaultBranch main
+```
 
 ::: callout
 
