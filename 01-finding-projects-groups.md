@@ -102,9 +102,8 @@ entry."}
 
 The first tab, “Your projects”, lists all projects that you are a member of.
 When you create a project you automatically become a member and others can add
-you as a member to a project. We will talk about another way to become a member
-of a project when we talk about groups, members, and permissions (TODO: LINK TO
-SECTION).
+you as a member to a project. We will learn about another way to become a member
+of a project in the [episode on groups](04-groups.md).
 
 The second tab, “Starred projects”, lists projects that you have “starred”. In
 this context “starring” it is akin to bookmarks in a browser. Every project

@@ -224,9 +224,15 @@ $ git config --global init.defaultBranch main
 
 ### Markdown Headlines
 
-You can mark a line in Markdown as a headline by prefixing it with between one
-and six `#` characters and one space character. The number of `#` characters
-indicates the heading’s level, with 1 being the most significant.
+In Markdown, headlines are marked by one up to six `#` characters followed by a
+space character in front of the text. The number of `#` characters indicates the
+heading’s level, with 1 being the most significant.
+
+For example, a level 3 headline:
+
+```
+### Interesting Section Title
+```
 
 :::
 
@@ -365,7 +371,22 @@ $ git remote add origin https://gitlab.com/somenovice/research-diary.git
 
 ### https:// vs git@
 
-TODO
+We assume throughout this lesson that the user has no SSH key is configured,
+because we do not want to make the setup of such a key a prerequisite.
+
+If however, a user has configured an SSH key for their account, GitLab would
+default to showing links to repositories in the form for Git over SSH instead.
+
+For example, without a configured key GitLab shows
+
+`https://gitlab.com/somenovice/research.git`
+
+for our example repository, whereas with a configured key it would show
+
+`git@gitlab.com:somenovice/research.git`.
+
+The HTTPS link still works if a SSH key is configured, it is only no longer
+shown by default.
 
 :::
 
