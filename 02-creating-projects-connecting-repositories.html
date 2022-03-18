@@ -139,12 +139,23 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         Creating Projects and Connecting Local Repositories
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+        
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#creating-a-project">Creating a Project</a></li>
+<li><a href="#configuring-git">Configuring Git</a></li>
+<li><a href="#creating-a-local-repository">Creating a Local Repository</a></li>
+<li><a href="#connecting-local-and-remote-repository">Connecting Local and Remote Repository</a></li>
+<li><a href="#deleting-a-project">Deleting a Project</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
         
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -200,7 +211,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Creating Projects and Connecting Local Repositories</h1>
-        <p> Last updated on 2022-03-16 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/02-creating-projects-connecting-repositories.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-03-18 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/02-creating-projects-connecting-repositories.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -231,7 +242,8 @@
 </div>
 </div>
 </div>
-<p>After knowing how to find groups and projects. We want to go from passively browsing GitLab to actively using it. We are going to create a project and connect a local Git repository to it.</p>
+<section id="creating-a-project"><h2 class="section-heading">Creating a Project</h2>
+<hr class="half-width"><p>After knowing how to find groups and projects. We want to go from passively browsing GitLab to actively using it. We are going to create a project and connect a local Git repository to it.</p>
 <p>To create a project, click on the button with the “+” symbol in the top menu bar and select “New project/repository”.</p>
 <p>Multiple options are presented for how to create the new project. In this lesson we will only look at, and use, the first option: “Create blank project”. So click on that.</p>
 <p>This leads to the following page:</p>
@@ -298,8 +310,9 @@
 </div>
 </div>
 <p>The project overview page presents us with many options to add content to the project’s repository directly in GitLab. However, we will fill the project from a local Git repository. To do that, we need a local Git repository with some content.</p>
-<p>Before any Git commit is created, we should configure Git to know our name and email address.</p>
-<p>First we check whether they are already configured. We run</p>
+</section><section id="configuring-git"><h2 class="section-heading">Configuring Git</h2>
+<hr class="half-width"><p>Before we initialize a local Git repository, we make sure that Git is properly configured.</p>
+<p>To check for our name and email address, We run</p>
 <pre><code>$ git config --global --get user.name</code></pre>
 <p>{: .language-bash}</p>
 <p>and</p>
@@ -309,7 +322,10 @@
 <pre><code>$ git config --global user.name "Some Novice"
 $ git config --global user.email "some.novice@example.com"</code></pre>
 <p>{: .language-bash}</p>
-<div id="callout5" class="callout callout">
+<p>It is now common to name the default branch <code>main</code>, rather than <code>master</code> as is still the default in Git. For more information see, for example, the <a href="https://about.gitlab.com/blog/2021/03/10/new-git-default-branch-name/" class="external-link">announcement of GitLab to change the default branch</a> Since the discussion on this topic has started, Git has introduced a configuration value for the initial branch created by the <code>git init</code> command. We will use this, to make sure that all future repositories created locally start with a branch called <code>main</code>:</p>
+<pre><code>$ git config --global init.defaultBranch main</code></pre>
+</section><section id="creating-a-local-repository"><h2 class="section-heading">Creating a Local Repository</h2>
+<hr class="half-width"><div id="callout5" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -340,7 +356,7 @@ $ git config --global user.email "some.novice@example.com"</code></pre>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The following sequence of commands create and navigate to new directory, initialize a repository, create a README file, and add it as part of a commit to the repository.</p>
 <pre><code>$ mkdir research-diary
@@ -370,7 +386,8 @@ nothing to commit, working tree clean</code></pre>
 <p>{: .language-bash}</p>
 <pre><code><span class="va">README.md</span></code></pre>
 <p>{: .output}</p>
-<p>Having thus created our local repository, we want to save it to our repository in GitLab. To that end, we have a look at the project overview page again; this time at the instructions toward the bottom of the page. They read:</p>
+</section><section id="connecting-local-and-remote-repository"><h2 class="section-heading">Connecting Local and Remote Repository</h2>
+<hr class="half-width"><p>Having thus created our local repository, we want to save it to our repository in GitLab. To that end, we have a look at the project overview page again; this time at the instructions toward the bottom of the page. They read:</p>
 <blockquote>
 <p><strong>Git global setup</strong></p>
 <pre><code>git config --global user.name "Some Novice"
@@ -448,7 +465,8 @@ branch 'main' set up to track 'origin/main'.</code></pre>
 <p>The buttons below, that we saw earlier, allow us to add specific files or navigate to the configuration of certain GitLab features. Note that one button changed from reading “Add README” to just “README”, since we added <code>README.md</code>. The button is now a link to the latest version of that file in the current branch.</p>
 <p>Then we see a list of files. So far, there is only <code>README.md</code>. The list also tells us through which commit it was last changed and when that commit was created.</p>
 <p>Finally, we see the markdown file <code>README.md</code> rendered. Because having a README-file in the root directory of a repository is a widespread convention, GitLab (and other platforms like it) usually render it on a project’s homepage.</p>
-<p>We just went through the beginning of a GitLab project’s life cycle. At its end, if it has one, a project gets deleted. We will go through the process of deleting a process now, without doing the step.</p>
+</section><section id="deleting-a-project"><h2 class="section-heading">Deleting a Project</h2>
+<hr class="half-width"><p>We just went through the beginning of a GitLab project’s life cycle. At its end, if it has one, a project gets deleted. We will go through the process of deleting a process now, without doing the step.</p>
 <p>Using the menu on the left, we navigate to the projects settings.</p>
 <p>At the bottom the page, we find a section named “Advanced”. We hit the “Expand” button right next to it and scroll to the bottom of the page.</p>
 <p>Notice that many of buttons here are not the usual blue or white, but first an orange-brown and then red. This indicates that we should be careful about clicking them. Things might break or, as we want to have a look at now, get deleted.</p>
@@ -472,10 +490,7 @@ branch 'main' set up to track 'origin/main'.</code></pre>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="01-finding-projects-groups.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="03-members.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -522,7 +537,7 @@ any links that you are not going to use.
   "url": "https://zedif.github.io/gitlab-novice/02-creating-projects-connecting-repositories.html",
   "identifier": "https://zedif.github.io/gitlab-novice/02-creating-projects-connecting-repositories.html",
   "dateCreated": "2022-03-18",
-  "dateModified": "2022-03-16",
+  "dateModified": "2022-03-18",
   "datePublished": "2022-03-18"
 }
 
