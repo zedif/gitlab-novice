@@ -510,7 +510,8 @@ going back**”, and a red button labeled “Delete project”."}
 Clicking the button will not directly delete the project, as the warning says,
 but requires you to type the project location and slug,
 `<username>/research-diary` in our case, into a text field and clicking another
-button. **Do not do that now!**
+button. **Do not delete the project now! We will work with it throughout this
+lesson.**
 
 ::: keypoints
 
