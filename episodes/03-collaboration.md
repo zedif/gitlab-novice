@@ -14,9 +14,6 @@ exercises: 5
 
 - Explain the concepts of members and roles.
 - Add a member to a project.
-- Create a group.
-- Explain how members relate to groups and a group’s projects.
-- Add a member to a group.
 
 :::
 
