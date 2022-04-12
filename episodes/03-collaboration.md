@@ -14,6 +14,7 @@ exercises: 5
 
 - Explain the concepts of members and roles.
 - Add a member to a project.
+- Contribute to a project that you are a member of.
 
 :::
 
