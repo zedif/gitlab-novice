@@ -1,5 +1,5 @@
 ---
-title: "Finding Projects and Groups"
+title: "Navigating GitLab"
 teaching: 10
 exercises: 15
 ---
