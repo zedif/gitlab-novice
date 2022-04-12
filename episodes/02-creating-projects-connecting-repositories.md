@@ -1,5 +1,5 @@
 ---
-title: "Creating Projects and Connecting Local Repositories"
+title: "GitLab Projects"
 teaching: 20
 exercises: 15
 ---
