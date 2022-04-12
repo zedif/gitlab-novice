@@ -1,5 +1,5 @@
 ---
-title: "Creating Projects and Connecting Local Repositories"
+title: "GitLab Projects"
 teaching: 20
 exercises: 15
 ---
@@ -504,13 +504,14 @@ At the bottom we find a section labeled “Delete Project”.
 
 ![Delete project dialog](fig/delete-project.png){alt="A box with red headline
 “Delete this project”, followed by the warning “This action deletes
-`somenovice/reseach-diary` and everything this project contains. **There is no going
-back**”, and a red button labeled “Delete project”."}
+`somenovice/reseach-diary` and everything this project contains. **There is no
+going back**”, and a red button labeled “Delete project”."}
 
 Clicking the button will not directly delete the project, as the warning says,
 but requires you to type the project location and slug,
 `<username>/research-diary` in our case, into a text field and clicking another
-button. **Do not do that now!**
+button. **Do not delete the project now! We will work with it throughout this
+lesson.**
 
 ::: keypoints
 

@@ -1,5 +1,5 @@
 ---
-title: "Finding Projects and Groups"
+title: "Navigation"
 teaching: 10
 exercises: 15
 ---
