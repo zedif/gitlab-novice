@@ -260,7 +260,7 @@
 <p>To create a project, click on the button with the “+” symbol in the top menu bar and select “New project/repository”.</p>
 <p>Multiple options are presented for how to create the new project. In this lesson we will only look at, and use, the first option: “Create blank project”. So click on that.</p>
 <p>This leads to the following page:</p>
-<figure><img src="../fig/create-project.png" alt="Create blank project dialog with text input fields labeled “Project name”, “Project URL”, “Project slug”, “Project description (optional)”, “Project deployment target (optional)”, a radio button element labeled “Visibility Level” with options “Private” and “Public”, and two checkboxes labeled “Initialize repository with a README” and “Enable Static Application Security Testing (SAST)”." class="figure mx-auto d-block"><figcaption>Create blank project dialog</figcaption></figure><p>The “Project name” field is for just that, the project name. Its value has no other purpose and can be changed at anytime without indirect consequences (the direct consequence being, that its name will be different). We will call it “Research Diary”.</p>
+<figure><img src="../fig/create-project.png" alt="Create blank project form with text input fields labeled “Project name”, “Project URL”, “Project slug”, “Project description (optional)”, “Project deployment target (optional)”, a radio button element labeled “Visibility Level” with options “Private” and “Public”, and two checkboxes labeled “Initialize repository with a README” and “Enable Static Application Security Testing (SAST)”." class="figure mx-auto d-block"><figcaption>Create blank project form</figcaption></figure><p>The “Project name” field is for just that, the project name. Its value has no other purpose and can be changed at anytime without indirect consequences (the direct consequence being, that its name will be different). We will call it “Research Diary”.</p>
 <p>As we fill in the project name, a project slug gets suggested in the respective field. The project slug is the last part of the project’s, and the associated Git repository’s, URL or web address.</p>
 <p>If the user belongs to at least one group, the URL’s middle part can be chosen in the drop-down field labeled “Project URL”, which defaults to the current user’s username. This is the location for a user’s project (and groups). Other options in the drop-down list are the groups in which the current user may create projects.</p>
 <div id="callout1" class="callout callout">
@@ -270,7 +270,7 @@
 <div id="project-url-and-project-slug" class="callout-inner">
 <h3 class="callout-title">Project URL and Project Slug</h3>
 <div class="callout-content">
-<p>The two fields under labels “Project URL” and “Project slug” are the only fields in this dialog for which changing the value later might cause problems. Since they determine the URL under which the project’s pages and the project’s Git repository can be found, changing them later might brake links and bookmarks as well as connections from Git repositories on other systems, for example on contributors’ machines.</p>
+<p>The two fields under labels “Project URL” and “Project slug” are the only fields in this form for which changing the value later might cause problems. Since they determine the URL under which the project’s pages and the project’s Git repository can be found, changing them later might brake links and bookmarks as well as connections from Git repositories on other systems, for example on contributors’ machines.</p>
 </div>
 </div>
 </div>
@@ -371,7 +371,7 @@ $ git config --global user.email "some.novice@example.com"</code></pre>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The following sequence of commands create and navigate to new directory, initialize a repository, create a README file, and add it as part of a commit to the repository.</p>
 <pre><code>$ mkdir research-diary
@@ -492,7 +492,7 @@ branch 'main' set up to track 'origin/main'.</code></pre>
 <p>At the bottom the page, we find a section named “Advanced”. We hit the “Expand” button right next to it and scroll to the bottom of the page.</p>
 <p>Notice that many of buttons here are not the usual blue or white, but first an orange-brown and then red. This indicates that we should be careful about clicking them. Things might break or, as we want to have a look at now, get deleted.</p>
 <p>At the bottom we find a section labeled “Delete Project”.</p>
-<figure><img src="../fig/delete-project.png" alt="A box with red headline “Delete this project”, followed by the warning “This action deletes `somenovice/reseach-diary` and everything this project contains. **There is no going back**”, and a red button labeled “Delete project”." class="figure mx-auto d-block"><figcaption>Delete project dialog</figcaption></figure><p>Clicking the button will not directly delete the project, as the warning says, but requires you to type the project location and slug, <code>&lt;username&gt;/research-diary</code> in our case, into a text field and clicking another button. <strong>Do not delete the project now! We will work with it throughout this lesson.</strong></p>
+<figure><img src="../fig/delete-project.png" alt="A box with red headline “Delete this project”, followed by the warning “This action deletes `somenovice/reseach-diary` and everything this project contains. **There is no going back**”, and a red button labeled “Delete project”." class="figure mx-auto d-block"><figcaption>Delete project section</figcaption></figure><p>Clicking the button will not directly delete the project, as the warning says, but requires you to type the project location and slug, <code>&lt;username&gt;/research-diary</code> in our case, into a text field and clicking another button. <strong>Do not delete the project now! We will work with it throughout this lesson.</strong></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
