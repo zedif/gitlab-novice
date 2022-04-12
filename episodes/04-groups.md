@@ -30,12 +30,12 @@ how members of a group relate to its subgroups and projects.
 ## Creating a Group
 
 In the top menu bar, we open the drop-down menu labeled with a boxed plus and
-select the menu item “New Group”. On the next page, we select “Create Group”,
+select the menu item “New Group”. On the next page, we select “Create group”,
 because that is what we want to do.
 
 This leads to the following page:
 
-![Create group dialog](fig/create-group.png){alt="Create group dialog with text
+![Create form dialog](fig/create-group.png){alt="Create group form with text
 input fields labeled “Group name”, “Group URL”, a radio button element labeled
 "Visibility Level” with options “Private” and “Public”, a drop-down field
 labeled “Role”, a radio button element labeled “Who will be using this group?”
