@@ -1,5 +1,5 @@
 ---
-title: "Collaborate on GitLab"
+title: "Collaboration"
 teaching: 15
 exercises: 5
 ---
