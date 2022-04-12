@@ -34,8 +34,8 @@ click on that.
 
 This leads to the following page:
 
-![Create blank project dialog](fig/create-project.png){alt="Create blank project
-dialog with text input fields labeled “Project name”, “Project URL”, “Project
+![Create blank project form](fig/create-project.png){alt="Create blank project
+form with text input fields labeled “Project name”, “Project URL”, “Project
 slug”, “Project description (optional)”, “Project deployment target (optional)”,
 a radio button element labeled “Visibility Level” with options “Private” and
 “Public”, and two checkboxes labeled “Initialize repository with a README” and
@@ -61,7 +61,7 @@ create projects.
 ### Project URL and Project Slug
 
 The two fields under labels “Project URL” and “Project slug” are the only fields
-in this dialog for which changing the value later might cause problems. Since
+in this form for which changing the value later might cause problems. Since
 they determine the URL under which the project’s pages and the project’s Git
 repository can be found, changing them later might brake links and bookmarks as
 well as connections from Git repositories on other systems, for example on
@@ -502,7 +502,7 @@ deleted.
 
 At the bottom we find a section labeled “Delete Project”.
 
-![Delete project dialog](fig/delete-project.png){alt="A box with red headline
+![Delete project section](fig/delete-project.png){alt="A box with red headline
 “Delete this project”, followed by the warning “This action deletes
 `somenovice/reseach-diary` and everything this project contains. **There is no
 going back**”, and a red button labeled “Delete project”."}

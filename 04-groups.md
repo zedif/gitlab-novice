@@ -30,12 +30,12 @@ how members of a group relate to its subgroups and projects.
 ## Creating a Group
 
 In the top menu bar, we open the drop-down menu labeled with a boxed plus and
-select the menu item “New Group”. On the next page, we select “Create Group”,
+select the menu item “New Group”. On the next page, we select “Create group”,
 because that is what we want to do.
 
 This leads to the following page:
 
-![Create group dialog](fig/create-group.png){alt="Create group dialog with text
+![Create form dialog](fig/create-group.png){alt="Create group form with text
 input fields labeled “Group name”, “Group URL”, a radio button element labeled
 "Visibility Level” with options “Private” and “Public”, a drop-down field
 labeled “Role”, a radio button element labeled “Who will be using this group?”
@@ -55,3 +55,21 @@ like that of a project.
 We will leave the remaining fields as they are and create the group by clicking
 the blue button labeled “Create group”. GitLab will navigate to the group home
 page, listing the group’s subgroups and projects (currently none).
+
+Now, we will have a look at how to create a project in the new group.
+
+In the top menu bar, we open the drop-down menu labeled with a boxed plus and
+select the menu item “New Project”. On the next page, we select “Create blank
+project”.
+
+This leads to the create blank project form page. We do not really want to
+create a project. Instead we have a look at the drop-down field under the
+heading “Project URL”. It will either show your username or one of the groups
+you belong to.
+
+If the field does not show the URL of the group that we just created, clicking
+on the field should open a drop-down list which includes it and allows us to
+select it.
+
+Submitting the form with our group’s URL selected would create a project in that
+group.
