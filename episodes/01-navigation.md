@@ -1,5 +1,5 @@
 ---
-title: "Navigating GitLab"
+title: "Navigation"
 teaching: 10
 exercises: 15
 ---
