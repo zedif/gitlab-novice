@@ -168,6 +168,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#creating-a-group">Creating a Group</a></li>
+<li><a href="#move-project-to-group">Move Project to Group</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -216,7 +217,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Groups</h1>
-        <p> Last updated on 2022-04-12 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/04-groups.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-04-13 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/04-groups.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -261,6 +262,26 @@
 <p>This leads to the create blank project form page. We do not really want to create a project. Instead we have a look at the drop-down field under the heading “Project URL”. It will either show your username or one of the groups you belong to.</p>
 <p>If the field does not show the URL of the group that we just created, clicking on the field should open a drop-down list which includes it and allows us to select it.</p>
 <p>Submitting the form with our group’s URL selected would create a project in that group.</p>
+</section><section id="move-project-to-group"><h2 class="section-heading">Move Project to Group</h2>
+<hr class="half-width"><p>We will now move our project to our group.</p>
+<p>On the side menu, we select “Settings” then “General”. On that page, we expand the section labeled “Advanced” and scroll down to the subsection labeled “Transfer Project”.</p>
+<p>Now, please read the subsections notes, with an emphasis on the list of things to be aware of.</p>
+<p>A few comments on the last two items of the list:</p>
+<p>The second to last tells us that we will need to update our local repositories to point to the new location. Because we are moving the project to a group from our own projects, the URL will change. So the URL we specified when adding the remote to our local repository will no longer be valid. We will test this, but will not change the URL, because we will move the project back in a bit.</p>
+<p>The last item on the list informs us about potential visibility changes. For example, moving a public project to a private group, will cause the project to become private.</p>
+<p>Having carefully read and thought about the warnings, we are ready to move our project. We select the group that we previously created from the drop-down field and click the button labeled “Transfer project”.</p>
+<p>A dialog appears and we confirm, that we are sure, by typing in the name of our project and clicking the button labeled “Confirm”.</p>
+<p>The project will be transferred to the group.</p>
+<p>To test that the URL changed, we switch to the shell and navigate to the directory containing our repository; <strong>Not the repository of our co-learner</strong>!</p>
+<p>Running</p>
+<pre><code>git remote get-url origin</code></pre>
+<p>{: .language-bash}</p>
+<p>should tell us that our project points to the old project URL. So, let us try to run</p>
+<pre><code>git pull</code></pre>
+<p>{: .language-bash}</p>
+<pre><code>Already up to date.</code></pre>
+<p>{: .output}</p>
+<p>That result is unexpected. The reason for this is that <a href="https://docs.gitlab.com/ee/user/project/repository/#what-happens-when-a-repository-path-changes" class="external-link">GitLab will redirect the old URLs to the new ones, as long as the old URLs do not point to a new project.</a></p>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
@@ -311,9 +332,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://zedif.github.io/gitlab-novice/04-groups.html",
   "identifier": "https://zedif.github.io/gitlab-novice/04-groups.html",
-  "dateCreated": "2022-04-12",
-  "dateModified": "2022-04-12",
-  "datePublished": "2022-04-12"
+  "dateCreated": "2022-04-13",
+  "dateModified": "2022-04-13",
+  "datePublished": "2022-04-13"
 }
 
   </script><script>
