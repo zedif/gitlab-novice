@@ -73,3 +73,64 @@ select it.
 
 Submitting the form with our group’s URL selected would create a project in that
 group.
+
+## Move Project to Group
+
+We will now move our project to our group.
+
+On the side menu, we select “Settings” then “General”. On that page, we expand
+the section labeled “Advanced” and scroll down to the subsection labeled
+“Transfer Project”.
+
+Now, please read the subsections notes, with an emphasis on the list of things
+to be aware of.
+
+A few comments on the last two items of the list:
+
+The second to last tells us that we will need to update our local repositories
+to point to the new location. Because we are moving the project to a group from
+our own projects, the URL will change. So the URL we specified when adding the
+remote to our local repository will no longer be valid. We will test this, but
+will not change the URL, because we will move the project back in a bit.
+
+The last item on the list informs us about potential visibility changes. For
+example, moving a public project to a private group, will cause the project to
+become private.
+
+Having carefully read and thought about the warnings, we are ready to move our
+project. We select the group that we previously created from the drop-down field
+and click the button labeled “Transfer project”.
+
+A dialog appears and we confirm, that we are sure, by typing in the name of our
+project and clicking the button labeled “Confirm”.
+
+The project will be transferred to the group.
+
+To test that the URL changed, we switch to the shell and navigate to the
+directory containing our repository; **Not the repository of our co-learner**!
+
+Running
+
+```
+git remote get-url origin
+```
+{: .language-bash}
+
+should tell us that our project points to the old project URL. So, let us try to
+run
+
+```
+git pull
+```
+{: .language-bash}
+```
+Already up to date.
+```
+{: .output}
+
+That result is unexpected. The reason for this is that [GitLab will redirect the
+old URLs to the new ones, as long as the old URLs do not point to a new
+project.][GitLab-Redirect]
+
+[GitLab-Redirect]: https://docs.gitlab.com/ee/user/project/repository/#what-happens-when-a-repository-path-changes
+
