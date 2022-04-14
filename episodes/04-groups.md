@@ -155,7 +155,7 @@ Steps to solve the challenge:
 1. Navigate to the group home page.
 2. Select “Group information”, then “Members” from the side bar menu.
 3. Click the “Invite members” button.
-4. Fill out dialog to invite your instructor with the “Guest” role.
+4. Fill in the dialog to invite your instructor with the “Guest” role.
 5. Click the “Invite” button.
 
 ::::
@@ -185,5 +185,33 @@ to**.
 Move your project back to your username space.
 
 This exercise should take about 5 minutes.
+
+:::
+
+## Delete Group
+
+Now that our group is empty again, we will delete it again, to be polite users
+of free resources. (If you created a group, that you actually intend to keep, do
+not delete it.)
+
+::: challenge
+
+### Delete a Group
+
+Delete your group. The process is the same as for the deletion of a project.
+
+This exercise should take about 5 minutes.
+
+:::: solution
+
+Steps to solve the challenge:
+
+1. Navigate to the group home page.
+2. Select “Settings”, then “General” from the side bar menu.
+3. Expand the “Advanced” section and scroll all the way down.
+4. Click “Remove group”.
+5. Fill in the dialog and click “Confirm”.
+
+::::
 
 :::
