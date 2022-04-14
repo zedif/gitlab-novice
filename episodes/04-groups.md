@@ -215,3 +215,11 @@ Steps to solve the challenge:
 ::::
 
 :::
+
+::: keypoints
+
+- Groups and subgroups are used to organize projects.
+- Groups can have members.
+- Projects and groups inherit members from the group they belong to.
+
+:::
