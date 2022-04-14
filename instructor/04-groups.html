@@ -170,6 +170,7 @@
       <div class="accordion-body">
         <ul><li><a href="#creating-a-group">Creating a Group</a></li>
 <li><a href="#move-project-to-group">Move Project to Group</a></li>
+<li><a href="#adding-members-to-group">Adding Members to Group</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -195,7 +196,7 @@
               </div>
             </div>
 
-            
+            <a href="../instructor/aio.html">See all in one page</a>
 
             <hr class="d-none d-sm-block d-md-none"><div class="d-grid gap-1">
             
@@ -219,7 +220,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Groups</h1>
-        <p> Last updated on 2022-04-13 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/04-groups.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-04-14 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/04-groups.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 0 minutes </p>
         
         <div class="text-end">
@@ -286,6 +287,55 @@
 <pre><code>Already up to date.</code></pre>
 <p>{: .output}</p>
 <p>That result is unexpected. The reason for this is that <a href="https://docs.gitlab.com/ee/user/project/repository/#what-happens-when-a-repository-path-changes" class="external-link">GitLab will redirect the old URLs to the new ones, as long as the old URLs do not point to a new project.</a></p>
+</section><section id="adding-members-to-group"><h2 class="section-heading">Adding Members to Group</h2>
+<hr class="half-width"><div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="adding-members" class="callout-inner">
+<h3 class="callout-title">Adding Members</h3>
+<div class="callout-content">
+<p>Add your instructor as a member of your group with the role of “Guest”. The process is the same as to add members to a project.</p>
+<p>Hint: After adding a member, you might need to reload the members page to see the new member in the list.</p>
+<p>This exercise should take about 5 minutes.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Show me the solution
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>Steps to solve the challenge:</p>
+<ol style="list-style-type: decimal"><li>Navigate to the group home page.</li>
+<li>Select “Group information”, then “Members” from the side bar menu.</li>
+<li>Click the “Invite members” button.</li>
+<li>Fill out dialog to invite your instructor with the “Guest” role.</li>
+<li>Click the “Invite” button.</li>
+</ol></div>
+</div>
+</div>
+</div>
+<p>After adding a member to the group, we have look at the member list of our research diary project.</p>
+<p>The list has three entries: ourselves, our co-learner, and our instructor. We have the “Owner” role and, as its creator, are a direct member of the project. Our co-learner has the “Developer” role that we assigned them and are also a direct member of the project, as we added them directly to the project.</p>
+<p>The entry we are really interested in is that of the instructor. We added them as a “Guest” to the group. Now, they show up in the list of this project with the same role. The reason is, as the column “Source” tells us, that our project is in our group, and our instructor is a member of that group.</p>
+<p>That means, <strong>projects and groups inherit the members of the group they belong to</strong>.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="move-project" class="callout-inner">
+<h3 class="callout-title">Move project</h3>
+<div class="callout-content">
+<p>Move your project back to your username space.</p>
+<p>This exercise should take about 5 minutes.</p>
+</div>
+</div>
+</div>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
@@ -314,9 +364,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.3.6" class="external-link">sandpaper (0.3.6)</a>,
-      <a href="https://github.com/carpentries/pegboard" class="external-link">,
-      and </a><a href="https://github.com/carpentries/varnish/tree/0.1.8" class="external-link">varnish (0.1.8)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.4.0" class="external-link">sandpaper (0.4.0)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/0.2.4" class="external-link">pegboard (0.2.4)</a>,
+      and <a href="https://github.com/carpentries/varnish/tree/0.1.9" class="external-link">varnish (0.1.9)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -336,9 +386,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://zedif.github.io/gitlab-novice/instructor/04-groups.html",
   "identifier": "https://zedif.github.io/gitlab-novice/instructor/04-groups.html",
-  "dateCreated": "2022-04-13",
-  "dateModified": "2022-04-13",
-  "datePublished": "2022-04-13"
+  "dateCreated": "2022-04-14",
+  "dateModified": "2022-04-14",
+  "datePublished": "2022-04-14"
 }
 
   </script><script>
