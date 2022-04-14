@@ -1,7 +1,7 @@
 ---
 title: "Groups"
-teaching: 0
-exercises: 0
+teaching: 15
+exercises: 15
 ---
 
 ::: questions
@@ -213,5 +213,13 @@ Steps to solve the challenge:
 5. Fill in the dialog and click “Confirm”.
 
 ::::
+
+:::
+
+::: keypoints
+
+- Groups and subgroups are used to organize projects.
+- Groups can have members.
+- Projects and groups inherit members from the group they belong to.
 
 :::
