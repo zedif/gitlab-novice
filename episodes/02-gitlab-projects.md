@@ -247,7 +247,7 @@ Remember to use a [good commit message][CommitMessages] for your commit.
 
 This exercise should take about 10 minutes.
 
-::: solution
+:::: solution
 
 The following sequence of commands create and navigate to new directory,
 initialize a repository, create a README file, and add it as part of a
@@ -270,7 +270,7 @@ $ git commit -m "Add README.md"
 More commonly, the file `README.md` would be created in text editor, but
 that is difficult to concisely represent here.
 
-:::
+::::
 
 :::
 
