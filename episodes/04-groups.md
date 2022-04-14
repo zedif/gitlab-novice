@@ -134,3 +134,56 @@ project.][GitLab-Redirect]
 
 [GitLab-Redirect]: https://docs.gitlab.com/ee/user/project/repository/#what-happens-when-a-repository-path-changes
 
+## Adding Members to Group
+
+::: challenge
+
+### Adding Members
+
+Add your instructor as a member of your group with the role of “Guest”. The
+process is the same as to add members to a project.
+
+Hint: After adding a member, you might need to reload the members page to see
+the new member in the list.
+
+This exercise should take about 5 minutes.
+
+:::: solution
+
+Steps to solve the challenge:
+
+1. Navigate to the group home page.
+2. Select “Group information”, then “Members” from the side bar menu.
+3. Click the “Invite members” button.
+4. Fill out dialog to invite your instructor with the “Guest” role.
+5. Click the “Invite” button.
+
+::::
+
+:::
+
+After adding a member to the group, we have look at the member list of our
+research diary project.
+
+The list has three entries: ourselves, our co-learner, and our instructor. We
+have the “Owner” role and, as its creator, are a direct member of the project.
+Our co-learner has the “Developer” role that we assigned them and are also a
+direct member of the project, as we added them directly to the project.
+
+The entry we are really interested in is that of the instructor. We added them
+as a “Guest” to the group. Now, they show up in the list of this project with
+the same role. The reason is, as the column “Source” tells us, that our project
+is in our group, and our instructor is a member of that group.
+
+That means, **projects and groups inherit the members of the group they belong
+to**.
+
+::: challenge
+
+### Move project
+
+Move your project back to your username space.
+
+This exercise should take about 5 minutes.
+
+:::
