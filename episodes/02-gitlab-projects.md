@@ -260,7 +260,7 @@ $ git init
 $ echo "# Research Diary" > README.md
 $ echo "" >> README.md
 $ echo "This repository contains our research diary." >> README.md
-$ echo "Each day gets his own file." >> README.md
+$ echo "Each day gets its own file." >> README.md
 $ echo "We use the Markdown format for our files." >> README.md
 $ git add README.md
 $ git commit -m "Add README.md"
