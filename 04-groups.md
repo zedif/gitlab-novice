@@ -35,7 +35,7 @@ because that is what we want to do.
 
 This leads to the following page:
 
-![Create form dialog](fig/create-group.png){alt="Create group form with text
+![Create group form](fig/create-group.png){alt="Create group form with text
 input fields labeled “Group name”, “Group URL”, a radio button element labeled
 "Visibility Level” with options “Private” and “Public”, a drop-down field
 labeled “Role”, a radio button element labeled “Who will be using this group?”

@@ -29,7 +29,7 @@ colleagues to contribute to our research diary, when they keep tabs on our
 experiments for us on the weekends. To achieve this, we will grant others access
 to our GitLab project.
 
-Using the menu on the right side of the project homepage (or nearly any other
+Using the menu on the left side of the project homepage (or nearly any other
 project page), we navigate to the project members page hovering over or clicking
 on “Project Information” and then clicking on “Members” in the submenu. The
 project member page should look similar to the following screenshot:
