@@ -592,7 +592,7 @@ $ git config --global user.email "some.novice@example.com"</code></pre>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The following sequence of commands create and navigate to new directory, initialize a repository, create a README file, and add it as part of a commit to the repository.</p>
 <pre><code>$ mkdir research-diary
@@ -811,6 +811,13 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</code></pre>
 <pre><code><span class="va">ls</span></code></pre>
 <pre><code><span class="va">README.md</span></code></pre>
 <p>Now we are sure that everything is in order with the cloned repository and we can add our lab entry. Let us do that:</p>
+<pre><code>echo "* Injected transformational fluid into moss sample." &gt; 2022-03-13.md
+echo "* Moss turned into several butterflys. SUCCESS!" &gt;&gt; 2022-03-13.md
+git add 2022-03.13.md
+git commit -m "Record work on experiment A-13"</code></pre>
+<pre><code>[main 4eac24c] Record work on experiment A-13
+ 1 file changed, 2 insertions(+)
+ create mode 100644 2022-03-13.md</code></pre>
 <div id="callout1" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -826,13 +833,6 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</code></pre>
 </div>
 </div>
 </div>
-<pre><code>echo "* Injected transformational fluid into moss sample." &gt; 2022-03-13.md
-echo "* Moss turned into several butterflys. SUCCESS!" &gt;&gt; 2022-03-13.md
-git add 2022-03.13.md
-git commit -m "Record work on experiment A-13"</code></pre>
-<pre><code>[main 4eac24c] Record work on experiment A-13
- 1 file changed, 2 insertions(+)
- create mode 100644 2022-03-13.md</code></pre>
 <p>We check Git’s log for our commit:</p>
 <pre><code>git log -n 1</code></pre>
 <pre><code>commit 4eac24cafbcebc4f0d528bd2e1246a4624265085 (HEAD -&gt; main)
@@ -979,7 +979,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Steps to solve the challenge:</p>
 <ol style="list-style-type: decimal">
@@ -1031,7 +1031,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Steps to solve the challenge:</p>
 <ol style="list-style-type: decimal">
