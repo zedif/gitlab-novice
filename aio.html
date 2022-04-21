@@ -206,6 +206,18 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="05-issues.html">Issues</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -363,7 +375,7 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The project page is located at <a href="https://gitlab.com/inkscape/inkscape" class="external-link uri">https://gitlab.com/inkscape/inkscape</a>. If you found yourself at <a href="https://gitlab.com/inkscape" class="external-link uri">https://gitlab.com/inkscape</a> you found the group page of the Inkscape community.</p>
 </div>
@@ -399,7 +411,7 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>The top-level groups name is Inkscape as it is written at the top of the main content.</li>
@@ -592,7 +604,7 @@ $ git config --global user.email "some.novice@example.com"</code></pre>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The following sequence of commands create and navigate to new directory, initialize a repository, create a README file, and add it as part of a commit to the repository.</p>
 <pre><code>$ mkdir research-diary
@@ -979,7 +991,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Steps to solve the challenge:</p>
 <ol style="list-style-type: decimal">
@@ -1031,7 +1043,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Steps to solve the challenge:</p>
 <ol style="list-style-type: decimal">
@@ -1057,6 +1069,82 @@ any links that you are not going to use.
 <li>Groups can have members.</li>
 <li>Projects and groups inherit members from the group they belong to.</li>
 </ul>
+</div>
+</div>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
+</section></section><section id="episode-05-issues"><p>Content from <a href="05-issues.html">Issues</a></p>
+<hr>
+<p> Last updated on 2022-04-21 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/05-issues.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can I use GitLab to manage development or a whole project?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Create an issue.</li>
+<li>Comment on an issue.</li>
+<li>Close an issue.</li>
+<li>Use boards to get an overview the state of issues.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="create-issue"><h2 class="section-heading">Create Issue</h2>
+<hr class="half-width">
+<p>Before our excursion to learn about groups, we contributed lab notes to our co-learner’s repository. Having done that, we think we should be listed as contributors in the documentation of that repository. Since, we want our co-learner to do the honors, we create an issue in their repository.</p>
+<p>With our co-learner’s help, we navigate to their project. On the side bar menu on the left we click the entry labeled “Issues” and on the following page we click on the button labeled “New issue”.</p>
+<p>This leads us to the following form:</p>
+<figure><img src="fig/issue.png" alt="New issue form with a text input field labeled “Title” with subscript “Add description templates to help your contributors communicate effectively!”, the second and third word being a link, a drop-down field labeled “Type” showing the word “Issue“, a multi-line text input field with buttons for text formatting labeled “Description”, a check box labeled “This issue is confidential and should only be visible to team members with at least Reporter access.”, drop-down fields labeled “Assignee“, “Milestone”, and “Label” showing “Unassigned“, “Milestone”, and “Labels”, respectively, a date input field labeled “Due date”, and two buttons labeled “Create Issue” and “Cancel”." class="figure mx-auto d-block"><figcaption>New issue form</figcaption></figure><p>For our issue we provide a short, descriptive title, for example “Recognize outside contributors” and a description:</p>
+<pre><code>Outside contributors should be mentioned in the project’s documentation. Their
+names could be listed in one of the following locations:
+
+* a section of `README.md`
+* a separate `CONTRIBUTORS.md` file</code></pre>
+<div id="callout1" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="markdown-code-spans-and-blocks" class="callout-inner">
+<h3 class="callout-title">Markdown Code Spans and Blocks</h3>
+<div class="callout-content">
+<p>Markdown provides syntax for formatting text in a monospaced font, this is usually used to typeset code, because code is usually written to be readable in such fonts.</p>
+<p>For a monospaced snippet within a normal paragraph, enclose the snippet in a single backquote (also called backtick or grave accent), for example</p>
+<pre><code>The filename `README.md` will be set in a monospaced font.</code></pre>
+<p>will be typeset as:</p>
+<p>The filename <code>README.md</code> will be set in a monospaced font.</p>
+<p>For a whole block of monospaced text, for example some lines of code, start and end the block with a line consisting of three or more backquotes, where the number should match for start and end, for example</p>
+<pre><code>```
+# This python code will also be set in a monospaced font, which preserves
+# relative indentation between lines.
+def some_function():
+    pass
+```</code></pre>
+<p>will be typeset as:</p>
+<pre><code># This python code will also be set in a monospaced font, which preserves
+# relative indentation between lines.
+def some_function():
+    pass</code></pre>
 </div>
 </div>
 </div>
