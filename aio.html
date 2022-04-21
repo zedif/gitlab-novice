@@ -363,7 +363,7 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The project page is located at <a href="https://gitlab.com/inkscape/inkscape" class="external-link uri">https://gitlab.com/inkscape/inkscape</a>. If you found yourself at <a href="https://gitlab.com/inkscape" class="external-link uri">https://gitlab.com/inkscape</a> you found the group page of the Inkscape community.</p>
 </div>
@@ -399,7 +399,7 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li>The top-level groups name is Inkscape as it is written at the top of the main content.</li>
@@ -592,7 +592,7 @@ $ git config --global user.email "some.novice@example.com"</code></pre>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The following sequence of commands create and navigate to new directory, initialize a repository, create a README file, and add it as part of a commit to the repository.</p>
 <pre><code>$ mkdir research-diary
@@ -738,7 +738,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="episode-03-collaboration"><p>Content from <a href="03-collaboration.html">Collaboration</a></p>
 <hr>
-<p> Last updated on 2022-04-12 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/03-collaboration.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-04-21 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/03-collaboration.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -773,7 +773,7 @@ any links that you are not going to use.
 <hr class="half-width">
 <p>So far, each of you has created a GitLab project that not one but you can contribute to; depending on the visibility setting, no one but you might be able to even see it.</p>
 <p>Git and GitLab can be and is used for one-person projects. But we want our colleagues to contribute to our research diary, when they keep tabs on our experiments for us on the weekends. To achieve this, we will grant others access to our GitLab project.</p>
-<p>Using the menu on the right side of the project homepage (or nearly any other project page), we navigate to the project members page hovering over or clicking on “Project Information” and then clicking on “Members” in the submenu. The project member page should look similar to the following screenshot:</p>
+<p>Using the menu on the left side of the project homepage (or nearly any other project page), we navigate to the project members page hovering over or clicking on “Project Information” and then clicking on “Members” in the submenu. The project member page should look similar to the following screenshot:</p>
 <figure><img src="fig/initial-members.png" alt="Webpage coutout titled “Project Members” with three buttons next to the title: “Import from a project”, “Invite a group”, and “Invite members”. Below a table listing the project’s members, showing account holder‘s name with account name, the membership source, when access was granted, the member’s maximum role and the membership expiration date. The table contains one column: ”Philipp Matthias Schäfer, @fiveop, Direct member, 2 weeks ago by himself, Maintainer, and no Expiration date." class="figure mx-auto d-block"><figcaption>Project members page</figcaption></figure><p>On the page we can see the page title, “Project members”, three buttons to the left of the title, and a filterable table of members, currently only listing ourselves.</p>
 <p>The table shows our full name and account name, why we are a member of this project, when we got access—at the moment we created the project—what our maximum role is—more on that in a bit—and a disabled membership expiration date widget.</p>
 <p>For practice we will all add an instructor to our project and remove them again right away. Click the button labeled “Invite members”, type in the username your instructors provided you with into the search field, make sure that “Guest” is selected as a role, and click the button labeled “Invite”.</p>
@@ -889,7 +889,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="episode-04-groups"><p>Content from <a href="04-groups.html">Groups</a></p>
 <hr>
-<p> Last updated on 2022-04-14 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/04-groups.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-04-21 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/04-groups.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -928,7 +928,7 @@ any links that you are not going to use.
 <hr class="half-width">
 <p>In the top menu bar, we open the drop-down menu labeled with a boxed plus and select the menu item “New Group”. On the next page, we select “Create group”, because that is what we want to do.</p>
 <p>This leads to the following page:</p>
-<figure><img src="fig/create-group.png" alt="Create form dialog" class="figure mx-auto d-block">{alt=“Create group form with text input fields labeled “Group name”, “Group URL”, a radio button element labeled “Visibility Level” with options “Private” and “Public”, a drop-down field labeled “Role”, a radio button element labeled “Who will be using this group?” with options “My company or team” and “Just me”, a drop-down field labeled “What will you use this group for?” and an text input field labeled “Email 1” with a button to add more under the heading “Invite members (optional)”."}</figure><p>Choose any name for the group, for example a fictional research group like “Ant-Sized Elephants’ Applications Lab”. When you move the focus out of the input field, for example by pressing the tabulator key, GitLab will suggest a URL for the group. Usually, we might want to adapt it, but for now all we care about that it is available.</p>
+<figure><img src="fig/create-group.png" alt="Create group form" class="figure mx-auto d-block">{alt=“Create group form with text input fields labeled “Group name”, “Group URL”, a radio button element labeled “Visibility Level” with options “Private” and “Public”, a drop-down field labeled “Role”, a radio button element labeled “Who will be using this group?” with options “My company or team” and “Just me”, a drop-down field labeled “What will you use this group for?” and an text input field labeled “Email 1” with a button to add more under the heading “Invite members (optional)”."}</figure><p>Choose any name for the group, for example a fictional research group like “Ant-Sized Elephants’ Applications Lab”. When you move the focus out of the input field, for example by pressing the tabulator key, GitLab will suggest a URL for the group. Usually, we might want to adapt it, but for now all we care about that it is available.</p>
 <p>You can leave the group’s visibility private. The visibility of a group works like that of a project.</p>
 <p>We will leave the remaining fields as they are and create the group by clicking the blue button labeled “Create group”. GitLab will navigate to the group home page, listing the group’s subgroups and projects (currently none).</p>
 <p>Now, we will have a look at how to create a project in the new group.</p>
@@ -1106,9 +1106,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://zedif.github.io/gitlab-novice/aio.html",
   "identifier": "https://zedif.github.io/gitlab-novice/aio.html",
-  "dateCreated": "2022-04-14",
-  "dateModified": "2022-04-19",
-  "datePublished": "2022-04-19"
+  "dateCreated": "2022-04-21",
+  "dateModified": "2022-04-21",
+  "datePublished": "2022-04-21"
 }
 
   </script><script>
