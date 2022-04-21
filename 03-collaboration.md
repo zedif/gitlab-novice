@@ -123,6 +123,18 @@ README.md
 Now we are sure that everything is in order with the cloned repository and we
 can add our lab entry. Let us do that:
 
+```
+echo "* Injected transformational fluid into moss sample." > 2022-03-13.md
+echo "* Moss turned into several butterflys. SUCCESS!" >> 2022-03-13.md
+git add 2022-03.13.md
+git commit -m "Record work on experiment A-13"
+```
+```
+[main 4eac24c] Record work on experiment A-13
+ 1 file changed, 2 insertions(+)
+ create mode 100644 2022-03-13.md
+```
+
 ::: callout
 
 ### Markdown Lists
@@ -141,18 +153,6 @@ For example:
 ```
 
 :::
-
-```
-echo "* Injected transformational fluid into moss sample." > 2022-03-13.md
-echo "* Moss turned into several butterflys. SUCCESS!" >> 2022-03-13.md
-git add 2022-03.13.md
-git commit -m "Record work on experiment A-13"
-```
-```
-[main 4eac24c] Record work on experiment A-13
- 1 file changed, 2 insertions(+)
- create mode 100644 2022-03-13.md
-```
 
 We check Git’s log for our commit:
 
