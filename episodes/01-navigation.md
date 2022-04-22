@@ -130,7 +130,7 @@ internal visibility anyway.
 
 Self-hosted instances might also disable some visibility types. For example,
 the public visibility might be disabled, to prevent users from publishing
-something to whole internet.
+something to the whole internet.
 
 :::
 

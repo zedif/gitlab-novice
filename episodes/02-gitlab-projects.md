@@ -116,7 +116,7 @@ information.
 It is common to write README files in Markdown format, indicated by the
 filename suffix `.md`.
 
-Platforms like GitLab show the contents of project’s README file on its
+Platforms like GitLab show the contents of a project’s README file on its
 homepage; if it is in Markdown format, in its rendered form.
 
 :::

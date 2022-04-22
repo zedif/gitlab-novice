@@ -20,7 +20,7 @@ exercises: 5
 
 ## Adding Project Members
 
-So far, each of you has created a GitLab project that not one but you can
+So far, each of you has created a GitLab project that no one but you can
 contribute to; depending on the visibility setting, no one but you might be able
 to even see it.
 
