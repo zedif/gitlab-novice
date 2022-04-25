@@ -93,7 +93,7 @@ weekend.
 First, we clone their repositories into the directory `rd-colleague`.
 
 ```
-git clone https://gitlab.com/someothernovice/research-diary.git rd-colleague
+$ git clone https://gitlab.com/someothernovice/research-diary.git rd-colleague
 ```
 ```
 Cloning into 'research-diary'...
@@ -108,14 +108,14 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Moving into the directory
 
 ```
-cd rd-colleague
+$ cd rd-colleague
 ```
 
 we check its contents. If your colleague did everything we did, it should
 contain a single file, `README.md`.
 
 ```
-ls
+$ ls
 ```
 ```
 README.md
@@ -135,8 +135,8 @@ work, listing the work we did:
 Then we add the file as part of a new commit to the repository:
 
 ```
-git add 2022-03.13.md
-git commit -m "Record work on experiment A-13"
+$ git add 2022-03.13.md
+$ git commit -m "Record work on experiment A-13"
 ```
 ```
 [main 4eac24c] Record work on experiment A-13
@@ -166,7 +166,7 @@ For example:
 We check Git’s log for our commit:
 
 ```
-git log -n 1
+$ git log -n 1
 ```
 ```
 commit 4eac24cafbcebc4f0d528bd2e1246a4624265085 (HEAD -> main)
@@ -179,7 +179,7 @@ Date:   Thu Mar 17 16:00:23 2022 +0000
 And everything seems to be in order, so we push our change.
 
 ```
-git push
+$ git push
 ```
 ```
 Username for 'https://gitlab.com': somenovice
@@ -199,13 +199,13 @@ last weekend. Curious what our colleagues did for us, we navigate back to the
 directory of our own repository in the shell, for example:
 
 ```
-cd ../research-diary
+$ cd ../research-diary
 ```
 
 There, we pull the changes that our colleagues previously pushed.
 
 ```
-git pull
+$ git pull
 ```
 ```
 Username for 'https://gitlab.com': somenovice
@@ -222,7 +222,7 @@ From the output’s last line, we can already see that a single file,
 us, what our colleague did:
 
 ```
-cat 2022-03-13.md
+$ cat 2022-03-13.md
 ```
 ```
 * Injected transformational fluid into moss sample.
