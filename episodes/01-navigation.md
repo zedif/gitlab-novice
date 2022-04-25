@@ -135,10 +135,10 @@ something to the whole internet.
 :::
 
 When working with GitLab, most of the time you will want to access projects you
-are already a member of. In that case the list on the “Your projects” will be
-all you need to find the project you are looking for. When the list becomes
-long, the search field next to the tabs allows you to filter the projects by
-name, just as the placeholder text suggests.
+are already a member of (in the GitLab sense). In that case the list on the
+“Your projects” will be all you need to find the project you are looking for.
+When the list becomes long, the search field next to the tabs allows you to
+filter the projects by name, just as the placeholder text suggests.
 
 You can also use that search field on the “Explore projects” tab to search
 through all projects that you can look at.
