@@ -201,7 +201,8 @@ delete it.)
 
 ### Delete a Group
 
-Delete your group. The process is the same as for the deletion of a project.
+Delete your group. You find the deletion form at the same position in the
+group’s settings, as the project deletion form in a project’s settings.
 
 This exercise should take about 5 minutes.
 

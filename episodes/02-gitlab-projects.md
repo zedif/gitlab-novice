@@ -15,7 +15,7 @@ exercises: 15
 - Create a project.
 - Change name, description, visibility, and avatar of a project.
 - Push a local Git repository to a newly created project.
-- Delete a project.
+- Archive (or delete) a project.
 
 :::
 
@@ -491,40 +491,39 @@ Finally, we see the markdown file `README.md` rendered. Because having a
 README-file in the root directory of a repository is a widespread convention,
 GitLab (and other platforms like it) usually render it on a project’s homepage.
 
-## Deleting a Project
+## Archiving a Project
 
 We just went through the beginning of a GitLab project’s life cycle. At its end,
-if it has one, a project gets deleted. We will go through the process of
-deleting a process now, without doing the step.
+if it has one, a project gets archived (or deleted). We will now go through the
+process of archiving a project, without completing the step.
 
 Using the menu on the left, we navigate to the projects settings.
 
 At the bottom the page, we find a section named “Advanced”. We hit the “Expand”
-button right next to it and scroll to the bottom of the page.
+button right next to it and scroll down the page.
 
-Notice that many of buttons here are not the usual blue or white, but first an
-orange-brown and then red. This indicates that we should be careful about
-clicking them. Things might break or, as we want to have a look at now, get
-deleted.
+Notice that many of buttons here are not the usual blue or white, but after
+scrolling a little they are red. This indicates that we should be careful about
+clicking them. Things might break or get deleted.
 
-At the bottom we find a section labeled “Delete Project”.
+Scrolling back up, we find a section labeled “Archive Project”. Clicking the
+button will not delete the project. Instead it will be placed in a read-only
+mode. Everything will be preserved but nothing can be changed anymore. In
+addition, the project no longer shows up in search results and on the page for
+exploring projects.
 
-![Delete project section](fig/delete-project.png){alt="A box with red headline
-“Delete this project”, followed by the warning “This action deletes
-`somenovice/reseach-diary` and everything this project contains. **There is no
-going back**”, and a red button labeled “Delete project”."}
+Most of the time archiving a project is preferable to deleting it, in particular
+when it comes to research projects. **Do not archive the project now! We will
+work with it throughout this lesson.**
 
-Clicking the button will not directly delete the project, as the warning says,
-but requires you to type the project location and slug,
-`<username>/research-diary` in our case, into a text field and clicking another
-button. **Do not delete the project now! We will work with it throughout this
-lesson.**
+At the bottom of the page is also a section for deleting a project, in case you
+ever think that is the right thing to do.
 
 ::: keypoints
 
 - Creating a GitLab project requires not more than a few clicks and providing a name.
 - Changing the name of description of a GitLab project after creation has no indirect consequences.
 - You can fill a fresh GitLab project’s repository by pushing a local repository.
-- You can delete a project, but the option is hidden well.
+- You can archive a project (and you can delete a project, but often should not.)
 
 :::
