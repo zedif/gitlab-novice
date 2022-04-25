@@ -77,9 +77,10 @@ of Markdown files”
 
 ### Markdown
 
-Markdown is a markup language, like HTML on which the World Wide Web is based,
-whose markup directives, indicating for example that something is a headline or
-a list item, are such that they serve their purpose even in the plain text form.
+Markdown is a markup language, like HTML on which the World Wide Web is based or
+wikitext used to write Wikipedia’s content. Its markup directives, indicating
+for example that something is a headline or a list item, are such that they
+serve their purpose even in the plain text form.
 
 There exist many variants (or flavors) of Markdown and GitLab has [its
 own](https://docs.gitlab.com/ee/user/markdown.html). Other than for rendering
@@ -116,7 +117,7 @@ information.
 It is common to write README files in Markdown format, indicated by the
 filename suffix `.md`.
 
-Platforms like GitLab show the contents of project’s README file on its
+Platforms like GitLab show the contents of a project’s README file on its
 homepage; if it is in Markdown format, in its rendered form.
 
 :::
@@ -249,26 +250,32 @@ This exercise should take about 10 minutes.
 
 :::: solution
 
-The following sequence of commands create and navigate to new directory,
-initialize a repository, create a README file, and add it as part of a
-commit to the repository.
+We start by creating and navigating to a new directory, `research-diary`. There
+we initialize a git repository.
 
 ```
 $ mkdir research-diary
 $ cd research-diary
 $ git init
-$ echo "# Research Diary" > README.md
-$ echo "" >> README.md
-$ echo "This repository contains our research diary." >> README.md
-$ echo "Each day gets its own file." >> README.md
-$ echo "We use the Markdown format for our files." >> README.md
+```
+
+Next we create a file called `README.md` with the following content using our
+preferred text editor.
+
+```
+# Research Diary
+
+This repository contains our research diary.
+Each day gets its own file.
+We use the Markdown format for our files.
+```
+
+Finally, we stage the added file using and create a commit.
+
+```
 $ git add README.md
 $ git commit -m "Add README.md"
 ```
-{: .language-bash}
-
-More commonly, the file `README.md` would be created in text editor, but
-that is difficult to concisely represent here.
 
 ::::
 
