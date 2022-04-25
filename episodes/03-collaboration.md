@@ -228,5 +228,6 @@ We successfully collaborated through GitLab on a project of text files.
 - Adding others as members allows them to directly contribute to your projects
 - Members with sufficient rights can independently contribute to repositories
 - You update your local repositories relative to the GitLab repository with the `git pull` command
+- You send changes committed in your local repository to the GitLab repository with the `git push` command.
 
 :::
