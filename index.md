@@ -27,5 +27,6 @@ GitLab is mainly a platform for Git repositories. So a major part of this lesson
 requires a basic familiarity with Git. To understand the material on GitLab’s
 continuous integration (CI) feature you need to know your way around the shell
 and it might help to have the most basic understanding of how to use [Docker].
+Knowledge on how to create and edit text files is also assumed.
 
 [Docker]: https://www.docker.com/
