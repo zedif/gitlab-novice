@@ -106,7 +106,7 @@ you as a member to a project. We will learn about another way to become a member
 of a project in the [episode on groups](04-groups.md).
 
 The second tab, “Starred projects”, lists projects that you have “starred”. In
-this context “starring” it is akin to bookmarks in a browser. Every project
+this context “starring” it is similar to bookmarks in a browser. Every project
 homepage shows a widget in the upper right corner labeled “Star”. By pressing it
 you “star” or bookmark the project.
 
