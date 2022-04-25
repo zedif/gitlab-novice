@@ -22,7 +22,10 @@ exercises: 15
 
 In the first episode, we already got to know groups; GitLab’s way to organize
 projects. A group might hold a projects of a research group or those of a
-research project with contributors from multiple institutions.
+research project with contributors from multiple institutions. Together with
+members and their permissions they can be used to manage access to multiple
+repositories (for example, restrict access to certain repositories to staff
+while others may be accessed by student assistants as well).
 
 In this episode we will create (and delete) a group, move our project, and learn
 how members of a group relate to its subgroups and projects.
