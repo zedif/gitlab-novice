@@ -249,26 +249,32 @@ This exercise should take about 10 minutes.
 
 :::: solution
 
-The following sequence of commands create and navigate to new directory,
-initialize a repository, create a README file, and add it as part of a
-commit to the repository.
+We start by creating and navigating to a new directory, `research-diary`. There
+we initialize a git repository.
 
 ```
 $ mkdir research-diary
 $ cd research-diary
 $ git init
-$ echo "# Research Diary" > README.md
-$ echo "" >> README.md
-$ echo "This repository contains our research diary." >> README.md
-$ echo "Each day gets its own file." >> README.md
-$ echo "We use the Markdown format for our files." >> README.md
+```
+
+Next we create a file called `README.md` with the following content using our
+preferred text editor.
+
+```
+# Research Diary
+
+This repository contains our research diary.
+Each day gets its own file.
+We use the Markdown format for our files.
+```
+
+Finally, we stage the added file using and create a commit.
+
+```
 $ git add README.md
 $ git commit -m "Add README.md"
 ```
-{: .language-bash}
-
-More commonly, the file `README.md` would be created in text editor, but
-that is difficult to concisely represent here.
 
 ::::
 
