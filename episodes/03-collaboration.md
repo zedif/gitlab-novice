@@ -122,11 +122,19 @@ README.md
 ```
 
 Now we are sure that everything is in order with the cloned repository and we
-can add our lab entry. Let us do that:
+can add our lab entry.
+
+First we create a file, named `2022-03-13.md` after the date on which we did the
+work, listing the work we did:
 
 ```
-echo "* Injected transformational fluid into moss sample." > 2022-03-13.md
-echo "* Moss turned into several butterflys. SUCCESS!" >> 2022-03-13.md
+* Injected transformational fluid into moss sample.
+* Moss turned into several butterflys. SUCCESS!
+```
+
+Then we add the file as part of a new commit to the repository:
+
+```
 git add 2022-03.13.md
 git commit -m "Record work on experiment A-13"
 ```
