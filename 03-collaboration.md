@@ -20,7 +20,7 @@ exercises: 5
 
 ## Adding Project Members
 
-So far, each of you has created a GitLab project that no one but you can
+So far, each of you has created a GitLab project that not one but you can
 contribute to; depending on the visibility setting, no one but you might be able
 to even see it.
 
@@ -87,13 +87,12 @@ This exercise should take about 5 minutes.
 ## Contribute Changes to Project Repository
 
 Now, everyone should be the member of one of your co-learners’ projects. We will
-now add an diary entry for imaginary work that we did on their experiments last
-weekend.
+now add an diary entry for the work we did on their experiments last weekend.
 
 First, we clone their repositories into the directory `rd-colleague`.
 
 ```
-$ git clone https://gitlab.com/someothernovice/research-diary.git rd-colleague
+git clone https://gitlab.com/someothernovice/research-diary.git rd-colleague
 ```
 ```
 Cloning into 'research-diary'...
@@ -108,35 +107,27 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Moving into the directory
 
 ```
-$ cd rd-colleague
+cd rd-colleague
 ```
 
 we check its contents. If your colleague did everything we did, it should
 contain a single file, `README.md`.
 
 ```
-$ ls
+ls
 ```
 ```
 README.md
 ```
 
 Now we are sure that everything is in order with the cloned repository and we
-can add our lab entry.
-
-First we create a file, named `2022-03-13.md` after the date on which we did the
-work, listing the work we did:
+can add our lab entry. Let us do that:
 
 ```
-* Injected transformational fluid into moss sample.
-* Moss turned into several butterflys. SUCCESS!
-```
-
-Then we add the file as part of a new commit to the repository:
-
-```
-$ git add 2022-03.13.md
-$ git commit -m "Record work on experiment A-13"
+echo "* Injected transformational fluid into moss sample." > 2022-03-13.md
+echo "* Moss turned into several butterflys. SUCCESS!" >> 2022-03-13.md
+git add 2022-03.13.md
+git commit -m "Record work on experiment A-13"
 ```
 ```
 [main 4eac24c] Record work on experiment A-13
@@ -166,7 +157,7 @@ For example:
 We check Git’s log for our commit:
 
 ```
-$ git log -n 1
+git log -n 1
 ```
 ```
 commit 4eac24cafbcebc4f0d528bd2e1246a4624265085 (HEAD -> main)
@@ -179,7 +170,7 @@ Date:   Thu Mar 17 16:00:23 2022 +0000
 And everything seems to be in order, so we push our change.
 
 ```
-$ git push
+git push
 ```
 ```
 Username for 'https://gitlab.com': somenovice
@@ -199,13 +190,13 @@ last weekend. Curious what our colleagues did for us, we navigate back to the
 directory of our own repository in the shell, for example:
 
 ```
-$ cd ../research-diary
+cd ../research-diary
 ```
 
 There, we pull the changes that our colleagues previously pushed.
 
 ```
-$ git pull
+git pull
 ```
 ```
 Username for 'https://gitlab.com': somenovice
@@ -222,7 +213,7 @@ From the output’s last line, we can already see that a single file,
 us, what our colleague did:
 
 ```
-$ cat 2022-03-13.md
+cat 2022-03-13.md
 ```
 ```
 * Injected transformational fluid into moss sample.
@@ -236,6 +227,5 @@ We successfully collaborated through GitLab on a project of text files.
 - Adding others as members allows them to directly contribute to your projects
 - Members with sufficient rights can independently contribute to repositories
 - You update your local repositories relative to the GitLab repository with the `git pull` command
-- You send changes committed in your local repository to the GitLab repository with the `git push` command.
 
 :::

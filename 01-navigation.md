@@ -106,7 +106,7 @@ you as a member to a project. We will learn about another way to become a member
 of a project in the [episode on groups](04-groups.md).
 
 The second tab, “Starred projects”, lists projects that you have “starred”. In
-this context “starring” it is similar to bookmarks in a browser. Every project
+this context “starring” it is akin to bookmarks in a browser. Every project
 homepage shows a widget in the upper right corner labeled “Star”. By pressing it
 you “star” or bookmark the project.
 
@@ -130,21 +130,21 @@ internal visibility anyway.
 
 Self-hosted instances might also disable some visibility types. For example,
 the public visibility might be disabled, to prevent users from publishing
-something to the whole internet.
+something to whole internet.
 
 :::
 
 When working with GitLab, most of the time you will want to access projects you
-are already a member of (in the GitLab sense). In that case the list on the
-“Your projects” will be all you need to find the project you are looking for.
-When the list becomes long, the search field next to the tabs allows you to
-filter the projects by name, just as the placeholder text suggests.
+are already a member of. In that case the list on the “Your projects” will be
+all you need to find the project you are looking for. When the list becomes
+long, the search field next to the tabs allows you to filter the projects by
+name, just as the placeholder text suggests.
 
 You can also use that search field on the “Explore projects” tab to search
 through all projects that you can look at.
 
-The search field in the top menu bar can also be used to find projects. It
-shows other search results, too, but clearly labels what is what.
+The search field in the top menu bar can also be used to find projects. It also
+shows other search results, but clearly labels what is what.
 
 Finally, you can use the search field under the “Projects” in the menu accessible
 from the menu button on the left side of the top menu bar to search for

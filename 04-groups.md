@@ -37,7 +37,7 @@ This leads to the following page:
 
 ![Create group form](fig/create-group.png){alt="Create group form with text
 input fields labeled “Group name”, “Group URL”, a radio button element labeled
-“Visibility Level” with options “Private” and “Public”, a drop-down field
+"Visibility Level” with options “Private” and “Public”, a drop-down field
 labeled “Role”, a radio button element labeled “Who will be using this group?”
 with options “My company or team” and “Just me”, a drop-down field labeled “What
 will you use this group for?” and an text input field labeled “Email 1” with a
@@ -190,9 +190,9 @@ This exercise should take about 5 minutes.
 
 ## Delete Group
 
-Now that our group is empty again, we will delete it, to be polite users of free
-resources. (If you created a group, that you actually intend to keep, do not
-delete it.)
+Now that our group is empty again, we will delete it again, to be polite users
+of free resources. (If you created a group, that you actually intend to keep, do
+not delete it.)
 
 ::: challenge
 
