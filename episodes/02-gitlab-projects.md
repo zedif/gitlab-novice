@@ -77,9 +77,10 @@ of Markdown files”
 
 ### Markdown
 
-Markdown is a markup language, like HTML on which the World Wide Web is based,
-whose markup directives, indicating for example that something is a headline or
-a list item, are such that they serve their purpose even in the plain text form.
+Markdown is a markup language, like HTML on which the World Wide Web is based or
+wikitext used to write Wikipedia’s content. Its markup directives, indicating
+for example that something is a headline or a list item, are such that they
+serve their purpose even in the plain text form.
 
 There exist many variants (or flavors) of Markdown and GitLab has [its
 own](https://docs.gitlab.com/ee/user/markdown.html). Other than for rendering
