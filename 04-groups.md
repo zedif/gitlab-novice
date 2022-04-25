@@ -22,7 +22,10 @@ exercises: 15
 
 In the first episode, we already got to know groups; GitLab’s way to organize
 projects. A group might hold a projects of a research group or those of a
-research project with contributors from multiple institutions.
+research project with contributors from multiple institutions. Together with
+members and their permissions they can be used to manage access to multiple
+repositories (for example, restrict access to certain repositories to staff
+while others may be accessed by student assistants as well).
 
 In this episode we will create (and delete) a group, move our project, and learn
 how members of a group relate to its subgroups and projects.
@@ -37,7 +40,7 @@ This leads to the following page:
 
 ![Create group form](fig/create-group.png){alt="Create group form with text
 input fields labeled “Group name”, “Group URL”, a radio button element labeled
-"Visibility Level” with options “Private” and “Public”, a drop-down field
+“Visibility Level” with options “Private” and “Public”, a drop-down field
 labeled “Role”, a radio button element labeled “Who will be using this group?”
 with options “My company or team” and “Just me”, a drop-down field labeled “What
 will you use this group for?” and an text input field labeled “Email 1” with a
@@ -190,15 +193,16 @@ This exercise should take about 5 minutes.
 
 ## Delete Group
 
-Now that our group is empty again, we will delete it again, to be polite users
-of free resources. (If you created a group, that you actually intend to keep, do
-not delete it.)
+Now that our group is empty again, we will delete it, to be polite users of free
+resources. (If you created a group, that you actually intend to keep, do not
+delete it.)
 
 ::: challenge
 
 ### Delete a Group
 
-Delete your group. The process is the same as for the deletion of a project.
+Delete your group. You find the deletion form at the same position in the
+group’s settings, as the project deletion form in a project’s settings.
 
 This exercise should take about 5 minutes.
 
