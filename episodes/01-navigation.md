@@ -143,8 +143,8 @@ filter the projects by name, just as the placeholder text suggests.
 You can also use that search field on the “Explore projects” tab to search
 through all projects that you can look at.
 
-The search field in the top menu bar can also be used to find projects. It also
-shows other search results, but clearly labels what is what.
+The search field in the top menu bar can also be used to find projects. It
+shows other search results, too, but clearly labels what is what.
 
 Finally, you can use the search field under the “Projects” in the menu accessible
 from the menu button on the left side of the top menu bar to search for
