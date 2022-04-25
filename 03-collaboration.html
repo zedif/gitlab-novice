@@ -257,7 +257,7 @@
 </div>
 </div>
 <section id="adding-project-members"><h2 class="section-heading">Adding Project Members</h2>
-<hr class="half-width"><p>So far, each of you has created a GitLab project that no one but you can contribute to; depending on the visibility setting, no one but you might be able to even see it.</p>
+<hr class="half-width"><p>So far, each of you has created a GitLab project that not one but you can contribute to; depending on the visibility setting, no one but you might be able to even see it.</p>
 <p>Git and GitLab can be and is used for one-person projects. But we want our colleagues to contribute to our research diary, when they keep tabs on our experiments for us on the weekends. To achieve this, we will grant others access to our GitLab project.</p>
 <p>Using the menu on the left side of the project homepage (or nearly any other project page), we navigate to the project members page hovering over or clicking on “Project Information” and then clicking on “Members” in the submenu. The project member page should look similar to the following screenshot:</p>
 <figure><img src="fig/initial-members.png" alt="Webpage coutout titled “Project Members” with three buttons next to the title: “Import from a project”, “Invite a group”, and “Invite members”. Below a table listing the project’s members, showing account holder‘s name with account name, the membership source, when access was granted, the member’s maximum role and the membership expiration date. The table contains one column: ”Philipp Matthias Schäfer, @fiveop, Direct member, 2 weeks ago by himself, Maintainer, and no Expiration date." class="figure mx-auto d-block"><figcaption>Project members page</figcaption></figure><p>On the page we can see the page title, “Project members”, three buttons to the left of the title, and a filterable table of members, currently only listing ourselves.</p>
@@ -280,9 +280,9 @@
 </div>
 </div>
 </section><section id="contribute-changes-to-project-repository"><h2 class="section-heading">Contribute Changes to Project Repository</h2>
-<hr class="half-width"><p>Now, everyone should be the member of one of your co-learners’ projects. We will now add an diary entry for imaginary work that we did on their experiments last weekend.</p>
+<hr class="half-width"><p>Now, everyone should be the member of one of your co-learners’ projects. We will now add an diary entry for the work we did on their experiments last weekend.</p>
 <p>First, we clone their repositories into the directory <code>rd-colleague</code>.</p>
-<pre><code>$ git clone https://gitlab.com/someothernovice/research-diary.git rd-colleague</code></pre>
+<pre><code>git clone https://gitlab.com/someothernovice/research-diary.git rd-colleague</code></pre>
 <pre><code>Cloning into 'research-diary'...
 Username for 'https://gitlab.com': somenovice
 Password for 'https://somenovice@gitlab.com':
@@ -291,17 +291,15 @@ remote: Counting objects: 100% (3/3), done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</code></pre>
 <p>Moving into the directory</p>
-<pre><code>$ cd rd-colleague</code></pre>
+<pre><code>cd rd-colleague</code></pre>
 <p>we check its contents. If your colleague did everything we did, it should contain a single file, <code>README.md</code>.</p>
-<pre><code>$ ls</code></pre>
+<pre><code><span class="va">ls</span></code></pre>
 <pre><code><span class="va">README.md</span></code></pre>
-<p>Now we are sure that everything is in order with the cloned repository and we can add our lab entry.</p>
-<p>First we create a file, named <code>2022-03-13.md</code> after the date on which we did the work, listing the work we did:</p>
-<pre><code>* Injected transformational fluid into moss sample.
-* Moss turned into several butterflys. SUCCESS!</code></pre>
-<p>Then we add the file as part of a new commit to the repository:</p>
-<pre><code>$ git add 2022-03.13.md
-$ git commit -m "Record work on experiment A-13"</code></pre>
+<p>Now we are sure that everything is in order with the cloned repository and we can add our lab entry. Let us do that:</p>
+<pre><code>echo "* Injected transformational fluid into moss sample." &gt; 2022-03-13.md
+echo "* Moss turned into several butterflys. SUCCESS!" &gt;&gt; 2022-03-13.md
+git add 2022-03.13.md
+git commit -m "Record work on experiment A-13"</code></pre>
 <pre><code>[main 4eac24c] Record work on experiment A-13
  1 file changed, 2 insertions(+)
  create mode 100644 2022-03-13.md</code></pre>
@@ -321,14 +319,14 @@ $ git commit -m "Record work on experiment A-13"</code></pre>
 </div>
 </div>
 <p>We check Git’s log for our commit:</p>
-<pre><code>$ git log -n 1</code></pre>
+<pre><code>git log -n 1</code></pre>
 <pre><code>commit 4eac24cafbcebc4f0d528bd2e1246a4624265085 (HEAD -&gt; main)
 Author: Some Novice &lt;some.novice@example.com&gt;
 Date:   Thu Mar 17 16:00:23 2022 +0000
 
     Record work on experiment A-13</code></pre>
 <p>And everything seems to be in order, so we push our change.</p>
-<pre><code>$ git push</code></pre>
+<pre><code>git push</code></pre>
 <pre><code>Username for 'https://gitlab.com': somenovice
 Password for 'https://somenovice@gitlab.com':
 Enumerating objects: 4, done.
@@ -340,9 +338,9 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://gitlab.com/somenovice/research-diary.git
    2dd2c21..4eac24c  main -&gt; main</code></pre>
 <p>We have now recorded in pairs lab work we carried out for a colleague during the last weekend. Curious what our colleagues did for us, we navigate back to the directory of our own repository in the shell, for example:</p>
-<pre><code>$ cd ../research-diary</code></pre>
+<pre><code>cd ../research-diary</code></pre>
 <p>There, we pull the changes that our colleagues previously pushed.</p>
-<pre><code>$ git pull</code></pre>
+<pre><code>git pull</code></pre>
 <pre><code>Username for 'https://gitlab.com': somenovice
 Password for 'https://somenovice@gitlab.com':
 Updating 2dd2c21..4eac24c
@@ -351,7 +349,7 @@ Fast-forward
  1 file changed, 2 insertions(+)
  create mode 100644 2022-03-13.md</code></pre>
 <p>From the output’s last line, we can already see that a single file, <code>2022-03-13.md</code> was added. Letting the shell write out the files contents shows us, what our colleague did:</p>
-<pre><code>$ cat 2022-03-13.md</code></pre>
+<pre><code>cat 2022-03-13.md</code></pre>
 <pre><code>* Injected transformational fluid into moss sample.
 * Moss turned into several butterflys. SUCCESS!</code></pre>
 <p>We successfully collaborated through GitLab on a project of text files.</p>
@@ -365,7 +363,6 @@ Fast-forward
 <ul><li>Adding others as members allows them to directly contribute to your projects</li>
 <li>Members with sufficient rights can independently contribute to repositories</li>
 <li>You update your local repositories relative to the GitLab repository with the <code>git pull</code> command</li>
-<li>You send changes committed in your local repository to the GitLab repository with the <code>git push</code> command.</li>
 </ul></div>
 </div>
 </div>
@@ -419,7 +416,7 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://zedif.github.io/gitlab-novice/03-collaboration.html",
   "identifier": "https://zedif.github.io/gitlab-novice/03-collaboration.html",
-  "dateCreated": "2022-04-25",
+  "dateCreated": "2022-04-21",
   "dateModified": "2022-04-25",
   "datePublished": "2022-04-25"
 }

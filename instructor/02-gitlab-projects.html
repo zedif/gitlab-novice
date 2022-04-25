@@ -291,7 +291,7 @@
 <div id="markdown" class="callout-inner">
 <h3 class="callout-title">Markdown</h3>
 <div class="callout-content">
-<p>Markdown is a markup language, like HTML on which the World Wide Web is based or wikitext used to write Wikipedia’s content. Its markup directives, indicating for example that something is a headline or a list item, are such that they serve their purpose even in the plain text form.</p>
+<p>Markdown is a markup language, like HTML on which the World Wide Web is based, whose markup directives, indicating for example that something is a headline or a list item, are such that they serve their purpose even in the plain text form.</p>
 <p>There exist many variants (or flavors) of Markdown and GitLab has <a href="https://docs.gitlab.com/ee/user/markdown.html" class="external-link">its own</a>. Other than for rendering Markdown files in repositories on its web interface, GitLab allows for Markdown input in many of its interface’s text fields, such as issue descriptions or comments.</p>
 <p>This will be pointed out as we get to use these fields during the lesson.</p>
 </div>
@@ -309,7 +309,7 @@
 <div class="callout-content">
 <p>A project’s README file usually contains basic information about the project: what it contains, how it can be used (for example build or installed, if it is a software project), how to contribute, how to get help, and licensing information.</p>
 <p>It is common to write README files in Markdown format, indicated by the filename suffix <code>.md</code>.</p>
-<p>Platforms like GitLab show the contents of a project’s README file on its homepage; if it is in Markdown format, in its rendered form.</p>
+<p>Platforms like GitLab show the contents of project’s README file on its homepage; if it is in Markdown format, in its rendered form.</p>
 </div>
 </div>
 </div>
@@ -382,19 +382,19 @@ $ git config --global user.email "some.novice@example.com"</code></pre>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>We start by creating and navigating to a new directory, <code>research-diary</code>. There we initialize a git repository.</p>
+<p>The following sequence of commands create and navigate to new directory, initialize a repository, create a README file, and add it as part of a commit to the repository.</p>
 <pre><code>$ mkdir research-diary
 $ cd research-diary
-$ git init</code></pre>
-<p>Next we create a file called <code>README.md</code> with the following content using our preferred text editor.</p>
-<pre><code># Research Diary
-
-This repository contains our research diary.
-Each day gets its own file.
-We use the Markdown format for our files.</code></pre>
-<p>Finally, we stage the added file using and create a commit.</p>
-<pre><code>$ git add README.md
+$ git init
+$ echo "# Research Diary" &gt; README.md
+$ echo "" &gt;&gt; README.md
+$ echo "This repository contains our research diary." &gt;&gt; README.md
+$ echo "Each day gets its own file." &gt;&gt; README.md
+$ echo "We use the Markdown format for our files." &gt;&gt; README.md
+$ git add README.md
 $ git commit -m "Add README.md"</code></pre>
+<p>{: .language-bash}</p>
+<p>More commonly, the file <code>README.md</code> would be created in text editor, but that is difficult to concisely represent here.</p>
 </div>
 </div>
 </div>
@@ -566,7 +566,7 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://zedif.github.io/gitlab-novice/instructor/02-gitlab-projects.html",
   "identifier": "https://zedif.github.io/gitlab-novice/instructor/02-gitlab-projects.html",
-  "dateCreated": "2022-04-25",
+  "dateCreated": "2022-04-21",
   "dateModified": "2022-04-25",
   "datePublished": "2022-04-25"
 }
