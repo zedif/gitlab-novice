@@ -154,7 +154,7 @@
 <li><a href="#configuring-git">Configuring Git</a></li>
 <li><a href="#creating-a-local-repository">Creating a Local Repository</a></li>
 <li><a href="#connecting-local-and-remote-repository">Connecting Local and Remote Repository</a></li>
-<li><a href="#deleting-a-project">Deleting a Project</a></li>
+<li><a href="#archiving-a-project">Archiving a Project</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -258,7 +258,7 @@
 <ul><li>Create a project.</li>
 <li>Change name, description, visibility, and avatar of a project.</li>
 <li>Push a local Git repository to a newly created project.</li>
-<li>Delete a project.</li>
+<li>Archive (or delete) a project.</li>
 </ul></div>
 </div>
 </div>
@@ -291,7 +291,7 @@
 <div id="markdown" class="callout-inner">
 <h3 class="callout-title">Markdown</h3>
 <div class="callout-content">
-<p>Markdown is a markup language, like HTML on which the World Wide Web is based, whose markup directives, indicating for example that something is a headline or a list item, are such that they serve their purpose even in the plain text form.</p>
+<p>Markdown is a markup language, like HTML on which the World Wide Web is based or wikitext used to write Wikipedia’s content. Its markup directives, indicating for example that something is a headline or a list item, are such that they serve their purpose even in the plain text form.</p>
 <p>There exist many variants (or flavors) of Markdown and GitLab has <a href="https://docs.gitlab.com/ee/user/markdown.html" class="external-link">its own</a>. Other than for rendering Markdown files in repositories on its web interface, GitLab allows for Markdown input in many of its interface’s text fields, such as issue descriptions or comments.</p>
 <p>This will be pointed out as we get to use these fields during the lesson.</p>
 </div>
@@ -309,7 +309,7 @@
 <div class="callout-content">
 <p>A project’s README file usually contains basic information about the project: what it contains, how it can be used (for example build or installed, if it is a software project), how to contribute, how to get help, and licensing information.</p>
 <p>It is common to write README files in Markdown format, indicated by the filename suffix <code>.md</code>.</p>
-<p>Platforms like GitLab show the contents of project’s README file on its homepage; if it is in Markdown format, in its rendered form.</p>
+<p>Platforms like GitLab show the contents of a project’s README file on its homepage; if it is in Markdown format, in its rendered form.</p>
 </div>
 </div>
 </div>
@@ -382,19 +382,19 @@ $ git config --global user.email "some.novice@example.com"</code></pre>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>The following sequence of commands create and navigate to new directory, initialize a repository, create a README file, and add it as part of a commit to the repository.</p>
+<p>We start by creating and navigating to a new directory, <code>research-diary</code>. There we initialize a git repository.</p>
 <pre><code>$ mkdir research-diary
 $ cd research-diary
-$ git init
-$ echo "# Research Diary" &gt; README.md
-$ echo "" &gt;&gt; README.md
-$ echo "This repository contains our research diary." &gt;&gt; README.md
-$ echo "Each day gets its own file." &gt;&gt; README.md
-$ echo "We use the Markdown format for our files." &gt;&gt; README.md
-$ git add README.md
+$ git init</code></pre>
+<p>Next we create a file called <code>README.md</code> with the following content using our preferred text editor.</p>
+<pre><code># Research Diary
+
+This repository contains our research diary.
+Each day gets its own file.
+We use the Markdown format for our files.</code></pre>
+<p>Finally, we stage the added file using and create a commit.</p>
+<pre><code>$ git add README.md
 $ git commit -m "Add README.md"</code></pre>
-<p>{: .language-bash}</p>
-<p>More commonly, the file <code>README.md</code> would be created in text editor, but that is difficult to concisely represent here.</p>
 </div>
 </div>
 </div>
@@ -495,13 +495,14 @@ branch 'main' set up to track 'origin/main'.</code></pre>
 <p>The buttons below, that we saw earlier, allow us to add specific files or navigate to the configuration of certain GitLab features. Note that one button changed from reading “Add README” to just “README”, since we added <code>README.md</code>. The button is now a link to the latest version of that file in the current branch.</p>
 <p>Then we see a list of files. So far, there is only <code>README.md</code>. The list also tells us through which commit it was last changed and when that commit was created.</p>
 <p>Finally, we see the markdown file <code>README.md</code> rendered. Because having a README-file in the root directory of a repository is a widespread convention, GitLab (and other platforms like it) usually render it on a project’s homepage.</p>
-</section><section id="deleting-a-project"><h2 class="section-heading">Deleting a Project</h2>
-<hr class="half-width"><p>We just went through the beginning of a GitLab project’s life cycle. At its end, if it has one, a project gets deleted. We will go through the process of deleting a process now, without doing the step.</p>
+</section><section id="archiving-a-project"><h2 class="section-heading">Archiving a Project</h2>
+<hr class="half-width"><p>We just went through the beginning of a GitLab project’s life cycle. At its end, if it has one, a project gets archived (or deleted). We will now go through the process of archiving a project, without completing the step.</p>
 <p>Using the menu on the left, we navigate to the projects settings.</p>
-<p>At the bottom the page, we find a section named “Advanced”. We hit the “Expand” button right next to it and scroll to the bottom of the page.</p>
-<p>Notice that many of buttons here are not the usual blue or white, but first an orange-brown and then red. This indicates that we should be careful about clicking them. Things might break or, as we want to have a look at now, get deleted.</p>
-<p>At the bottom we find a section labeled “Delete Project”.</p>
-<figure><img src="../fig/delete-project.png" alt="A box with red headline “Delete this project”, followed by the warning “This action deletes `somenovice/reseach-diary` and everything this project contains. **There is no going back**”, and a red button labeled “Delete project”." class="figure mx-auto d-block"><figcaption>Delete project section</figcaption></figure><p>Clicking the button will not directly delete the project, as the warning says, but requires you to type the project location and slug, <code>&lt;username&gt;/research-diary</code> in our case, into a text field and clicking another button. <strong>Do not delete the project now! We will work with it throughout this lesson.</strong></p>
+<p>At the bottom the page, we find a section named “Advanced”. We hit the “Expand” button right next to it and scroll down the page.</p>
+<p>Notice that many of buttons here are not the usual blue or white, but after scrolling a little they are red. This indicates that we should be careful about clicking them. Things might break or get deleted.</p>
+<p>Scrolling back up, we find a section labeled “Archive Project”. Clicking the button will not delete the project. Instead it will be placed in a read-only mode. Everything will be preserved but nothing can be changed anymore. In addition, the project no longer shows up in search results and on the page for exploring projects.</p>
+<p>Most of the time archiving a project is preferable to deleting it, in particular when it comes to research projects. <strong>Do not archive the project now! We will work with it throughout this lesson.</strong></p>
+<p>At the bottom of the page is also a section for deleting a project, in case you ever think that is the right thing to do.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -512,7 +513,7 @@ branch 'main' set up to track 'origin/main'.</code></pre>
 <ul><li>Creating a GitLab project requires not more than a few clicks and providing a name.</li>
 <li>Changing the name of description of a GitLab project after creation has no indirect consequences.</li>
 <li>You can fill a fresh GitLab project’s repository by pushing a local repository.</li>
-<li>You can delete a project, but the option is hidden well.</li>
+<li>You can archive a project (and you can delete a project, but often should not.)</li>
 </ul></div>
 </div>
 </div>
@@ -566,7 +567,7 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://zedif.github.io/gitlab-novice/instructor/02-gitlab-projects.html",
   "identifier": "https://zedif.github.io/gitlab-novice/instructor/02-gitlab-projects.html",
-  "dateCreated": "2022-04-21",
+  "dateCreated": "2022-04-25",
   "dateModified": "2022-04-25",
   "datePublished": "2022-04-25"
 }
