@@ -262,7 +262,7 @@
         
 <section id="aio-01-navigation"><p>Content from <a href="01-navigation.html">Navigation</a></p>
 <hr>
-<p> Last updated on 2022-04-25 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/01-navigation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-04-27 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/01-navigation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -453,7 +453,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-gitlab-projects"><p>Content from <a href="02-gitlab-projects.html">GitLab Projects</a></p>
 <hr>
-<p> Last updated on 2022-04-25 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/02-gitlab-projects.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-04-27 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/02-gitlab-projects.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -604,7 +604,7 @@ $ git config --global user.email "some.novice@example.com"</code></pre>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>We start by creating and navigating to a new directory, <code>research-diary</code>. There we initialize a git repository.</p>
 <pre><code>$ mkdir research-diary
@@ -751,7 +751,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-03-collaboration"><p>Content from <a href="03-collaboration.html">Collaboration</a></p>
 <hr>
-<p> Last updated on 2022-04-25 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/03-collaboration.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-04-27 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/03-collaboration.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -905,7 +905,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04-groups"><p>Content from <a href="04-groups.html">Groups</a></p>
 <hr>
-<p> Last updated on 2022-04-25 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/04-groups.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-04-27 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/04-groups.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -995,7 +995,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Steps to solve the challenge:</p>
 <ol style="list-style-type: decimal">
@@ -1047,7 +1047,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Steps to solve the challenge:</p>
 <ol style="list-style-type: decimal">
@@ -1174,6 +1174,20 @@ def some_function():
 <p>and click the button labeled “Comment”. We notice, that GitLab uses and shortened version of the commits identifier for the link text, which makes it slightly more readable.</p>
 <p>Before we move on, please note the button labeled “Close issue” under the comment text field. An issue starts in the open state and can be closed by clicking this button. When we type something into the comment field the label of the button changes to “Comment &amp; close issue”, so we can add a final comment before closing the issue.</p>
 <p>This is a very important feature, allowing us to distinguish between issues that have yet to be dealt with and those that have already been dealt with. We do not, in general, delete issues, because they are often useful to check whether a certain issue was already discussed or has already come up in the past.</p>
+</section><section id="issue-boards"><h2 class="section-heading">Issue Boards</h2>
+<hr class="half-width">
+<p>Now, we will have a look at boards, a feature that uses labels to visually organize a project’s issues.</p>
+<p>We navigate to our project’s issue board by clicking the submenu item “Boards” of the menu item “Issues” in the side menu.</p>
+<p>The following page loads:</p>
+<figure><img src="fig/board.png" alt="Issue board page with a menu bar on the left and content on the right. At the top of the content area is a drop-down field with “Development” selected followed by a button labeled “New board” a search field, a check box labeled “Show labels”, and two buttons the first labeled “Edit board”, the second “Create list”. Below these elements are two columns, each with a title bar, one titled “Open”, the other “Closed”. In the “Open” column there is a box representing an issue, showing its title “Recognize outside contributors”, a label “WIP”, the issue number “#1” and an avatar of a user." class="figure mx-auto d-block"><figcaption>Issue board page</figcaption></figure><p>GitLab creates on board, called “Development”, by default for each project. This is the board we see. It has two so called lists configured, labeled “Open” and “Closed”, that list all open and closed issues of the project, respectively. These two lists cannot be deleted.</p>
+<p>We will now create another list for issues that are work in progress, that is those that are labeled “WIP”.</p>
+<p>We click on the button labeled “Create List”. A new list appears to the right of the “Closed” list. We are prompted to select a label. We select our label “WIP” and click the button labeled “Add to board”.</p>
+<p>The new list is created between the “Open” and “Closed” lists. Those two will always be on the left and right end, respectively. We can reorder the lists created by us however we want between these two.</p>
+<p>Note, that our issue is initially show in the “Open” and our new list. When we reload the page, it disappears from the “Open” list. In general, open issues that belong to one of the lists due to their labels will not appear in the “Open” list. Closed issues, however, will always only appear in the “Closed” list.</p>
+<p>Boards can not only be used to get an overview of a project’s issues. They can also be used to manipulate their labels. If we drag an issue from one list to another, the label of the originating list will be removed and that of the target list will be added (unless it is one of the “Open” and “Closed” lists). Moving an issue to the “Closed” list will close the issue, while moving an issue out of the “Closed” list will open it.</p>
+<p>We note that we added the “WIP” label to our issue, however, that is not accurate. Our co-learner should add the label whenever they start to work on it. To remove the label we drag the issue to the “Open” list.</p>
+<p>We click on the issue’s title to navigate to its page. Initially the comment text field was directly under the description. By now, there is a list that chronicles the changes to the issue. It starts with the assignment to our co-learner (still from creating the issue), next we see that the “WIP” label was added by us, then comes our comment, and finally it lists that we removed the ”WIP” label again.</p>
+<p>This helps keep track of who did what with an issue</p>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
