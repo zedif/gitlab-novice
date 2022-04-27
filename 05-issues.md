@@ -1,6 +1,6 @@
 ---
 title: "Issues"
-teaching: 0
+teaching: 20
 exercises: 0
 ---
 
@@ -178,3 +178,68 @@ have yet to be dealt with and those that have already been dealt with. We do
 not, in general, delete issues, because they are often useful to check whether a
 certain issue was already discussed or has already come up in the past.
 
+## Issue Boards
+
+Now, we will have a look at boards, a feature that uses labels to visually
+organize a project’s issues.
+
+We navigate to our project’s issue board by clicking the submenu item “Boards”
+of the menu item “Issues” in the side menu.
+
+The following page loads:
+
+![Issue board page](fig/board.png){alt="Issue board page with a menu bar on the
+left and content on the right. At the top of the content area is a drop-down
+field with “Development” selected followed by a button labeled “New board” a
+search field, a check box labeled “Show labels”, and two buttons the first
+labeled “Edit board”, the second “Create list”. Below these elements are two
+columns, each with a title bar, one titled “Open”, the other “Closed”. In the
+“Open” column there is a box representing an issue, showing its title “Recognize
+outside contributors”, a label “WIP”, the issue number “#1” and an avatar of a
+user."}
+
+GitLab creates on board, called “Development”, by default for each project. This
+is the board we see. It has two so called lists configured, labeled “Open” and
+“Closed”, that list all open and closed issues of the project, respectively.
+These two lists cannot be deleted.
+
+We will now create another list for issues that are work in progress, that is
+those that are labeled “WIP”.
+
+We click on the button labeled “Create List”. A new list appears to the right of
+the “Closed” list. We are prompted to select a label. We select our label “WIP”
+and click the button labeled “Add to board”.
+
+The new list is created between the “Open” and “Closed” lists. Those two will
+always be on the left and right end, respectively. We can reorder the lists
+created by us however we want between these two.
+
+Note, that our issue is initially show in the “Open” and our new list. When we
+reload the page, it disappears from the “Open” list. In general, open issues
+that belong to one of the lists due to their labels will not appear in the
+“Open” list. Closed issues, however, will always only appear in the “Closed”
+list.
+
+Boards can not only be used to get an overview of a project’s issues. They can
+also be used to manipulate their labels. If we drag an issue from one list to
+another, the label of the originating list will be removed and that of the
+target list will be added (unless it is one of the “Open” and “Closed” lists).
+Moving an issue to the “Closed” list will close the issue, while moving an issue
+out of the “Closed” list will open it.
+
+We note that we added the “WIP” label to our issue, however, that is not
+accurate. Our co-learner should add the label whenever they start to work on it.
+To remove the label we drag the issue to the “Open” list.
+
+We click on the issue’s title to navigate to its page. Initially the comment
+text field was directly under the description. By now, there is a list that
+chronicles the changes to the issue. It starts with the assignment to our
+co-learner (still from creating the issue), next we see that the “WIP” label was
+added by us, then comes our comment, and finally it lists that we removed the
+”WIP” label again.
+
+This helps keep track of who did what with an issue
+
+::: keypoints
+
+:::
