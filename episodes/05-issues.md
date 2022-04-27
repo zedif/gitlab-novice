@@ -239,7 +239,3 @@ added by us, then comes our comment, and finally it lists that we removed the
 ”WIP” label again.
 
 This helps keep track of who did what with an issue
-
-::: keypoints
-
-:::
