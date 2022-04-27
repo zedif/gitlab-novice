@@ -188,7 +188,15 @@ of the menu item “Issues” in the side menu.
 
 The following page loads:
 
-![Issue board page](fig/board.png){alt="TODO"}
+![Issue board page](fig/board.png){alt="Issue board page with a menu bar on the
+left and content on the right. At the top of the content area is a drop-down
+field with “Development” selected followed by a button labeled “New board” a
+search field, a check box labeled “Show labels”, and two buttons the first
+labeled “Edit board”, the second “Create list”. Below these elements are two
+columns, each with a title bar, one titled “Open”, the other “Closed”. In the
+“Open” column there is a box representing an issue, showing its title “Recognize
+outside contributors”, a label “WIP”, the issue number “#1” and an avatar of a
+user."}
 
 GitLab creates on board, called “Development”, by default for each project. This
 is the board we see. It has two so called lists configured, labeled “Open” and
