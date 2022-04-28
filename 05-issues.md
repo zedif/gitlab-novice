@@ -28,7 +28,10 @@ co-learner to do the honors, we create an issue in their repository, to document
 our desire.
 
 Issues are a feature of GitLab that allows us to organize tasks by project and
-by group (and its descendant groups and projects).
+by group (and its descendant groups and projects). By default anyone that has
+read access to a project can file issues. This usually makes sense, because
+users can report their problems and ask their questions that way, even when they
+are not supposed change anything themselves.
 
 With our co-learner’s help, we navigate to their project. On the side bar menu
 on the left we click the entry labeled “Issues” and on the following page we
