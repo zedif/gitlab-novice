@@ -218,6 +218,18 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="06-merge-requests.html">Merge Requests</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -1082,7 +1094,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-05-issues"><p>Content from <a href="05-issues.html">Issues</a></p>
 <hr>
-<p> Last updated on 2022-04-27 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/05-issues.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-04-28 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/05-issues.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1117,7 +1129,7 @@ any links that you are not going to use.
 <section id="create-issue"><h2 class="section-heading">Create Issue</h2>
 <hr class="half-width">
 <p>Before our excursion to learn about groups, we contributed lab notes to our co-learner’s repository. Having done that, we think we should be listed as contributors in the documentation of that repository. Since, we want our co-learner to do the honors, we create an issue in their repository, to document our desire.</p>
-<p>Issues are a feature of GitLab that allows us to organize tasks by project and by group (and its descendant groups and projects).</p>
+<p>Issues are a feature of GitLab that allows us to organize tasks by project and by group (and its descendant groups and projects). By default anyone that has read access to a project can file issues. This usually makes sense, because users can report their problems and ask their questions that way, even when they are not supposed change anything themselves.</p>
 <p>With our co-learner’s help, we navigate to their project. On the side bar menu on the left we click the entry labeled “Issues” and on the following page we click on the button labeled “New issue”.</p>
 <p>This leads us to the following form:</p>
 <figure><img src="fig/issue.png" alt="New issue form with a text input field labeled “Title” with subscript “Add description templates to help your contributors communicate effectively!”, the second and third word being a link, a drop-down field labeled “Type” showing the word “Issue“, a multi-line text input field with buttons for text formatting labeled “Description”, a check box labeled “This issue is confidential and should only be visible to team members with at least Reporter access.”, drop-down fields labeled “Assignee“, “Milestone”, and “Label” showing “Unassigned“, “Milestone”, and “Labels”, respectively, a date input field labeled “Due date”, and two buttons labeled “Create Issue” and “Cancel”." class="figure mx-auto d-block"><figcaption>New issue form</figcaption></figure><p>For our issue we provide a short, descriptive title, for example “Recognize outside contributors” and a description:</p>
@@ -1192,6 +1204,66 @@ def some_function():
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
+</section></section><section id="aio-06-merge-requests"><p>Content from <a href="06-merge-requests.html">Merge Requests</a></p>
+<hr>
+<p> Last updated on 2022-04-28 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/06-merge-requests.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can I contribute to a project on GitLab?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Fork a project.</li>
+<li>Create and edit a file on GitLab.</li>
+<li>Create/Accept a merge request.</li>
+<li>Mention an issue in GitLab markdown.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>In the chapter on collaboration we learned how to contribute changes to a project that we are a member of. We also learned, in the previous chapter, that we can contribute to other projects by filing issues to report problems or ask questions. This episode we will learn about a way to suggest concrete changes to a GitLab project that we do not have write access on.</p>
+<p>The feature that allows us to do this is called Merge Request, the corresponding feature on GitHub is called Pull Request.</p>
+<p>As a target for our merge request, we will use our co-learners repository. We we have write access to it, but to learn something new, we will pretend that we don’t.</p>
+<section id="create-a-fork"><h2 class="section-heading">Create a Fork</h2>
+<hr class="half-width">
+<p>Since we are a member of our co-learner’s project we could create a merge request within the project. But again, to learn how to do it for project’s of which we are not a member of, we will make ourselves some extra work.</p>
+<p>So supposedly, we cannot make changes to our co-learner’s project. We need a copy that we can change. Such a copy is called a fork in GitLab’s (and also GitHub’s case). The term can be explained by looking at its use in “fork in the road”. Once we make changes to our copy, the development history will have split.</p>
+<p>To create a fork, we navigate to the homepage of our co-learner’s project. In the upper right corner is a button labeled ”Fork”. The number next to it tells us how many forks of this repository exist on GitLab. We will now increase that number by one by clicking on the button.</p>
+<p>This redirects us to a form that looks like a reduced version of the “Create new project” form. Since we do not want to make a real fork of the project, that is project that develops in a different direction than the original, but rather suggest a change to the original, we will leave almost everything as it is.</p>
+<p>What we need to do is select a namespace. We will use our user namespace, so we select ourselves in the drop-down list under ”Project URL”. We set the visibility to private, because we will make the changes public (to those able to see the original project) once we create the merge request. Then we click the “Fork project” button.</p>
+<div id="callout1" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="unique-project-name" class="callout-inner">
+<h3 class="callout-title">Unique Project Name</h3>
+<div class="callout-content">
+<p>If there already is a project with the name or the same slug, GitLab will show you an error message which, at the time of me writing this, can be summarized to “an error has occurred”, which is not very helpful. In that case, reload the page, select a different name and/or slug and try again.</p>
+</div>
+</div>
+</div>
+<p>We are redirected to the fork’s project home page. The fork is full featured project just like the original, however, only the Git repository is copied. So, as we can notice, there are no issues in it, even though the original had at least one.</p>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
 </section></section>
 </div>
     </main>
@@ -1234,9 +1306,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://zedif.github.io/gitlab-novice/aio.html",
   "identifier": "https://zedif.github.io/gitlab-novice/aio.html",
-  "dateCreated": "2022-04-27",
-  "dateModified": "2022-04-27",
-  "datePublished": "2022-04-27"
+  "dateCreated": "2022-04-28",
+  "dateModified": "2022-04-28",
+  "datePublished": "2022-04-28"
 }
 
   </script><script>
