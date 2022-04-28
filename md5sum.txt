@@ -10,6 +10,7 @@
 "episodes/03-collaboration.md" "2dbfe8ff26071c45840fa3756386dc05" "site/built/03-collaboration.md" "2022-04-27"
 "episodes/04-groups.md" "3e2db56170b134f6fa111a9954ffd224" "site/built/04-groups.md" "2022-04-27"
 "episodes/05-issues.md" "24a179bd94f14da74832a52cac5eef91" "site/built/05-issues.md" "2022-04-27"
+"episodes/06-merge-requests.md" "18322c49029ffa971e9670a294bb78df" "site/built/06-merge-requests.md" "2022-04-28"
 "instructors/instructor-notes.md" "60b93493cf1da06dfd63255d73854461" "site/built/instructor-notes.md" "2022-04-27"
 "learners/setup.md" "949321b8224bc2def10b453b8411f78c" "site/built/setup.md" "2022-04-27"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2022-04-27"
