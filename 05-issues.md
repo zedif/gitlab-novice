@@ -242,3 +242,15 @@ added by us, then comes our comment, and finally it lists that we removed the
 ”WIP” label again.
 
 This helps keep track of who did what with an issue
+
+::: keypoints
+
+- GitLab has a feature to manage issues of a project.
+- Issues consist of titles and descriptions.
+- Issues can be open or closed.
+- Labels can be assigned to issues.
+- Users can be assigned to issues.
+- Boards can give an overview of issues and their stats.
+- An issue’s state can be manipulated in the board view.
+
+:::
