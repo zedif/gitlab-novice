@@ -387,7 +387,7 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The project page is located at <a href="https://gitlab.com/inkscape/inkscape" class="external-link uri">https://gitlab.com/inkscape/inkscape</a>. If you found yourself at <a href="https://gitlab.com/inkscape" class="external-link uri">https://gitlab.com/inkscape</a> you found the group page of the Inkscape community.</p>
 </div>
@@ -423,7 +423,7 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>The top-level groups name is Inkscape as it is written at the top of the main content.</li>
@@ -1007,7 +1007,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Steps to solve the challenge:</p>
 <ol style="list-style-type: decimal">
@@ -1059,7 +1059,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Steps to solve the challenge:</p>
 <ol style="list-style-type: decimal">
@@ -1094,7 +1094,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-05-issues"><p>Content from <a href="05-issues.html">Issues</a></p>
 <hr>
-<p> Last updated on 2022-04-28 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/05-issues.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-05-02 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/05-issues.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1200,13 +1200,32 @@ def some_function():
 <p>We note that we added the “WIP” label to our issue, however, that is not accurate. Our co-learner should add the label whenever they start to work on it. To remove the label we drag the issue to the “Open” list.</p>
 <p>We click on the issue’s title to navigate to its page. Initially the comment text field was directly under the description. By now, there is a list that chronicles the changes to the issue. It starts with the assignment to our co-learner (still from creating the issue), next we see that the “WIP” label was added by us, then comes our comment, and finally it lists that we removed the ”WIP” label again.</p>
 <p>This helps keep track of who did what with an issue</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Keypoints</h3>
+<div class="callout-content">
+<ul>
+<li>GitLab has a feature to manage issues of a project.</li>
+<li>Issues consist of titles and descriptions.</li>
+<li>Issues can be open or closed.</li>
+<li>Labels can be assigned to issues.</li>
+<li>Users can be assigned to issues.</li>
+<li>Boards can give an overview of issues and their stats.</li>
+<li>An issue’s state can be manipulated in the board view.</li>
+</ul>
+</div>
+</div>
+</div>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 </section></section><section id="aio-06-merge-requests"><p>Content from <a href="06-merge-requests.html">Merge Requests</a></p>
 <hr>
-<p> Last updated on 2022-04-28 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/06-merge-requests.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-05-02 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/06-merge-requests.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1239,8 +1258,8 @@ any links that you are not going to use.
 </div>
 </div>
 <p>In the chapter on collaboration we learned how to contribute changes to a project that we are a member of. We also learned, in the previous chapter, that we can contribute to other projects by filing issues to report problems or ask questions. This episode we will learn about a way to suggest concrete changes to a GitLab project that we do not have write access on.</p>
-<p>The feature that allows us to do this is called Merge Request, the corresponding feature on GitHub is called Pull Request.</p>
-<p>As a target for our merge request, we will use our co-learners repository. We we have write access to it, but to learn something new, we will pretend that we don’t.</p>
+<p>The feature that allows us to do this is called Merge Request, the corresponding feature on GitHub is called Pull Request. As a target for our merge request, we will use our co-learners repository. We we have write access to it, but to learn something new, we will pretend that we don’t.</p>
+<p>We will create a merge request that adds a file listing the contributors, which will solve the issue that we filed during the last episode.</p>
 <section id="create-a-fork"><h2 class="section-heading">Create a Fork</h2>
 <hr class="half-width">
 <p>Since we are a member of our co-learner’s project we could create a merge request within the project. But again, to learn how to do it for project’s of which we are not a member of, we will make ourselves some extra work.</p>
@@ -1259,7 +1278,40 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
-<p>We are redirected to the fork’s project home page. The fork is full featured project just like the original, however, only the Git repository is copied. So, as we can notice, there are no issues in it, even though the original had at least one.</p>
+<p>We are redirected to the fork’s project home page. The fork is full featured project just like the original, however, only the Git repository is copied. So, for example, there are no issues in it, even though the original had at least one.</p>
+</section><section id="create-and-edit-a-file-on-gitlab"><h2 class="section-heading">Create and Edit a File on GitLab</h2>
+<hr class="half-width">
+<p>Our goal is to create a file listing contributors to the project. We will do this within GitLab using its file creation and editing features.</p>
+<p>To do that, we click on the button labeled “Web IDE” in the line just below the project’s description. This redirects us to a page with a file browser in a column on the, with most of the screen taken up by a box informing us how to use the Web IDE: “Select a file from the left sidebar to begin editing. Afterwards, you’ll be able to commit your changes.”</p>
+<p>We do not want to edit an existing file, but want to create a new one. To do that we click on the button above the list of files on the left that is marked with an icon representing a sheet of paper with a +-sign on top of it.</p>
+<p>A pop-up dialog prompts us for a name, which we will provide: “CONTRIBUTORS.md” followed by clicking the button labeled “Create file”.</p>
+<div id="callout2" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="all-caps-filenames" class="callout-inner">
+<h3 class="callout-title">All caps filenames</h3>
+<div class="callout-content">
+<p>In software projects it is customary to name certain files with information about a project in all caps. One example we already encountered is the README file. Others are the file containing the license (<code>LICENSE</code>), a file about how to contribute (<code>CONTRIBUTING</code>), or how to install the software (<code>INSTALL</code>).</p>
+<p>Sometimes a file extension indicating the format is appended, usually in lower-case letters.</p>
+</div>
+</div>
+</div>
+<p>We see the result of our action in two ways: A file named “CONTRIBUTORS.md” appeared in the list of files on the left and a tab labeled “CONTRIBUTORS.md” showing an text editor appeared in the space to the right of the list of files.</p>
+<p>We will now add something similar the following lines in the editor:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="an">The following persons have contributed to my research diary:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Conner Learner</span></code></pre>
+</div>
+<p>Then we click the button labeled “Create a commit”. The view to the left of the list of files gets split into to columns. On the left side we see the old version of the file (it did not exist, so nothing is shown) and on the right side we see the new version with additions marked in green. If we had removed anything from the old version those lines would have been marked red on the left side.</p>
+<p>Since everything looks as expected—one new file with called “CONTRIBUTORS.md” with the lines we just typed in—we change the commit message to</p>
+<pre><code>Add CONTRIBUTORS.md</code></pre>
+<p>We keep “Create a new branch” with the pre-generated name selected. For our purposes we could also leave the checkbox “Start a new merge request” selected, but we want to go through the merge request creation process separately to get familiar with it, in case we want to create one from changes we pushed from a local repository.</p>
+<p>We do create a new branch and do not commit the changes to the branch called “main”, because it is a good habit. We might want to create multiple independent merge requests for one project, which cannot be done from a single branch. And then there is the option to create merge requests within a project, those cannot come from the branch they are supposed to be merged to, so we need another branch anyway.</p>
+<p>Finally, we click the button labeled “Commit”.</p>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
@@ -1306,9 +1358,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://zedif.github.io/gitlab-novice/aio.html",
   "identifier": "https://zedif.github.io/gitlab-novice/aio.html",
-  "dateCreated": "2022-04-28",
-  "dateModified": "2022-04-28",
-  "datePublished": "2022-04-28"
+  "dateCreated": "2022-05-02",
+  "dateModified": "2022-05-02",
+  "datePublished": "2022-05-02"
 }
 
   </script><script>
