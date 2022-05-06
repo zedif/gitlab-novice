@@ -132,7 +132,7 @@ redirects us to the project’s homepage, which looks similar to this:
 project. On the left, a menu leading to other project pages: Project
 Information, Issues, Merge requests, CI/CD, Security & Compliance, Deployments,
 Monitor, Infrastructure, Packages & Registries, Analytics, Wiki, Snippets, and
-Settings. On the right, taking the major port of the width, the project page:
+Settings. On the right, taking up the major part of the width, the project page:
 Starting at the top, the project’s name “Research Diary“, followed by its
 descriptions “My research diary, a collection of Markdown files”, an
 encouragement to “Invite your team” with a button “Invite members”, the
