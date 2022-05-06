@@ -148,3 +148,116 @@ come from the branch they are supposed to be merged to, so we need another
 branch anyway.
 
 Finally, we click the button labeled “Commit”.
+
+## Create a Merge Request
+
+Having created the commit, we navigate back to the project home page by clicking on
+the project’s name in the upper left corner.
+
+We notice that the file that we created is not present in the list of files.
+This is because GitLab shows the default branch, in our case the branch called
+“main”, by default. When we click the drop-down field below the description and
+the sentence starting with “Forked from…”, we get shown a list of all branches,
+which should be two: “main” and the one generated for our change, something
+along the lines of “…-patch-12345”. We select the new branch and now the file
+“CONTRIBUTORS.md” shows up in the list of files.
+
+To create a merge request, we click on the menu item labeled “Merge requests” in
+the menu on the left and on the following page on the button labeled “New merge
+request”.
+
+This gets us to the following dialog:
+
+![New merge request page](fig/merge-request.png){alt="New merge request page. On
+the left, a menu leading to other project pages. ON the right, taking up the
+major part of the width, the new merge request page: Below the page title, there
+are two UI elements side-by-side. The one on the left, titled ”Source branch”,
+has two drop-down fields, one to select the project, the other to select the
+branch. The former reads “fiveop/research-diary-2”, the latter “Select source
+branch”. The one on the right, titled “Target branch”, has the same two
+drop-down fields. In this case the former reads “somenovice/research-diary” and
+the latter ”main”. Belowthe two drop-down fields there is a box with information
+about the last commit on the “main” branch: message, author, relative author
+date and short identifier."}
+
+On the left side, we select the branch generated for our change. Once done, a
+box with details of the last commit on that branch appears below the drop-down
+fields on the left.
+
+We click the button labeled “Compare branches and continue”. On the following
+page, we can see that a merge request has it’s own title and description. They
+are prefilled with the newest commit message of the source branch. To connect
+this merge request with the issue we filed, we write
+
+```
+Solves #1
+```
+
+in the merge request description. Everything else, we leave with its default
+value or in its default state, including the two checkboxes.
+
+::: callout
+
+### Closing Issues Automatically
+
+Whenever a merge request is merged to the default branch of a project and its
+description or the description of a commit it contains the phrase `<keyword>
+#<number>` for one of the [keywords mentioned in GitLab’s
+documentation](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#default-closing-pattern),
+then the issue with number `<number>` is closed automatically.
+
+This can save a few clicks and ensures that closing the issue will not be
+forgotten.
+
+:::
+
+The first, labeled ”Delete source branch when merge request is accepted”, is
+selected and thus let’s GitLab clean up after us; we no longer need the branch
+once it has been merged.
+
+The second, labeled “Squash commits when merge request is accepted”, is not
+selected. If it were, GitLab would merge all commits of the merge request, that
+is all commits on the source branch since it was branched off the target branch,
+into one commit before merging. In our case, there is only one commit, so it
+would serve no purpose.
+
+We click the button labeled “Create merge request”. This leads us to the page
+for the created merge request. It looks similar to the page for an issue. The
+main difference are the tabs, their headers being located just below the title:
+“Overview” (the one that is shown initially), “Commits”, and “Changes”.
+
+Clicking on the tab header labeled “Commits”, we see a list of all the commits
+of this merge request, which in our case is the commit we created.
+
+Clicking on the tab header labeled “Changes”, we see a so called diff for each
+of the changed files. In our case a file was added, so all the lines in the file
+are new, indicated by the plus sign at the beginning of each line.
+
+Back on the “Overview” tab, below the description there is a technical
+description of the merge request, starting with “Request to merge…”, followed by
+a button to “Approve“ the merge request. By default this is optional, a project
+can be configured to require approval by a certain group of members for a merge
+request to be possible. Then there is a grayed-out button labeled “Merge”,
+followed by text that we need to ask someone with write access to click it. We
+will do exactly that in a moment. Note also, that the box around it mentions
+that the merge request mentions our issue. In particular for such mentions in
+commit messages that can otherwise be easily overlooked.
+
+Finally at the bottom, we see that a merge request can be commented on, just
+like an issue. But for merge request there is more. Navigating to the “Changes”
+tab and hovering the mouse over a line number, we see a speech bubble button
+appear at the start of the line. When we press it, a text field for a comment
+appears. We can use that to comment on individual lines. This feature allows to
+separate discussions of different changes of a merge request.
+
+::: callout
+
+### Code Review
+
+Being able to comment on individual lines is a useful feature for a practice
+called code review. Code review entails that a peer of the author of some
+changes reviews those, before they are merged. This practice is the origin of
+the merge request feature, but it lends itself well to reviewing text based
+changes other than to code.
+
+:::
