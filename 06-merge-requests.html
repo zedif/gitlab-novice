@@ -188,6 +188,7 @@
         <ul><li><a href="#create-a-fork">Create a Fork</a></li>
 <li><a href="#create-and-edit-a-file-on-gitlab">Create and Edit a File on GitLab</a></li>
 <li><a href="#create-a-merge-request">Create a Merge Request</a></li>
+<li><a href="#accept-a-merge-request">Accept a Merge Request</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -236,7 +237,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Merge Requests</h1>
-        <p> Last updated on 2022-05-06 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/06-merge-requests.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-05-09 | <a href="https://github.com/zedif/gitlab-novice/edit/main/episodes/06-merge-requests.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -327,7 +328,7 @@
 <p>This gets us to the following dialog:</p>
 <figure><img src="fig/merge-request.png" alt="New merge request page. On the left, a menu leading to other project pages. ON the right, taking up the major part of the width, the new merge request page: Below the page title, there are two UI elements side-by-side. The one on the left, titled ”Source branch”, has two drop-down fields, one to select the project, the other to select the branch. The former reads “fiveop/research-diary-2”, the latter “Select source branch”. The one on the right, titled “Target branch”, has the same two drop-down fields. In this case the former reads “somenovice/research-diary” and the latter ”main”. Belowthe two drop-down fields there is a box with information about the last commit on the “main” branch: message, author, relative author date and short identifier." class="figure mx-auto d-block"><figcaption>New merge request page</figcaption></figure><p>On the left side, we select the branch generated for our change. Once done, a box with details of the last commit on that branch appears below the drop-down fields on the left.</p>
 <p>We click the button labeled “Compare branches and continue”. On the following page, we can see that a merge request has it’s own title and description. They are prefilled with the newest commit message of the source branch. To connect this merge request with the issue we filed, we write</p>
-<pre><code><span class="va">Solves</span> <span class="co">#1</span></code></pre>
+<pre><code><span class="va">Resolves</span> <span class="co">#1</span></code></pre>
 <p>in the merge request description. Everything else, we leave with its default value or in its default state, including the two checkboxes.</p>
 <div id="callout3" class="callout callout">
 <div class="callout-square">
@@ -346,7 +347,7 @@
 <p>We click the button labeled “Create merge request”. This leads us to the page for the created merge request. It looks similar to the page for an issue. The main difference are the tabs, their headers being located just below the title: “Overview” (the one that is shown initially), “Commits”, and “Changes”.</p>
 <p>Clicking on the tab header labeled “Commits”, we see a list of all the commits of this merge request, which in our case is the commit we created.</p>
 <p>Clicking on the tab header labeled “Changes”, we see a so called diff for each of the changed files. In our case a file was added, so all the lines in the file are new, indicated by the plus sign at the beginning of each line.</p>
-<p>Back on the “Overview” tab, below the description there is a technical description of the merge request, starting with “Request to merge…”, followed by a button to “Approve“ the merge request. By default this is optional, a project can be configured to require approval by a certain group of members for a merge request to be possible. Then there is a grayed-out button labeled “Merge”, followed by text that we need to ask someone with write access to click it. We will do exactly that in a moment. Note also, that the box around it mentions that the merge request mentions our issue. In particular for such mentions in commit messages that can otherwise be easily overlooked.</p>
+<p>Back on the “Overview” tab, below the description there is a technical description of the merge request, starting with “Request to merge…”, followed by a button to “Approve“ the merge request. By default this is optional, a project can be configured to require approval by a certain group of members for a merge request to be possible. Then there is a grayed-out button labeled “Merge”, followed by text that we need to ask someone with write access to click it. We will do exactly that in a moment. Note also, that the box around it mentions that the merge request mentions the issue. This can be easily overlooked, if the mention happens in a commit message of the merge request.</p>
 <p>Finally at the bottom, we see that a merge request can be commented on, just like an issue. But for merge request there is more. Navigating to the “Changes” tab and hovering the mouse over a line number, we see a speech bubble button appear at the start of the line. When we press it, a text field for a comment appears. We can use that to comment on individual lines. This feature allows to separate discussions of different changes of a merge request.</p>
 <div id="callout4" class="callout callout">
 <div class="callout-square">
@@ -357,6 +358,27 @@
 <div class="callout-content">
 <p>Being able to comment on individual lines is a useful feature for a practice called code review. Code review entails that a peer of the author of some changes reviews those, before they are merged. This practice is the origin of the merge request feature, but it lends itself well to reviewing text based changes other than to code.</p>
 </div>
+</div>
+</div>
+</section><section id="accept-a-merge-request"><h2 class="section-heading">Accept a Merge Request</h2>
+<hr class="half-width"><p>While we were creating the merge request for our co-learner’s repository, they did the same for ours. Now it is time to review and accept the change.</p>
+<p>Navigate to the issue your co-learner created in your repository. At the very bottom of the issue’s history you will see en entry of the form “Co-learner <span class="citation">@colearner</span> mentioned in merge request !1 2 minutes ago”. The merge request reference, ”!1”, is a link. We follow the link by clicking on it.</p>
+<p>This leads us to the merge request page, very similar to the page of our own merge request. The difference, that we are interested in, is the state of the button labeled “Merge”. The button is no longer disabled. Under the button is a bar that informs us that one commit and one merge commit will be added.</p>
+<p>The merge commit serves as a common descendant of the heads of your main branch and the branch on which your co-learner based their merge request. We can change the commit message of the merge commit, by clicking on the bar informing us about the number of added commits, but we are happy with its contents.</p>
+<p>We click on the button labeled “Merge”. After a few seconds the box that allowed us to merge is replaced by a box that informs us about the successful merge.</p>
+<p>In particular, there still is a sentence informing us that the merge request mentions an issue. Our intention was for that issue to be closed, so we click on the issue reference, for example “#1”, to check.</p>
+<p>On the issue page, we can see that indeed the issue was closed. The last entry in the issue’s history reads similar to “Co-learner closed via commit abcdef12 just now”, informing us why the issue was closed.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Keypoints</h3>
+<div class="callout-content">
+<ul><li>You can create a project with a copy of another project’s repository by forking it.</li>
+<li>You can suggest changes to a project that you have no write access to through a merge request.</li>
+<li>You can close issues by use of certain keywords in merge request descriptions or commit messages.</li>
+</ul></div>
 </div>
 </div>
 <!-- 
@@ -410,7 +432,7 @@ any links that you are not going to use.
   "url": "https://zedif.github.io/gitlab-novice/06-merge-requests.html",
   "identifier": "https://zedif.github.io/gitlab-novice/06-merge-requests.html",
   "dateCreated": "2022-05-09",
-  "dateModified": "2022-05-06",
+  "dateModified": "2022-05-09",
   "datePublished": "2022-05-09"
 }
 
