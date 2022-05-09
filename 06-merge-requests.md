@@ -1,6 +1,6 @@
 ---
 title: "Merge Requests"
-teaching: 0
+teaching: 30
 exercises: 0
 ---
 
@@ -294,5 +294,12 @@ in the issue’s history reads similar to “Co-learner closed via commit abcdef
 just now”, informing us why the issue was closed.
 
 ::: keypoints
+
+- You can create a project with a copy of another project’s repository by
+  forking it.
+- You can suggest changes to a project that you have no write access to through
+  a merge request.
+- You can close issues by use of certain keywords in merge request descriptions
+  or commit messages.
 
 :::
