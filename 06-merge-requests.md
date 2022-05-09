@@ -190,7 +190,7 @@ are prefilled with the newest commit message of the source branch. To connect
 this merge request with the issue we filed, we write
 
 ```
-Solves #1
+Resolves #1
 ```
 
 in the merge request description. Everything else, we leave with its default
@@ -240,8 +240,8 @@ can be configured to require approval by a certain group of members for a merge
 request to be possible. Then there is a grayed-out button labeled “Merge”,
 followed by text that we need to ask someone with write access to click it. We
 will do exactly that in a moment. Note also, that the box around it mentions
-that the merge request mentions our issue. In particular for such mentions in
-commit messages that can otherwise be easily overlooked.
+that the merge request mentions the issue. This can be easily overlooked, if the
+mention happens in a commit message of the merge request.
 
 Finally at the bottom, we see that a merge request can be commented on, just
 like an issue. But for merge request there is more. Navigating to the “Changes”
@@ -259,5 +259,40 @@ called code review. Code review entails that a peer of the author of some
 changes reviews those, before they are merged. This practice is the origin of
 the merge request feature, but it lends itself well to reviewing text based
 changes other than to code.
+
+:::
+
+## Accept a Merge Request
+
+While we were creating the merge request for our co-learner’s repository, they
+did the same for ours. Now it is time to review and accept the change.
+
+Navigate to the issue your co-learner created in your repository. At the very
+bottom of the issue’s history you will see en entry of the form “Co-learner
+@colearner mentioned in merge request !1 2 minutes ago”. The merge request
+reference, ”!1”, is a link. We follow the link by clicking on it.
+
+This leads us to the merge request page, very similar to the page of our own
+merge request. The difference, that we are interested in, is the state of the
+button labeled “Merge”. The button is no longer disabled. Under the button is a
+bar that informs us that one commit and one merge commit will be added.
+
+The merge commit serves as a common descendant of the heads of your main branch
+and the branch on which your co-learner based their merge request. We can change
+the commit message of the merge commit, by clicking on the bar informing us
+about the number of added commits, but we are happy with its contents.
+
+We click on the button labeled “Merge”. After a few seconds the box that allowed
+us to merge is replaced by a box that informs us about the successful merge.
+
+In particular, there still is a sentence informing us that the merge request
+mentions an issue. Our intention was for that issue to be closed, so we click on
+the issue reference, for example “#1”, to check.
+
+On the issue page, we can see that indeed the issue was closed. The last entry
+in the issue’s history reads similar to “Co-learner closed via commit abcdef12
+just now”, informing us why the issue was closed.
+
+::: keypoints
 
 :::
