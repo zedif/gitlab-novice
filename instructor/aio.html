@@ -1455,7 +1455,7 @@ any links that you are not going to use.
 <section id="example-configuration"><h2 class="section-heading">Example Configuration</h2>
 <hr class="half-width">
 <p>To configure our automatic process, we navigate to our project page and click the menu item labeled “CI/CD” in the main menu on the left.</p>
-<p>The page that this leads to invites us to “use a sample <code>.gitlab-ci.yml</code> template file to explore how CI/CD works.” The GitLab-CI is configured by providing a file called <code>.gitlab-ci.yml</code> in the root directory of a project’s repository. Even though we want to learn how CI works in GitLab, we do not follow the invitation, because the example is quite elaborate and targets software developers specifically. Instead, we will use the provided template for Bash.</p>
+<p>The page that this leads to invites us to “use a sample <code>.gitlab-ci.yml</code> template file to explore how CI/CD works.” The GitLab CI is configured by providing a file called <code>.gitlab-ci.yml</code> in the root directory of a project’s repository. Even though we want to learn how CI works in GitLab, we do not follow the invitation, because the example is quite elaborate and targets software developers specifically. Instead, we will use the provided template for Bash.</p>
 <p>We click on the button labeled “Use template” of the entry for Bash in the list at the bottom of the page.</p>
 <p>This leads us to an editor for the <code>.gitlab-ci.yml</code> file that is prefilled from the selected template. The file is expected to be written in the <a href="https://yaml.org/" class="external-link">YAML</a> file format, hence the file extension <code>.yml</code>. We will go through the example line by line. Afterwards we will adapt it to our needs.</p>
 <p>The first few lines, starting with the symbol <code>#</code>, are comments notifying us of where to find further information. The last of these lines is the exception, which is a comment on the first functional line:</p>
@@ -1485,27 +1485,97 @@ any links that you are not going to use.
 <hr class="half-width">
 <p>We will now adapt the script to our requirements.</p>
 <p>First we delete everything.</p>
-<p>Then we define our own stages, because we do not develop software and want to have names for stages that fit:</p>
+<p>Then we define our own stages, because we do not develop software and want to have descriptive names for our use case:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stages</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> test</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> check</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> create</span></span></code></pre>
 </div>
 <p>In the first stage, we will do some testing, in the second we will create an EPUB format version of our research diary.</p>
-<p>We call the first job <code>test-mds</code> and in it make sure, that at least one Markdown file exists, because otherwise someone must have accidentally removed them all.</p>
+<p>We call the first job <code>check-for-mds</code> and in it make sure, that at least one Markdown file exists, because otherwise someone must have accidentally removed them all.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">test-mds</span><span class="kw">:</span></span>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check-for-mds</span><span class="kw">:</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> bash:latest</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">stage</span><span class="kw">:</span><span class="at"> test</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">stage</span><span class="kw">:</span><span class="at"> check</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">script</span><span class="kw">:</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> test -f *.md</span></span></code></pre>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> compgen -G '*.md'</span></span></code></pre>
 </div>
-<p>We use the docker image <code>bash</code>, because Bash provides the <code>test</code> command and we do not need anything else. We also state that the job belongs to the stage <code>test</code>. Finally, we provide the script, which tests for the existence of files with names ending in <code>.md</code>.</p>
-<p>When this job succeeds we want to create the EPUB format version of our research diary. We define a second job and call it <code>create-epub</code>.</p>
+<p>We use the docker image <code>bash</code>, because Bash provides the <code>compgen</code> command that allows us to check for the existence of files. We also state that the job belongs to the stage <code>check</code>. Finally, we provide the script. It tests for the existence of any files with names ending in <code>.md</code>.</p>
+<p>Whenever the job <code>check-for-mds</code> successfully completes, we want to create the EPUB format version of our research diary. We define a second job and call it <code>create-epub</code>.</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create-epub</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">name</span><span class="kw">:</span><span class="at"> pandoc/core:latest</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">entrypoint</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"/bin/sh"</span><span class="kw">,</span><span class="at"> </span><span class="st">"-c"</span><span class="kw">]</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">stage</span><span class="kw">:</span><span class="at"> create</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">script</span><span class="kw">:</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> pandoc *.md -o diary.epub</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">artifacts</span><span class="kw">:</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">paths</span><span class="kw">:</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> diary.epub</span></span></code></pre>
+</div>
+<p>After giving the name of the job, we again provide an Docker image in which the job should run. Since we want to use pandoc to convert our Markdown files into an EPUB file, we use the official pandoc Docker image. The next line, with the keyword <code>entrypoint</code> is necessary, because the pandoc Docker image is configured to directly run pandoc, when started in a container (pandoc is configured as its entrypoint). However, GitLab CI expects to run scripts in the Docker container, thus expects the Docker images to start a shell.</p>
+<div id="callout3" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="pandoc" class="callout-inner">
+<h3 class="callout-title">Pandoc</h3>
+<div class="callout-content">
+<p>Pandoc converts text documents from format to another, for example from Markdown to EPUB. It supports many formats for the source documents and even more for the target document.</p>
+<p>The <a href="https://pandoc.org/" class="external-link">project webpage</a> provides a complete list (in text and graphical form).</p>
+</div>
+</div>
+</div>
+<p>Next, we specify the stage, followed by the script. It runs pandoc on all files ending in <code>.md</code> in the current directory and instructs it to output a file <code>diary.epub</code>. Pandoc deduces from the file extension that it should be in EPUB format.</p>
+<p>The final three lines, starting with the keyword <code>artifacts</code>, specify that GitLab CI should save the file <code>diary.epub</code> from the Docker container the job runs in and provide it for download on its web interface.</p>
+<p>This completes our GitLab CI configuration.There are a lot more configuration options, for example to have a process run only for commits to certain branches, that are documented in <a href="https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html" class="external-link">GitLab’s Handbook</a></p>
+<p>We change the commit message to ”Configure CI“, leave the branch as it is (<code>main</code>), and click the button labeled “Commit changes”.</p>
+<div id="callout4" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="shared-runners" class="callout-inner">
+<h3 class="callout-title">Shared Runners</h3>
+<div class="callout-content">
+<p>The software that runs CI jobs is called a runner. GitLab provides so called shared runners on its platform for free (within certain usage limits). It does, however, require the user to provide credit card information. This is intended to prevent abuse of the free resource.</p>
+<p>If no such information has been provided running the CI will always fail.</p>
+<p>Alternatively, the organizers of a course based on this material could setup their own runner and help learners to configure their projects to use that runner.</p>
+<p>On other instances the situation can be different.</p>
+</div>
+</div>
+</div>
+<p>Clicking the button does not cause a change in page. Instead, we are informed at the top of the page about the status of the pipeline run that was initiated by committing the <code>.gitlab-ci.yml</code> to the repository.</p>
+<p>To get a better overview, we select “CI/CD” from the main menu on the right side. This brings us to the list of pipeline runs. We should see exactly one entry in the list, as we have just configured the CI.</p>
+<p>A blue, red, or green box in the “Status” column informs on the left informs us about the state of the pipeline. Blue indicates a running pipeline, red a failed pipeline, and green a pipeline that successfully completed. Below the status box we have the runtime of the pipeline and below that information about when it was started.</p>
+<p>In the ”Pipeline” column, we see the first line of the commit that triggered the pipeline run, the number of the pipeline run, for example <code>#11071</code>, the branch the commit is part of as well as the short identifier of the commit. Most of these serve as links to pages for their respective entities.</p>
+<p>The ”Triggerer” column tells us who caused the pipeline run. In our case that’s the author of the commit.</p>
+<p>The ”Stages” column visualizes the stages and their state. In addition to the colors discussed above, there are stages colored in grey. They are waiting for their predecessor stages (or need to be manually triggered, if configured that way).</p>
+<p>We wait until our pipeline ran through. It should complete without error.</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Instructor Note
+  </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>The behavior of the CI is the most fragile step of this course. There are some outside influences that can cause the pipeline to fail. This needs to be handled on a case by case basis.</p>
+</div>
+</div>
+</div>
+</div>
+<p>We click on the button labeled by the three dots on the right of the entry. In the menu that opens, we see that it provides a link to download artifacts of the pipeline. We click on the link labeled “create-epub:archive”, which causes our browser to download a file called <code>artifacts.zip</code>.</p>
+<p>In that archive, we find the file <code>diary.epub</code> that was build by our second job, <code>create-epub</code>.</p>
+<p>If you have an ebook viewer, you can verify that it contains the contents of all Markdown our files. (We ignore the fact, that the order might not make sense at all. For that we would need to improve the script that builds the EPUB file.)</p>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
