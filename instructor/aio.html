@@ -92,9 +92,7 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-<li><a class="dropdown-item" href="profiles.html">Learner Profiles</a></li>
-          </ul>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
 </li>
       </ul>
 </div>
@@ -275,14 +273,23 @@
                 <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
                   <div class="accordion-body">
                     <ul>
-<li><a href="profiles.html">Learner Profiles</a></li>
+<li>
+                        <a href="../instructor/key-points.html">Key Points</a>
+                      </li>
+                      <li>
+                        <a href="../instructor/instructor-notes.html">Instructor Notes</a>
+                      </li>
+                      <li>
+                        <a href="../instructor/images.html">Extract All Images</a>
+                      </li>
+                      
                     </ul>
 </div>
                 </div>
               </div>
             </div>
-
-            <a href="../instructor/aio.html">See all in one page</a>
+            <hr class="half-width resources">
+<a href="../instructor/aio.html">See all in one page</a>
 
             <hr class="d-none d-sm-block d-md-none">
 <div class="d-grid gap-1">
@@ -626,7 +633,7 @@ $ git config --global user.email "some.novice@example.com"</code></pre>
 <div class="callout-content">
 <p>In Markdown, headlines are marked by one up to six <code>#</code> characters followed by a space character in front of the text. The number of <code>#</code> characters indicates the heading’s level, with 1 being the most significant.</p>
 <p>For example, a level 3 headline:</p>
-<pre><code><span class="co">### Interesting Section Title</span></code></pre>
+<pre><code><span><span class="co">### Interesting Section Title</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -678,7 +685,7 @@ nothing to commit, working tree clean</code></pre>
 <p>There is one file, <code>README.md</code>:</p>
 <pre><code>$ ls</code></pre>
 <p>{: .language-bash}</p>
-<pre><code><span class="va">README.md</span></code></pre>
+<pre><code><span><span class="va">README.md</span></span></code></pre>
 <p>{: .output}</p>
 </section><section id="connecting-local-and-remote-repository"><h2 class="section-heading">Connecting Local and Remote Repository</h2>
 <hr class="half-width">
@@ -869,7 +876,7 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</code></pre>
 <pre><code>$ cd rd-colleague</code></pre>
 <p>we check its contents. If your colleague did everything we did, it should contain a single file, <code>README.md</code>.</p>
 <pre><code>$ ls</code></pre>
-<pre><code><span class="va">README.md</span></code></pre>
+<pre><code><span><span class="va">README.md</span></span></code></pre>
 <p>Now we are sure that everything is in order with the cloned repository and we can add our lab entry.</p>
 <p>First we create a file, named <code>2022-03-13.md</code> after the date on which we did the work, listing the work we did:</p>
 <pre><code>* Injected transformational fluid into moss sample.
@@ -1043,7 +1050,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Steps to solve the challenge:</p>
 <ol style="list-style-type: decimal">
@@ -1095,7 +1102,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Steps to solve the challenge:</p>
 <ol style="list-style-type: decimal">
@@ -1358,7 +1365,7 @@ any links that you are not going to use.
 <p>This gets us to the following dialog:</p>
 <figure><img src="../fig/merge-request.png" alt="New merge request page. On the left, a menu leading to other project pages. ON the right, taking up the major part of the width, the new merge request page: Below the page title, there are two UI elements side-by-side. The one on the left, titled ”Source branch”, has two drop-down fields, one to select the project, the other to select the branch. The former reads “fiveop/research-diary-2”, the latter “Select source branch”. The one on the right, titled “Target branch”, has the same two drop-down fields. In this case the former reads “somenovice/research-diary” and the latter ”main”. Belowthe two drop-down fields there is a box with information about the last commit on the “main” branch: message, author, relative author date and short identifier." class="figure mx-auto d-block"><figcaption>New merge request page</figcaption></figure><p>On the left side, we select the branch generated for our change. Once done, a box with details of the last commit on that branch appears below the drop-down fields on the left.</p>
 <p>We click the button labeled “Compare branches and continue”. On the following page, we can see that a merge request has it’s own title and description. They are prefilled with the newest commit message of the source branch. To connect this merge request with the issue we filed, we write</p>
-<pre><code><span class="va">Resolves</span> <span class="co">#1</span></code></pre>
+<pre><code><span><span class="va">Resolves</span> <span class="co">#1</span></span></code></pre>
 <p>in the merge request description. Everything else, we leave with its default value or in its default state, including the two checkboxes.</p>
 <div id="callout3" class="callout callout">
 <div class="callout-square">
@@ -1582,7 +1589,7 @@ any links that you are not going to use.
   Instructor Note
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>The behavior of the CI is the most fragile step of this course. There are some outside influences that can cause the pipeline to fail. This needs to be handled on a case by case basis.</p>
 </div>
@@ -1615,9 +1622,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.6.0" class="external-link">sandpaper (0.6.0)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.6.2" class="external-link">sandpaper (0.6.2)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/0.3.0" class="external-link">pegboard (0.3.0)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.0" class="external-link">varnish (0.2.0)</a>.</p>
+      and <a href="https://github.com/carpentries/varnish/tree/0.2.1" class="external-link">varnish (0.2.1)</a>.</p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -1639,8 +1646,8 @@ any links that you are not going to use.
   "url": "https://zedif.github.io/gitlab-novice/instructor/aio.html",
   "identifier": "https://zedif.github.io/gitlab-novice/instructor/aio.html",
   "dateCreated": "2022-05-16",
-  "dateModified": "2022-06-21",
-  "datePublished": "2022-06-21"
+  "dateModified": "2022-06-28",
+  "datePublished": "2022-06-28"
 }
 
   </script><script>
